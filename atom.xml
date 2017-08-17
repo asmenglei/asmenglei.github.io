@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-17T08:43:29.653Z</updated>
+  <updated>2017-08-17T08:46:00.784Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/08/17/redis/"/>
     <id>http://yoursite.com/2017/08/17/redis/</id>
     <published>2017-08-17T07:33:55.000Z</published>
-    <updated>2017-08-17T08:43:29.653Z</updated>
+    <updated>2017-08-17T08:46:00.784Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Redis使用-实现简单的消息队列"><a href="#Redis使用-实现简单的消息队列" class="headerlink" title="Redis使用 :实现简单的消息队列"></a>Redis使用 :实现简单的消息队列</h1><p>Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。<br><a id="more"></a></p>
 <h2 id="生产消费模式"><a href="#生产消费模式" class="headerlink" title="生产消费模式"></a>生产消费模式</h2><p>主要使用了redis提供的blpop获取队列数据，如果队列没有数据则阻塞等待，也就是监听。</p>
@@ -43,7 +43,7 @@
     
     </summary>
     
-      <category term="编程" scheme="http://yoursite.com/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="Coder" scheme="http://yoursite.com/categories/Coder/"/>
     
     
       <category term="redis" scheme="http://yoursite.com/tags/redis/"/>
