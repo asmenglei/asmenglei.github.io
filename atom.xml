@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-08-17T07:48:52.572Z</updated>
+  <updated>2017-08-17T07:53:20.570Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2017/08/17/redis/"/>
     <id>http://yoursite.com/2017/08/17/redis/</id>
     <published>2017-08-17T07:33:55.000Z</published>
-    <updated>2017-08-17T07:48:52.572Z</updated>
+    <updated>2017-08-17T07:53:20.570Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Redis使用-实现简单的消息队列"><a href="#Redis使用-实现简单的消息队列" class="headerlink" title="Redis使用 :实现简单的消息队列"></a>Redis使用 :实现简单的消息队列</h1><p>Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。</p>
+    <content type="html"><![CDATA[<h1 id="Redis使用-实现简单的消息队列"><a href="#Redis使用-实现简单的消息队列" class="headerlink" title="Redis使用 :实现简单的消息队列"></a>Redis使用 :实现简单的消息队列</h1><p>Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。<br><a id="more"></a></p>
 <h2 id="生产消费模式"><a href="#生产消费模式" class="headerlink" title="生产消费模式"></a>生产消费模式</h2><p>主要使用了redis提供的blpop获取队列数据，如果队列没有数据则阻塞等待，也就是监听。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf-8</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="string">生产者-消费者模式中的消费者</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="keyword">import</span> redis</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.rcon = redis.StrictRedis(host=<span class="string">'localhost'</span>, db=<span class="number">5</span>)</div><div class="line">        self.queue = <span class="string">'task:prodcons:queue'</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">listen_task</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">            task = self.rcon.blpop(self.queue, <span class="number">0</span>)[<span class="number">1</span>]</div><div class="line">            print(<span class="string">'Task get'</span>, task)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    print(<span class="string">'监听任务队列'</span>)</div><div class="line">    Task().listen_task()</div></pre></td></tr></table></figure>
 <h2 id="发布订阅模式"><a href="#发布订阅模式" class="headerlink" title="发布订阅模式"></a>发布订阅模式</h2><p>使用redis的pubsub功能，订阅者订阅频道，发布者发布消息到频道了，频道就是一个消息队列。</p>
@@ -39,7 +39,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;Redis使用-实现简单的消息队列&quot;&gt;&lt;a href=&quot;#Redis使用-实现简单的消息队列&quot; class=&quot;headerlink&quot; title=&quot;Redis使用 :实现简单的消息队列&quot;&gt;&lt;/a&gt;Redis使用 :实现简单的消息队列&lt;/h1&gt;&lt;p&gt;Redis提供了
+      &lt;h1 id=&quot;Redis使用-实现简单的消息队列&quot;&gt;&lt;a href=&quot;#Redis使用-实现简单的消息队列&quot; class=&quot;headerlink&quot; title=&quot;Redis使用 :实现简单的消息队列&quot;&gt;&lt;/a&gt;Redis使用 :实现简单的消息队列&lt;/h1&gt;&lt;p&gt;Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。&lt;br&gt;
     
     </summary>
     
@@ -57,7 +57,7 @@
     <link href="http://yoursite.com/2017/08/15/markdown/"/>
     <id>http://yoursite.com/2017/08/15/markdown/</id>
     <published>2017-08-15T03:00:55.000Z</published>
-    <updated>2017-08-17T07:45:18.175Z</updated>
+    <updated>2017-08-17T07:55:10.609Z</updated>
     
     <content type="html"><![CDATA[<h1 id="欢迎使用-Cmd-Markdown-编辑阅读器"><a href="#欢迎使用-Cmd-Markdown-编辑阅读器" class="headerlink" title="欢迎使用 Cmd Markdown 编辑阅读器"></a>欢迎使用 Cmd Markdown 编辑阅读器</h1><hr>
 <p>我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，<strong>Cmd Markdown</strong> 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。 您可以使用 Cmd Markdown：</p>
@@ -75,7 +75,7 @@
 <p>请保留此份 Cmd Markdown 的欢迎稿兼使用说明，如需撰写新稿件，点击顶部工具栏右侧的 <i class="icon-file"></i> <strong>新文稿</strong> 或者使用快捷键 <code>Ctrl+Alt+N</code>。</p>
 </blockquote>
 <hr>
-<h2 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown"></a>什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字，更棒的是，它还可以</p>
+<h2 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown"></a>什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字，更棒的是，它还可以<br><a id="more"></a></p>
 <h3 id="1-制作一份待办事宜-Todo-列表"><a href="#1-制作一份待办事宜-Todo-列表" class="headerlink" title="1. 制作一份待办事宜 Todo 列表"></a>1. 制作一份待办事宜 <a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown#13-待办事宜-todo-列表" target="_blank" rel="external">Todo 列表</a></h3><ul>
 <li style="list-style: none"><input type="checkbox"> 支持以 PDF 格式导出文稿</li>
 <li style="list-style: none"><input type="checkbox"> 改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</li>
@@ -147,7 +147,23 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;欢迎使用-Cmd-Markdown-编辑阅读器&quot;&gt;&lt;a href=&quot;#欢迎使用-Cmd-Markdown-编辑阅读器&quot; class=&quot;headerlink&quot; title=&quot;欢迎使用 Cmd Markdown 编辑阅读器&quot;&gt;&lt;/a&gt;欢迎使用 Cmd Markdown
+      &lt;h1 id=&quot;欢迎使用-Cmd-Markdown-编辑阅读器&quot;&gt;&lt;a href=&quot;#欢迎使用-Cmd-Markdown-编辑阅读器&quot; class=&quot;headerlink&quot; title=&quot;欢迎使用 Cmd Markdown 编辑阅读器&quot;&gt;&lt;/a&gt;欢迎使用 Cmd Markdown 编辑阅读器&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;我们理解您需要更便捷更高效的工具记录思想，整理笔记、知识，并将其中承载的价值传播给他人，&lt;strong&gt;Cmd Markdown&lt;/strong&gt; 是我们给出的答案 —— 我们为记录思想和分享知识提供更专业的工具。 您可以使用 Cmd Markdown：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;整理知识，学习笔记&lt;/li&gt;
+&lt;li&gt;发布日记，杂文，所见所想&lt;/li&gt;
+&lt;li&gt;撰写发布技术文稿（代码支持）&lt;/li&gt;
+&lt;li&gt;撰写发布学术论文（LaTeX 公式支持）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.zybuluo.com/static/img/logo.png&quot; alt=&quot;cmd-markdown-logo&quot;&gt;&lt;/p&gt;
+&lt;p&gt;除了您现在看到的这个 Cmd Markdown 在线版本，您还可以前往以下网址下载：&lt;/p&gt;
+&lt;h3 id=&quot;Windows-Mac-Linux-全平台客户端&quot;&gt;&lt;a href=&quot;#Windows-Mac-Linux-全平台客户端&quot; class=&quot;headerlink&quot; title=&quot;Windows/Mac/Linux 全平台客户端&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://www.zybuluo.com/cmd/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Windows/Mac/Linux 全平台客户端&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;请保留此份 Cmd Markdown 的欢迎稿兼使用说明，如需撰写新稿件，点击顶部工具栏右侧的 &lt;i class=&quot;icon-file&quot;&gt;&lt;/i&gt; &lt;strong&gt;新文稿&lt;/strong&gt; 或者使用快捷键 &lt;code&gt;Ctrl+Alt+N&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&quot;什么是-Markdown&quot;&gt;&lt;a href=&quot;#什么是-Markdown&quot; class=&quot;headerlink&quot; title=&quot;什么是 Markdown&quot;&gt;&lt;/a&gt;什么是 Markdown&lt;/h2&gt;&lt;p&gt;Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，&lt;strong&gt;粗体&lt;/strong&gt; 或者 &lt;em&gt;斜体&lt;/em&gt; 某些文字，更棒的是，它还可以&lt;br&gt;
     
     </summary>
     
@@ -165,7 +181,7 @@
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2017-08-15T02:59:46.886Z</updated>
+    <updated>2017-08-17T07:54:28.135Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -181,6 +197,7 @@
 <p>c) 拼接SECRET之后结果为{“invitation_id”:”489”,”limit”:”20”,”page”:”1”}!@#$ </p>
 <p>d) MD5之后转化为大写之后结果为C9052EC5CA57FB5D10BA67F07BF61FB5</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">PS:错误返回编码</div><div class="line">&#123;</div><div class="line">  &quot;code&quot;: 203,</div><div class="line">  &quot;error&quot;: &quot;********&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="1-微信用户开约"><a href="#1-微信用户开约" class="headerlink" title="1.微信用户开约"></a>1.微信用户开约</h3><ul>
 <li>wxAddInvitation</li>
 <li>请求参数</li>
@@ -3101,7 +3118,20 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;约定微信对接API文档-version-1-0&quot;&gt;&lt;a href=&quot;#约定微信对接API文档-version-1-0&quot; class=&quot;headerlink&quot; title=&quot;约定微信对接API文档 version 1.0&quot;&gt;&lt;/a&gt;&lt;strong&gt;约定微信对接API
+      &lt;h2 id=&quot;约定微信对接API文档-version-1-0&quot;&gt;&lt;a href=&quot;#约定微信对接API文档-version-1-0&quot; class=&quot;headerlink&quot; title=&quot;约定微信对接API文档 version 1.0&quot;&gt;&lt;/a&gt;&lt;strong&gt;约定微信对接API文档 version 1.0&lt;/strong&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;url地址 :&lt;a href=&quot;http://dev.****.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://dev.&lt;em&gt;**&lt;/em&gt;.cn/index.php/api/restful/###&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;method  :POST&lt;/li&gt;
+&lt;li&gt;返回格式: json&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;###接口签名算法&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;* POST 方式添加参数 sign， 算法为所有请求参数按照KEY值排序后转化json，尾部加上SECRET(值为!@#\$)之后MD5转换为大写字母之后的值&lt;/strong&gt;&lt;br&gt;如:POST的参数为 [page=&amp;gt;1,limit=&amp;gt;20,invitation_id=&amp;gt;489] 则TOKEN值的计算方式为 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;a) 排序所有参数，排序后的结果为 [invitation_id=&amp;gt;489,limit=&amp;gt;20,page=&amp;gt;1]。 &lt;/p&gt;
+&lt;p&gt;b) 按顺序进行拼装，拼装后结果为 json加密数组{“invitation_id”:”489”,”limit”:”20”,”page”:”1”} &lt;/p&gt;
+&lt;p&gt;c) 拼接SECRET之后结果为{“invitation_id”:”489”,”limit”:”20”,”page”:”1”}!@#$ &lt;/p&gt;
+&lt;p&gt;d) MD5之后转化为大写之后结果为C9052EC5CA57FB5D10BA67F07BF61FB5&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;PS:错误返回编码&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;quot;code&amp;quot;: 203,&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &amp;quot;error&amp;quot;: &amp;quot;********&amp;quot;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     

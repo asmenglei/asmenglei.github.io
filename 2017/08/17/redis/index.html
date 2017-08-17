@@ -96,21 +96,21 @@
 
 
 
-<meta name="description" content="Redis使用 :实现简单的消息队列Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。 生产消费模式主要使用了redis提">
+<meta name="description" content="Redis使用 :实现简单的消息队列Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。">
 <meta name="keywords" content="redis,python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Redis使用 :实现简单的消息队列">
 <meta property="og:url" content="http://yoursite.com/2017/08/17/redis/index.html">
 <meta property="og:site_name" content="Elliot&#39;Blog">
-<meta property="og:description" content="Redis使用 :实现简单的消息队列Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。 生产消费模式主要使用了redis提">
+<meta property="og:description" content="Redis使用 :实现简单的消息队列Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/673170/201609/673170-20160905223621223-458416278.png">
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/673170/201609/673170-20160905223754785-1454569376.png">
 <meta property="og:image" content="http://images2015.cnblogs.com/blog/673170/201609/673170-20160905223811832-1908810925.png">
-<meta property="og:updated_time" content="2017-08-17T07:48:52.572Z">
+<meta property="og:updated_time" content="2017-08-17T07:53:20.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis使用 :实现简单的消息队列">
-<meta name="twitter:description" content="Redis使用 :实现简单的消息队列Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。 生产消费模式主要使用了redis提">
+<meta name="twitter:description" content="Redis使用 :实现简单的消息队列Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。">
 <meta name="twitter:image" content="http://images2015.cnblogs.com/blog/673170/201609/673170-20160905223621223-458416278.png">
 
 
@@ -406,7 +406,7 @@
       
 
       
-        <h1 id="Redis使用-实现简单的消息队列"><a href="#Redis使用-实现简单的消息队列" class="headerlink" title="Redis使用 :实现简单的消息队列"></a>Redis使用 :实现简单的消息队列</h1><p>Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。</p>
+        <h1 id="Redis使用-实现简单的消息队列"><a href="#Redis使用-实现简单的消息队列" class="headerlink" title="Redis使用 :实现简单的消息队列"></a>Redis使用 :实现简单的消息队列</h1><p>Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。<br><a id="more"></a></p>
 <h2 id="生产消费模式"><a href="#生产消费模式" class="headerlink" title="生产消费模式"></a>生产消费模式</h2><p>主要使用了redis提供的blpop获取队列数据，如果队列没有数据则阻塞等待，也就是监听。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf-8</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="string">生产者-消费者模式中的消费者</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="keyword">import</span> redis</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.rcon = redis.StrictRedis(host=<span class="string">'localhost'</span>, db=<span class="number">5</span>)</div><div class="line">        self.queue = <span class="string">'task:prodcons:queue'</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">listen_task</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">            task = self.rcon.blpop(self.queue, <span class="number">0</span>)[<span class="number">1</span>]</div><div class="line">            print(<span class="string">'Task get'</span>, task)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    print(<span class="string">'监听任务队列'</span>)</div><div class="line">    Task().listen_task()</div></pre></td></tr></table></figure>
 <h2 id="发布订阅模式"><a href="#发布订阅模式" class="headerlink" title="发布订阅模式"></a>发布订阅模式</h2><p>使用redis的pubsub功能，订阅者订阅频道，发布者发布消息到频道了，频道就是一个消息队列。</p>
