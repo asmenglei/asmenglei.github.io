@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="redis,python," />
 
 
 
@@ -96,14 +96,22 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="Redis使用 :实现简单的消息队列Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。 生产消费模式主要使用了redis提">
+<meta name="keywords" content="redis,python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redis使用 :实现简单的消息队列">
+<meta property="og:url" content="http://yoursite.com/2017/08/17/redis/index.html">
 <meta property="og:site_name" content="Elliot&#39;Blog">
+<meta property="og:description" content="Redis使用 :实现简单的消息队列Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。 生产消费模式主要使用了redis提">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-15T03:14:52.104Z">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/673170/201609/673170-20160905223621223-458416278.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/673170/201609/673170-20160905223754785-1454569376.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/673170/201609/673170-20160905223811832-1908810925.png">
+<meta property="og:updated_time" content="2017-08-17T07:48:52.572Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="Redis使用 :实现简单的消息队列">
+<meta name="twitter:description" content="Redis使用 :实现简单的消息队列Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。 生产消费模式主要使用了redis提">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/673170/201609/673170-20160905223621223-458416278.png">
 
 
 
@@ -132,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/08/17/redis/"/>
 
 
 
 
 
-  <title>tags | Elliot'Blog</title>
+  <title>Redis使用 :实现简单的消息队列 | Elliot'Blog</title>
   
 
 
@@ -297,40 +305,180 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/17/redis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Elliot">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://tva4.sinaimg.cn/crop.0.0.640.640.180/7392110djw8eld8qhm29zj20hs0hs753.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Elliot'Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                5 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Cmd-Markdown/" style="font-size: 12px; color: #ccc">Cmd Markdown</a> <a href="/tags/lanxiao/" style="font-size: 12px; color: #ccc">lanxiao</a> <a href="/tags/python/" style="font-size: 12px; color: #ccc">python</a> <a href="/tags/redis/" style="font-size: 12px; color: #ccc">redis</a> <a href="/tags/作业部落/" style="font-size: 12px; color: #ccc">作业部落</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">Redis使用 :实现简单的消息队列</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-17T15:33:55+08:00">
+                2017-08-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown/" itemprop="url" rel="index">
+                    <span itemprop="name">Markdown</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="Redis使用-实现简单的消息队列"><a href="#Redis使用-实现简单的消息队列" class="headerlink" title="Redis使用 :实现简单的消息队列"></a>Redis使用 :实现简单的消息队列</h1><p>Redis提供了两种方式来作消息队列。一个是使用生产者消费模式模式，另外一个方法就是发布订阅者模式。前者会让一个或者多个客户端监听消息队列，一旦消息到达，消费者马上消费，谁先抢到算谁的，如果队列里没有消息，则消费者继续监听。后者也是一个或多个客户端订阅消息频道，只要发布者发布消息，所有订阅者都能收到消息，订阅者都是ping的。</p>
+<h2 id="生产消费模式"><a href="#生产消费模式" class="headerlink" title="生产消费模式"></a>生产消费模式</h2><p>主要使用了redis提供的blpop获取队列数据，如果队列没有数据则阻塞等待，也就是监听。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf-8</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="string">生产者-消费者模式中的消费者</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="keyword">import</span> redis</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.rcon = redis.StrictRedis(host=<span class="string">'localhost'</span>, db=<span class="number">5</span>)</div><div class="line">        self.queue = <span class="string">'task:prodcons:queue'</span></div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">listen_task</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">            task = self.rcon.blpop(self.queue, <span class="number">0</span>)[<span class="number">1</span>]</div><div class="line">            print(<span class="string">'Task get'</span>, task)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    print(<span class="string">'监听任务队列'</span>)</div><div class="line">    Task().listen_task()</div></pre></td></tr></table></figure>
+<h2 id="发布订阅模式"><a href="#发布订阅模式" class="headerlink" title="发布订阅模式"></a>发布订阅模式</h2><p>使用redis的pubsub功能，订阅者订阅频道，发布者发布消息到频道了，频道就是一个消息队列。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf-8</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="string">发布订阅模式中的订阅者</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="keyword">import</span> redis</div><div class="line"></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Task</span><span class="params">(object)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">        self.rcon = redis.StrictRedis(host=<span class="string">'localhost'</span>, db=<span class="number">5</span>)</div><div class="line">        self.ps = self.rcon.pubsub()</div><div class="line">        self.ps.subscribe(<span class="string">'task:pubsub:channel'</span>)</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">listen_task</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> self.ps.listen():</div><div class="line">            <span class="keyword">if</span> i[<span class="string">'type'</span>] == <span class="string">'message'</span>:</div><div class="line">                print(<span class="string">"Task get"</span>, i[<span class="string">'data'</span>])</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    print(<span class="string">'监听任务频道'</span>)</div><div class="line">    Task().listen_task()</div></pre></td></tr></table></figure>
+<h2 id="提供生产者和消息发布者"><a href="#提供生产者和消息发布者" class="headerlink" title="提供生产者和消息发布者"></a>提供生产者和消息发布者</h2><p>这里使用Flask做一个简单的页面作为生产者和消息发布者<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># coding:utf-8</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="string">提供一个页面作为生产者/消息发布者</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="keyword">import</span> redis</div><div class="line"><span class="keyword">import</span> random</div><div class="line"><span class="keyword">import</span> logging</div><div class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask, redirect</div><div class="line"></div><div class="line">app = Flask(__name__)</div><div class="line"></div><div class="line">rcon = redis.StrictRedis(host=<span class="string">'localhost'</span>, db=<span class="number">5</span>)</div><div class="line">prodcons_queue = <span class="string">'task:prodcons:queue'</span>  <span class="comment">#生产者消费者队列名称</span></div><div class="line">pubsub_channel = <span class="string">'task:pubsub:channel'</span> <span class="comment">#发布订阅频道名称</span></div><div class="line"></div><div class="line"><span class="meta">@app.route('/')</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></div><div class="line"></div><div class="line">    html = <span class="string">"""</span></div><div class="line"><span class="string">&lt;br&gt;</span></div><div class="line"><span class="string">&lt;center&gt;&lt;h3&gt;Redis Message Queue&lt;/h3&gt;</span></div><div class="line"><span class="string">&lt;br&gt;</span></div><div class="line"><span class="string">&lt;a href="/prodcons"&gt;生产消费者模式&lt;/a&gt;</span></div><div class="line"><span class="string">&lt;br&gt;</span></div><div class="line"><span class="string">&lt;br&gt;</span></div><div class="line"><span class="string">&lt;a href="/pubsub"&gt;发布订阅者模式&lt;/a&gt;</span></div><div class="line"><span class="string">&lt;/center&gt;</span></div><div class="line"><span class="string">"""</span></div><div class="line">    <span class="keyword">return</span> html</div><div class="line"></div><div class="line"><span class="comment">#生产者</span></div><div class="line"><span class="meta">@app.route('/prodcons')</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">prodcons</span><span class="params">()</span>:</span></div><div class="line">    elem = random.randrange(<span class="number">10</span>)</div><div class="line">    rcon.lpush(prodcons_queue, elem)</div><div class="line">    logging.info(<span class="string">"lpush &#123;&#125; -- &#123;&#125;"</span>.format(prodcons_queue, elem))</div><div class="line">    <span class="keyword">return</span> redirect(<span class="string">'/'</span>)</div><div class="line"><span class="comment">#消息发布者</span></div><div class="line"><span class="meta">@app.route('/pubsub')</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">pubsub</span><span class="params">()</span>:</span></div><div class="line">    ps = rcon.pubsub()</div><div class="line">    ps.subscribe(pubsub_channel)</div><div class="line">    elem = random.randrange(<span class="number">10</span>)</div><div class="line">    rcon.publish(pubsub_channel, elem)</div><div class="line">    <span class="keyword">return</span> redirect(<span class="string">'/'</span>)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">    app.run(debug=<span class="keyword">True</span>)</div></pre></td></tr></table></figure></p>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p>将三短代码分别保存在三个脚本文件中启动.</p>
+<p>打开浏览器,会看到如下页面:<br><img src="http://images2015.cnblogs.com/blog/673170/201609/673170-20160905223621223-458416278.png" alt=""></p>
+<p>点击其中的两个超链接,两个一直在监听的消费者和订阅者会立即得到消息</p>
+<p>消费者</p>
+<p><img src="http://images2015.cnblogs.com/blog/673170/201609/673170-20160905223754785-1454569376.png" alt=""></p>
+<p>订阅者</p>
+<p><img src="http://images2015.cnblogs.com/blog/673170/201609/673170-20160905223811832-1908810925.png" alt=""></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/redis/" rel="tag"># redis</a>
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/15/markdown/" rel="next" title="markdown">
+                <i class="fa fa-chevron-left"></i> markdown
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -363,8 +511,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://tva4.sinaimg.cn/crop.0.0.640.640.180/7392110djw8eld8qhm29zj20hs0hs753.jpg"
@@ -433,6 +590,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis使用-实现简单的消息队列"><span class="nav-number">1.</span> <span class="nav-text">Redis使用 :实现简单的消息队列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#生产消费模式"><span class="nav-number">1.1.</span> <span class="nav-text">生产消费模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布订阅模式"><span class="nav-number">1.2.</span> <span class="nav-text">发布订阅模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#提供生产者和消息发布者"><span class="nav-number">1.3.</span> <span class="nav-text">提供生产者和消息发布者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">1.4.</span> <span class="nav-text">测试</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -555,10 +728,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
