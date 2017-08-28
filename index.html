@@ -715,14 +715,13 @@
 <li>method  :POST</li>
 <li>返回格式: json</li>
 </ul>
-<p>###接口签名算法</p>
-<blockquote>
-<p><strong>* POST 方式添加参数 sign， 算法为所有请求参数按照KEY值正向排序后转化json连接加上SECRET(值为!@#\$)连接timestamp之后MD5转换为大写字母之后的值</strong><br>如:POST的参数为 [page=&gt;1,limit=&gt;20,lon=&gt;100，lat=&gt;100,uid=&gt;100] 则TOKEN值的计算方式为 </p>
-</blockquote>
+<h3 id="接口签名算法"><a href="#接口签名算法" class="headerlink" title="接口签名算法"></a>接口签名算法</h3><blockquote>
+<p><strong> POST 方式添加参数 sign， 算法为所有请求参数按照KEY值正向排序后转化json连接加上SECRET(值为!@#\$)连接timestamp之后MD5转换为大写字母之后的值</strong><br>如:POST的参数为 [page=&gt;1,limit=&gt;20,lon=&gt;100，lat=&gt;100,uid=&gt;100] 则TOKEN值的计算方式为 </p>
 <p>a) 排序ksort所有参数，排序后的结果为 [lat=&gt;100,limit=&gt;20,lon=&gt;100，page=&gt;1,uid=&gt;100]。 </p>
 <p>b) 按顺序进行拼装，拼装后结果为 json加密数组{“lat”:100,”limit”:20,”lon”:100,”page”:1,”uid”:100}</p>
 <p>c) 拼接SECRET以及时间戳之后结果为{“lat”:100,”limit”:20,”lon”:100,”page”:1,”uid”:100}!@#$1503905380</p>
 <p>d) MD5之后转化为大写之后结果为A130914BD050C341FD8B705FB5E4595C</p>
+</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">PS:错误返回编码</div><div class="line">&#123;</div><div class="line">  &quot;code&quot;: 400/403,</div><div class="line">  &quot;data&quot;: &apos;&apos;,</div><div class="line">  &quot;message&quot;: &apos;&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
