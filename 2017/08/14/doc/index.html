@@ -96,18 +96,18 @@
 
 
 
-<meta name="description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json  ###接口签名算法  * POST 方式添加参数 sign， 算法为所有请求参数按照KEY值排序后转化json，尾部加上SECRET(值为!@#\$)之后MD5转换为大写字母之后的值如:POST的参数">
+<meta name="description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json  ###接口签名算法  * POST 方式添加参数 sign， 算法为所有请求参数按照KEY值正向排序后转化json连接加上SECRET(值为!@#\$)连接timestamp之后MD5转换为大写字母之">
 <meta name="keywords" content="lanxiao">
 <meta property="og:type" content="article">
 <meta property="og:title" content="lanxiao-doc">
 <meta property="og:url" content="http://yoursite.com/2017/08/14/doc/index.html">
 <meta property="og:site_name" content="Elliot&#39;Blog">
-<meta property="og:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json  ###接口签名算法  * POST 方式添加参数 sign， 算法为所有请求参数按照KEY值排序后转化json，尾部加上SECRET(值为!@#\$)之后MD5转换为大写字母之后的值如:POST的参数">
+<meta property="og:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json  ###接口签名算法  * POST 方式添加参数 sign， 算法为所有请求参数按照KEY值正向排序后转化json连接加上SECRET(值为!@#\$)连接timestamp之后MD5转换为大写字母之">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-17T08:44:25.295Z">
+<meta property="og:updated_time" content="2017-08-28T07:33:31.933Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lanxiao-doc">
-<meta name="twitter:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json  ###接口签名算法  * POST 方式添加参数 sign， 算法为所有请求参数按照KEY值排序后转化json，尾部加上SECRET(值为!@#\$)之后MD5转换为大写字母之后的值如:POST的参数">
+<meta name="twitter:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json  ###接口签名算法  * POST 方式添加参数 sign， 算法为所有请求参数按照KEY值正向排序后转化json连接加上SECRET(值为!@#\$)连接timestamp之后MD5转换为大写字母之">
 
 
 
@@ -409,13 +409,13 @@
 </ul>
 <p>###接口签名算法</p>
 <blockquote>
-<p><strong>* POST 方式添加参数 sign， 算法为所有请求参数按照KEY值排序后转化json，尾部加上SECRET(值为!@#\$)之后MD5转换为大写字母之后的值</strong><br>如:POST的参数为 [page=&gt;1,limit=&gt;20,invitation_id=&gt;489] 则TOKEN值的计算方式为 </p>
+<p><strong>* POST 方式添加参数 sign， 算法为所有请求参数按照KEY值正向排序后转化json连接加上SECRET(值为!@#\$)连接timestamp之后MD5转换为大写字母之后的值</strong><br>如:POST的参数为 [page=&gt;1,limit=&gt;20,lon=&gt;100，lat=&gt;100,uid=&gt;100] 则TOKEN值的计算方式为 </p>
 </blockquote>
-<p>a) 排序所有参数，排序后的结果为 [invitation_id=&gt;489,limit=&gt;20,page=&gt;1]。 </p>
-<p>b) 按顺序进行拼装，拼装后结果为 json加密数组{“invitation_id”:”489”,”limit”:”20”,”page”:”1”} </p>
-<p>c) 拼接SECRET之后结果为{“invitation_id”:”489”,”limit”:”20”,”page”:”1”}!@#$ </p>
-<p>d) MD5之后转化为大写之后结果为C9052EC5CA57FB5D10BA67F07BF61FB5</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">PS:错误返回编码</div><div class="line">&#123;</div><div class="line">  &quot;code&quot;: 203,</div><div class="line">  &quot;error&quot;: &quot;********&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>a) 排序ksort所有参数，排序后的结果为 [lat=&gt;100,limit=&gt;20,lon=&gt;100，page=&gt;1,uid=&gt;100]。 </p>
+<p>b) 按顺序进行拼装，拼装后结果为 json加密数组{“lat”:100,”limit”:20,”lon”:100,”page”:1,”uid”:100}</p>
+<p>c) 拼接SECRET以及时间戳之后结果为{“lat”:100,”limit”:20,”lon”:100,”page”:1,”uid”:100}!@#$1503905380</p>
+<p>d) MD5之后转化为大写之后结果为A130914BD050C341FD8B705FB5E4595C</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">PS:错误返回编码</div><div class="line">&#123;</div><div class="line">  &quot;code&quot;: 400/403,</div><div class="line">  &quot;data&quot;: &apos;&apos;,</div><div class="line">  &quot;message&quot;: &apos;&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="1-微信用户开约"><a href="#1-微信用户开约" class="headerlink" title="1.微信用户开约"></a>1.微信用户开约</h3><ul>
 <li>wxAddInvitation</li>
