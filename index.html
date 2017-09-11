@@ -702,16 +702,7 @@
 <li>整理知识，学习笔记</li>
 <li>发布日记，杂文，所见所想</li>
 <li>撰写发布技术文稿（代码支持）</li>
-<li>撰写发布学术论文（LaTeX 公式支持）</li>
-</ul>
-</blockquote>
-<p><img src="https://www.zybuluo.com/static/img/logo.png" alt="cmd-markdown-logo"></p>
-<p>除了您现在看到的这个 Cmd Markdown 在线版本，您还可以前往以下网址下载：</p>
-<h3 id="Windows-Mac-Linux-全平台客户端"><a href="#Windows-Mac-Linux-全平台客户端" class="headerlink" title="Windows/Mac/Linux 全平台客户端"></a><a href="https://www.zybuluo.com/cmd/" target="_blank" rel="external">Windows/Mac/Linux 全平台客户端</a></h3><blockquote>
-<p>请保留此份 Cmd Markdown 的欢迎稿兼使用说明，如需撰写新稿件，点击顶部工具栏右侧的 <i class="icon-file"></i> <strong>新文稿</strong> 或者使用快捷键 <code>Ctrl+Alt+N</code>。</p>
-</blockquote>
-<hr>
-<h2 id="什么是-Markdown"><a href="#什么是-Markdown" class="headerlink" title="什么是 Markdown"></a>什么是 Markdown</h2><p>Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，<strong>粗体</strong> 或者 <em>斜体</em> 某些文字，更棒的是，它还可以<br>
+<li>撰写发布学术论文（LaTeX 公式支持）
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/15/markdown/#more" rel="contents">
@@ -860,16 +851,7 @@
           <h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
 <li>method  :POST</li>
-<li>返回格式: json</li>
-</ul>
-<h3 id="接口签名算法"><a href="#接口签名算法" class="headerlink" title="接口签名算法"></a>接口签名算法</h3><blockquote>
-<p><strong> POST 方式添加参数 sign， 算法为所有请求参数按照KEY值正向排序后转化json连接加上SECRET(值为!@#\$)连接timestamp之后MD5转换为大写字母之后的值</strong><br>如:POST的参数为 [page=&gt;1,limit=&gt;20,lon=&gt;100，lat=&gt;100,uid=&gt;100] 则TOKEN值的计算方式为 </p>
-<p>a) 排序ksort所有参数，排序后的结果为 [lat=&gt;100,limit=&gt;20,lon=&gt;100，page=&gt;1,uid=&gt;100]。 </p>
-<p>b) 按顺序进行拼装，拼装后结果为 json加密数组{“lat”:100,”limit”:20,”lon”:100,”page”:1,”uid”:100}</p>
-<p>c) 拼接SECRET以及时间戳之后结果为{“lat”:100,”limit”:20,”lon”:100,”page”:1,”uid”:100}!@#$1503905380</p>
-<p>d) MD5之后转化为大写之后结果为A130914BD050C341FD8B705FB5E4595C</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">PS:错误返回编码</div><div class="line">&#123;</div><div class="line">  &quot;code&quot;: 400/403,</div><div class="line">  &quot;data&quot;: &apos;&apos;,</div><div class="line">  &quot;message&quot;: &apos;&apos;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>返回格式: json
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/08/14/doc/#more" rel="contents">
