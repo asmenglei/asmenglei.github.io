@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="docker," />
 
 
 
@@ -96,14 +96,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="1. container无法删除表现为一个运行中的容器，stop和kill没效果，查看/var/log/messages日志如下:12Mar 14 18:24:23 localhost dockerd: time=&quot;2017-03-14T18:24:23.005216354+08:00&quot; level=warning msg=&quot;container kill failed because of &apos;co">
+<meta name="keywords" content="docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker坑系列">
+<meta property="og:url" content="http://yoursite.com/2017/09/11/docker/index.html">
 <meta property="og:site_name" content="Elliot&#39;Blog">
+<meta property="og:description" content="1. container无法删除表现为一个运行中的容器，stop和kill没效果，查看/var/log/messages日志如下:12Mar 14 18:24:23 localhost dockerd: time=&quot;2017-03-14T18:24:23.005216354+08:00&quot; level=warning msg=&quot;container kill failed because of &apos;co">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-08-15T03:14:52.104Z">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1972946-401c10e58ad2f225.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-09-11T04:22:59.249Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="Docker坑系列">
+<meta name="twitter:description" content="1. container无法删除表现为一个运行中的容器，stop和kill没效果，查看/var/log/messages日志如下:12Mar 14 18:24:23 localhost dockerd: time=&quot;2017-03-14T18:24:23.005216354+08:00&quot; level=warning msg=&quot;container kill failed because of &apos;co">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1972946-401c10e58ad2f225.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -132,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/11/docker/"/>
 
 
 
 
 
-  <title>tags | Elliot'Blog</title>
+  <title>Docker坑系列 | Elliot'Blog</title>
   
 
 
@@ -297,40 +303,174 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/11/docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Elliot">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://tva4.sinaimg.cn/crop.0.0.640.640.180/7392110djw8eld8qhm29zj20hs0hs753.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Elliot'Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                6 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Cmd-Markdown/" style="font-size: 12px; color: #ccc">Cmd Markdown</a> <a href="/tags/docker/" style="font-size: 12px; color: #ccc">docker</a> <a href="/tags/lanxiao/" style="font-size: 12px; color: #ccc">lanxiao</a> <a href="/tags/python/" style="font-size: 12px; color: #ccc">python</a> <a href="/tags/redis/" style="font-size: 12px; color: #ccc">redis</a> <a href="/tags/作业部落/" style="font-size: 12px; color: #ccc">作业部落</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">Docker坑系列</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-11T11:33:51+08:00">
+                2017-09-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Coder/" itemprop="url" rel="index">
+                    <span itemprop="name">Coder</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h1 id="1-container无法删除"><a href="#1-container无法删除" class="headerlink" title="1. container无法删除"></a>1. container无法删除</h1><p>表现为一个运行中的容器，stop和kill没效果，查看<code>/var/log/messages</code>日志如下:<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Mar <span class="number">14</span> <span class="number">18</span>:<span class="number">24</span>:<span class="number">23</span> localhost dockerd: time=<span class="string">"2017-03-14T18:24:23.005216354+08:00"</span> level=warning msg=<span class="string">"container kill failed because of 'container not found' or 'no such process': Cannot kill container 2d3fd2ca48a42a2e4c56cf08abfe120cdc9a07c50a02b025c5e651ad0f8adb3e: rpc error: code = 2 desc = containerd: container not found"</span></div><div class="line">Mar <span class="number">14</span> <span class="number">18</span>:<span class="number">24</span>:<span class="number">33</span> localhost dockerd: time=<span class="string">"2017-03-14T18:24:33.005531933+08:00"</span> level=info msg=<span class="string">"Container 2d3fd2ca48a4 failed to exit within 10 seconds of kill - trying direct SIGKILL"</span></div></pre></td></tr></table></figure></p>
+<p><code>systemctl restart docker</code>重启解决。</p>
+<a id="more"></a>
+<h1 id="2-docker-run报错"><a href="#2-docker-run报错" class="headerlink" title="2. docker run报错"></a>2. docker run报错</h1><p>执行<code>sudo docker run -dit --restart=unless-stopped -p 8080:8080 rancher/server</code>时报错：<br><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">docker: Error response <span class="keyword">from</span> daemon: mkdir /var/lib/docker/overlay/<span class="number">22</span>ec70f56f655c703dbfa7731e7596f7adab16688e5f7e0f5f80631e1b6282c1-init/merged/dev/shm: invalid argument.</div><div class="line">See <span class="string">'docker run --help'</span>.</div></pre></td></tr></table></figure></p>
+<p>看到<a href="https://github.com/moby/moby/issues/32651" target="_blank" rel="external">这篇帖子</a>, 应该是跟storage drivers有关，再参考<a href="https://docs.docker.com/engine/userguide/storagedriver/selectadriver/#check-and-set-your-current-storage-driver" target="_blank" rel="external">官方文档</a>, CentOS 推荐devicemapper</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1972946-401c10e58ad2f225.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1972946-401c10e58ad2f225.png"><br><code>vi /etc/docker/daemon.json</code> 添加如下内容：<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"storage-driver"</span>: <span class="string">"devicemapper"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>重启docker即可。</p>
+<h1 id="3-sbt-native-packager-push镜像报错"><a href="#3-sbt-native-packager-push镜像报错" class="headerlink" title="3. sbt-native-packager push镜像报错"></a>3. sbt-native-packager push镜像报错</h1><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>mStep <span class="number">1</span>/<span class="number">12</span> : FROM malfurionpd/docker-oracle-jdk[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>m ---&gt; <span class="number">33548</span>a8b86f1[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>mStep <span class="number">2</span>/<span class="number">12</span> : MAINTAINER bmkp-dev[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>m ---&gt; Running in <span class="number">3</span>d2d26c181b2[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>m ---&gt; d4e855f088da[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>mRemoving intermediate container <span class="number">3</span>d2d26c181b2[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>mStep <span class="number">3</span>/<span class="number">12</span> : WORKDIR /opt/docker[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>m ---&gt; <span class="number">90</span>d6e06c2545[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>mRemoving intermediate container cde622bef5e1[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>mStep <span class="number">4</span>/<span class="number">12</span> : ADD opt /opt[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>m ---&gt; c215fa9a48fa[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>mRemoving intermediate container <span class="number">2</span>ac0b4328d83[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>mStep <span class="number">5</span>/<span class="number">12</span> : RUN chown -R daemon:daemon .[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>m ---&gt; Running in <span class="number">0</span>d52ec5c59d6[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">0</span>minfo[<span class="number">0</span>m] [<span class="number">0</span>mRemoving intermediate container <span class="number">0</span>d52ec5c59d6[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">31</span>merror[<span class="number">0</span>m] [<span class="number">0</span>mgrpc: the connection is unavailable[<span class="number">0</span>m</div><div class="line">java.lang.RuntimeException: Nonzero exit value: <span class="number">1</span></div><div class="line">    at com.typesafe.sbt.packager.docker.DockerPlugin$.publishLocalDocker(DockerPlugin.scala:<span class="number">302</span>)</div><div class="line">    at com.typesafe.sbt.packager.docker.DockerPlugin$$anonfun$projectSettings$<span class="number">19.</span>apply(DockerPlugin.scala:<span class="number">118</span>)</div><div class="line">    at com.typesafe.sbt.packager.docker.DockerPlugin$$anonfun$projectSettings$<span class="number">19.</span>apply(DockerPlugin.scala:<span class="number">116</span>)</div><div class="line">    at scala.Function1$$anonfun$compose$<span class="number">1.</span>apply(Function1.scala:<span class="number">47</span>)</div><div class="line">    at sbt.$tilde$greater$$anonfun$$u2219$<span class="number">1.</span>apply(TypeFunctions.scala:<span class="number">40</span>)</div><div class="line">    at sbt.std.Transform$$anon$<span class="number">4.</span>work(System.scala:<span class="number">63</span>)</div><div class="line">    at sbt.Execute$$anonfun$submit$<span class="number">1</span>$$anonfun$apply$<span class="number">1.</span>apply(Execute.scala:<span class="number">228</span>)</div><div class="line">    at sbt.Execute$$anonfun$submit$<span class="number">1</span>$$anonfun$apply$<span class="number">1.</span>apply(Execute.scala:<span class="number">228</span>)</div><div class="line">    at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:<span class="number">17</span>)</div><div class="line">    at sbt.Execute.work(Execute.scala:<span class="number">237</span>)</div><div class="line">    at sbt.Execute$$anonfun$submit$<span class="number">1.</span>apply(Execute.scala:<span class="number">228</span>)</div><div class="line">    at sbt.Execute$$anonfun$submit$<span class="number">1.</span>apply(Execute.scala:<span class="number">228</span>)</div><div class="line">    at sbt.ConcurrentRestrictions$$anon$<span class="number">4</span>$$anonfun$<span class="number">1.</span>apply(ConcurrentRestrictions.scala:<span class="number">159</span>)</div><div class="line">    at sbt.CompletionService$$anon$<span class="number">2.</span>call(CompletionService.scala:<span class="number">28</span>)</div><div class="line">    at java.util.concurrent.FutureTask.run(FutureTask.java:<span class="number">266</span>)</div><div class="line">    at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:<span class="number">511</span>)</div><div class="line">    at java.util.concurrent.FutureTask.run(FutureTask.java:<span class="number">266</span>)</div><div class="line">    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:<span class="number">1142</span>)</div><div class="line">    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:<span class="number">617</span>)</div><div class="line">    at java.lang.Thread.run(Thread.java:<span class="number">745</span>)</div><div class="line">[<span class="number">0</span>m[[<span class="number">31</span>merror[<span class="number">0</span>m] [<span class="number">0</span>m(docker:[<span class="number">31</span>mpublishLocal[<span class="number">0</span>m) Nonzero exit value: <span class="number">1</span>[<span class="number">0</span>m</div><div class="line">[<span class="number">0</span>m[[<span class="number">31</span>merror[<span class="number">0</span>m] [<span class="number">0</span>mTotal time: <span class="number">8</span> s, completed Jun <span class="number">15</span>, <span class="number">2017</span> <span class="number">10</span>:<span class="number">50</span>:<span class="number">15</span> AM[<span class="number">0</span>m</div></pre></td></tr></table></figure>
+<p>重启大法好！<code>systemctl restart docker.service</code> 搞定！</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/docker/" rel="tag"># docker</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/08/17/redis/" rel="next" title="Redis使用 :实现简单的消息队列">
+                <i class="fa fa-chevron-left"></i> Redis使用 :实现简单的消息队列
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -363,8 +503,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://tva4.sinaimg.cn/crop.0.0.640.640.180/7392110djw8eld8qhm29zj20hs0hs753.jpg"
@@ -433,6 +582,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-container无法删除"><span class="nav-number">1.</span> <span class="nav-text">1. container无法删除</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-docker-run报错"><span class="nav-number">2.</span> <span class="nav-text">2. docker run报错</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-sbt-native-packager-push镜像报错"><span class="nav-number">3.</span> <span class="nav-text">3. sbt-native-packager push镜像报错</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -555,10 +720,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
