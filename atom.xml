@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-14T09:50:16.231Z</updated>
+  <updated>2017-09-14T09:56:08.128Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/09/14/lnmp/"/>
     <id>http://yoursite.com/2017/09/14/lnmp/</id>
     <published>2017-09-14T09:22:39.000Z</published>
-    <updated>2017-09-14T09:50:16.231Z</updated>
+    <updated>2017-09-14T09:56:08.128Z</updated>
     
     <content type="html"><![CDATA[<p>一、安装nginx</p>
 <p>首先更新系统软件</p>
@@ -28,7 +28,7 @@
 <p>1.安装nginx源</p>
 <p><code># yum localinstall http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm</code><br>2.安装nginx</p>
 <p><code># yum install nginx</code><br>3.启动nginx</p>
-<p><code># service nginx start</code><br>Redirecting to /bin/systemctl start  nginx.service</p>
+<p><code># service nginx start</code><br>Redirecting to /bin/systemctl start  nginx.service<br><a id="more"></a></p>
 <p>4.访问<a href="http://你的ip/" target="_blank" rel="external">http://你的ip/</a></p>
 <p>如果成功安装会出来nginx默认的欢迎界面</p>
 <p><img src="http://images2015.cnblogs.com/blog/882728/201703/882728-20170302222425751-35413248.jpg" alt="img"></p>
@@ -127,7 +127,9 @@
 &lt;p&gt;首先更新系统软件&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;# yum update&lt;/code&gt;&lt;br&gt;安装nginx&lt;/p&gt;
 &lt;p&gt;1.安装nginx源&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;# yum localinstall http://nginx.org/
+&lt;p&gt;&lt;code&gt;# yum localinstall http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm&lt;/code&gt;&lt;br&gt;2.安装nginx&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# yum install nginx&lt;/code&gt;&lt;br&gt;3.启动nginx&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;# service nginx start&lt;/code&gt;&lt;br&gt;Redirecting to /bin/systemctl start  nginx.service&lt;br&gt;
     
     </summary>
     
