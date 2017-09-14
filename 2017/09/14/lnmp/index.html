@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="lnmp," />
 
 
 
@@ -96,17 +96,20 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="一、安装nginx 首先更新系统软件 # yum update安装nginx 1.安装nginx源 # yum localinstall http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm2.安装nginx # yum install nginx3.启动nginx #">
+<meta name="keywords" content="lnmp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2017/09/12/hello-world/index.html">
+<meta property="og:title" content="搭建lnmp环境 (centos7+nginx+MySQL5.7.9+PHP7)">
+<meta property="og:url" content="http://yoursite.com/2017/09/14/lnmp/index.html">
 <meta property="og:site_name" content="Elliot&#39;Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="一、安装nginx 首先更新系统软件 # yum update安装nginx 1.安装nginx源 # yum localinstall http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm2.安装nginx # yum install nginx3.启动nginx #">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-12T03:21:41.949Z">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/882728/201703/882728-20170302222425751-35413248.jpg">
+<meta property="og:updated_time" content="2017-09-14T09:48:08.692Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="搭建lnmp环境 (centos7+nginx+MySQL5.7.9+PHP7)">
+<meta name="twitter:description" content="一、安装nginx 首先更新系统软件 # yum update安装nginx 1.安装nginx源 # yum localinstall http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm2.安装nginx # yum install nginx3.启动nginx #">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/882728/201703/882728-20170302222425751-35413248.jpg">
 
 
 
@@ -135,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/12/hello-world/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/14/lnmp/"/>
 
 
 
 
 
-  <title>Hello World | Elliot'Blog</title>
+  <title>搭建lnmp环境 (centos7+nginx+MySQL5.7.9+PHP7) | Elliot'Blog</title>
   
 
 
@@ -312,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/12/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/14/lnmp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Elliot">
@@ -329,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">搭建lnmp环境 (centos7+nginx+MySQL5.7.9+PHP7)</h1>
         
 
         <div class="post-meta">
@@ -341,8 +344,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-12T11:21:41+08:00">
-                2017-09-12
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-14T17:22:39+08:00">
+                2017-09-14
               </time>
             
 
@@ -351,6 +354,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Coder/" itemprop="url" rel="index">
+                    <span itemprop="name">Coder</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -379,15 +404,103 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>一、安装nginx</p>
+<p>首先更新系统软件</p>
+<p><code># yum update</code><br>安装nginx</p>
+<p>1.安装nginx源</p>
+<p><code># yum localinstall http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm</code><br>2.安装nginx</p>
+<p><code># yum install nginx</code><br>3.启动nginx</p>
+<p><code># service nginx start</code><br>Redirecting to /bin/systemctl start  nginx.service</p>
+<p>4.访问<a href="http://你的ip/" target="_blank" rel="external">http://你的ip/</a></p>
+<p>如果成功安装会出来nginx默认的欢迎界面</p>
+<p><img src="http://images2015.cnblogs.com/blog/882728/201703/882728-20170302222425751-35413248.jpg" alt="img"></p>
+<p>二、安装MySQL5.7.*</p>
+<p>1.安装mysql源</p>
+<p><code># yum localinstall  http://dev.mysql.com/get/mysql57-community-release-el7-7.noarch.rpm</code><br>2.安装mysql</p>
+<p><code># yum install mysql-community-server</code><br>3.安装mysql的开发包，以后会有用</p>
+<p><code># yum install mysql-community-devel</code><br>4.启动mysql</p>
+<p><code># service mysqld start</code><br>Redirecting to /bin/systemctl start  mysqld.service</p>
+<p>5.查看mysql启动状态</p>
+<p><code># service mysqld status</code><br>出现pid</p>
+<p>证明启动成功</p>
+<ol>
+<li>更换密码</li>
+</ol>
+<p><code>mysql&gt;  ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;MyNewPasdfs4!&#39;;</code><br>这个密码一定要足够复杂，不然会不让你改，提示密码不合法;</p>
+<p>7.退出mysql并试用下新密码</p>
+<p><code>mysql&gt; quit;</code><br><code>mysql -uroot -p</code><br>确认密码正确</p>
+<p>三、编译安装php7.0.0</p>
+<p>1.下载php7源码包</p>
+<p><code># cd /root &amp; wget -O php7.tar.gz http://cn2.php.net/get/php-7.0.1.tar.gz/from/this/mirror</code><br>2.解压源码包</p>
+<p><code># tar -xvf php7.tar.gz</code><br>3.进入目录</p>
+<p><code># cd php-7.0.1</code><br>4.安装php依赖包　</p>
+<p><code># yum install libxml2 libxml2-devel openssl openssl-devel bzip2 bzip2-devel libcurl libcurl-devel libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel gmp gmp-devel libmcrypt libmcrypt-devel readline readline-devel libxslt libxslt-devel</code><br>5.编译配置，这里如果上一步的某些依赖包没有安装好，就会遇到很多configure error，我们一一解决，安装上相关软件开发包就可以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"># ./configure \</div><div class="line">--prefix=/usr/local/php \</div><div class="line">--with-config-file-path=/etc \</div><div class="line">--enable-fpm \</div><div class="line">--with-fpm-user=nginx  \</div><div class="line">--with-fpm-group=nginx \</div><div class="line">--enable-inline-optimization \</div><div class="line">--disable-debug \</div><div class="line">--disable-rpath \</div><div class="line">--enable-shared  \</div><div class="line">--enable-soap \</div><div class="line">--with-libxml-dir \</div><div class="line">--with-xmlrpc \</div><div class="line">--with-openssl \</div><div class="line">--with-mcrypt \</div><div class="line">--with-mhash \</div><div class="line">--with-pcre-regex \</div><div class="line">--with-sqlite3 \</div><div class="line">--with-zlib \</div><div class="line">--enable-bcmath \</div><div class="line">--with-iconv \</div><div class="line">--with-bz2 \</div><div class="line">--enable-calendar \</div><div class="line">--with-curl \</div><div class="line">--with-cdb \</div><div class="line">--enable-dom \</div><div class="line">--enable-exif \</div><div class="line">--enable-fileinfo \</div><div class="line">--enable-filter \</div><div class="line">--with-pcre-dir \</div><div class="line">--enable-ftp \</div><div class="line">--with-gd \</div><div class="line">--with-openssl-dir \</div><div class="line">--with-jpeg-dir \</div><div class="line">--with-png-dir \</div><div class="line">--with-zlib-dir  \</div><div class="line">--with-freetype-dir \</div><div class="line">--enable-gd-native-ttf \</div><div class="line">--enable-gd-jis-conv \</div><div class="line">--with-gettext \</div><div class="line">--with-gmp \</div><div class="line">--with-mhash \</div><div class="line">--enable-json \</div><div class="line">--enable-mbstring \</div><div class="line">--enable-mbregex \</div><div class="line">--enable-mbregex-backtrack \</div><div class="line">--with-libmbfl \</div><div class="line">--with-onig \</div><div class="line">--enable-pdo \</div><div class="line">--with-mysqli=mysqlnd \</div><div class="line">--with-pdo-mysql=mysqlnd \</div><div class="line">--with-zlib-dir \</div><div class="line">--with-pdo-sqlite \</div><div class="line">--with-readline \</div><div class="line">--enable-session \</div><div class="line">--enable-shmop \</div><div class="line">--enable-simplexml \</div><div class="line">--enable-sockets  \</div><div class="line">--enable-sysvmsg \</div><div class="line">--enable-sysvsem \</div><div class="line">--enable-sysvshm \</div><div class="line">--enable-wddx \</div><div class="line">--with-libxml-dir \</div><div class="line">--with-xsl \</div><div class="line">--enable-zip \</div><div class="line">--enable-mysqlnd-compression-support \</div><div class="line">--with-pear \</div><div class="line">--enable-opcache</div></pre></td></tr></table></figure>
+<p>configure error:</p>
+<p>1.configure: error: xml2-config not found. Please check your libxml2 installation.</p>
+<p>解决：</p>
+<p><code>1
+&lt;span style=&quot;color: #ff0000&quot;&gt;# yum install libxml2 libxml2-devel&lt;/span&gt;</code></p>
+<p>2.configure: error: Cannot find OpenSSL’s <evp.h></evp.h></p>
+<p>解决：</p>
+<p><code>1
+&lt;span style=&quot;color: #ff0000&quot;&gt;# yum install openssl openssl-devel&lt;/span&gt;</code></p>
+<p>3.configure: error: Please reinstall the BZip2 distribution</p>
+<p>解决：</p>
+<p><code>1
+&lt;span style=&quot;color: #ff0000&quot;&gt;# yum install bzip2 bzip2-devel&lt;/span&gt;</code></p>
+<p>4.configure: error: Please reinstall the libcurl distribution - easy.h should be in <curl-dir>/include/curl/</curl-dir></p>
+<p>解决：</p>
+<p><code>1
+&lt;span style=&quot;color: #ff0000&quot;&gt;# yum install libcurl libcurl-devel&lt;/span&gt;</code></p>
+<p>5.If configure fails try –with-webp-dir=<dir> configure: error: jpeglib.h not found.</dir></p>
+<p>解决：</p>
+<p><code>1
+&lt;span style=&quot;color: #ff0000&quot;&gt;# yum install libjpeg libjpeg-devel&lt;/span&gt;</code><br>6.If configure fails try –with-webp-dir=<dir></dir></p>
+<p>checking for jpeg_read_header in -ljpeg… yes</p>
+<p>configure: error: png.h not found.</p>
+<p>解决：</p>
+<p><code>1
+&lt;span style=&quot;color: #ff0000&quot;&gt;# yum install libpng libpng-devel&lt;/span&gt;</code></p>
+<p>7.If configure fails try –with-webp-dir=<dir></dir></p>
+<p>checking for jpeg_read_header in -ljpeg… yes</p>
+<p>checking for png_write_image in -lpng… yes</p>
+<p>If configure fails try –with-xpm-dir=<dir></dir></p>
+<p>configure: error: freetype-config not found.</p>
+<p>解决：</p>
+<p><code>1
+&lt;span style=&quot;color: #ff0000&quot;&gt;# yum install freetype freetype-devel&lt;/span&gt;</code><br>8.configure: error: Unable to locate gmp.h</p>
+<p>解决：</p>
+<p><code>1
+&lt;span style=&quot;color: #ff0000&quot;&gt;# yum install gmp gmp-devel&lt;/span&gt;</code><br>9.configure: error: mcrypt.h not found. Please reinstall libmcrypt.</p>
+<p>解决：</p>
+<p>  <code># yum install libmcrypt libmcrypt-devel</code></p>
+<p>10.configure: error: Please reinstall readline - I cannot find readline.h</p>
+<p>解决：</p>
+<p><code>1
+&lt;span style=&quot;color: #ff0000&quot;&gt;# yum install readline readline-devel&lt;/span&gt;</code><br>11.configure: error: xslt-config not found. Please reinstall the libxslt &gt;= 1.1.0 distribution</p>
+<p>解决：</p>
+<p><code>1
+&lt;span style=&quot;color: #ff0000&quot;&gt;# yum install libxslt libxslt-devel&lt;/span&gt;</code><br>6.编译与安装</p>
+<p><code># make &amp;&amp; make install</code><br>这里要make好久，要耐心一下</p>
+<p> 7.添加 PHP 命令到环境变量</p>
+<p><code># vim /etc/profile</code><br>在末尾加入</p>
+<p><code>PATH=$PATH:/usr/local/php/bin</code></p>
+<p>export PATH</p>
+<p>要使改动立即生效执行</p>
+<p><code># source /etc/profile</code><br>查看环境变量</p>
+<p><code># echo $PATH</code><br>查看php版本</p>
+<p><code># php -v</code><br>8.配置php-fpm</p>
+<p><code># cp php.ini-production /etc/php.ini</code><br><code># cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf</code></p>
+<p><code># cp /usr/local/php/etc/php-fpm.d/www.conf.default /usr/local/php/etc/php-fpm.d/www.conf</code><br><code># cp sapi/fpm/init.d.php-fpm /etc/init.d/php-fpm</code><br><code># chmod +x /etc/init.d/php-fpm</code><br>9.启动php-fpm</p>
+<p><code># /etc/init.d/php-fpm start</code><br>四、配置nginx虚拟机,绑定域名</p>
+<p><code># vim /etc/nginx/conf.d/php7.aaa.com.conf</code><br>这里可以把php7.aaa.com.conf改成自己的域名<br>把下面的内容复制到php7.aaa.com.conf里</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">server&#123;</div><div class="line">    listen 80;</div><div class="line">    server_name  php7.aaa.com;</div><div class="line">    root /var/www/html/php7.aaa.com; # 该项要修改为你准备存放相关网页的路径</div><div class="line">    location / &#123;</div><div class="line">        index  index.php index.html index.htm;</div><div class="line">         #如果请求既不是一个文件，也不是一个目录，则执行一下重写规则</div><div class="line">         if (!-e $request_filename)</div><div class="line">         &#123;</div><div class="line">            #地址作为将参数rewrite到index.php上。</div><div class="line">            rewrite ^/(.*)$ /index.php/$1;</div><div class="line">            #若是子目录则使用下面这句，将subdir改成目录名称即可。</div><div class="line">            #rewrite ^/subdir/(.*)$ /subdir/index.php/$1;</div><div class="line">         &#125;</div><div class="line">    &#125;</div><div class="line">    #proxy the php scripts to php-fpm</div><div class="line">    location ~ \.php &#123;</div><div class="line">            include fastcgi_params;</div><div class="line">            ##pathinfo支持start</div><div class="line">            #定义变量 $path_info ，用于存放pathinfo信息</div><div class="line">            set $path_info &quot;&quot;;</div><div class="line">            #定义变量 $real_script_name，用于存放真实地址</div><div class="line">            set $real_script_name $fastcgi_script_name;</div><div class="line">            #如果地址与引号内的正则表达式匹配</div><div class="line">            if ($fastcgi_script_name ~ &quot;^(.+?\.php)(/.+)$&quot;) &#123;</div><div class="line">                    #将文件地址赋值给变量 $real_script_name</div><div class="line">                    set $real_script_name $1;</div><div class="line">                    #将文件地址后的参数赋值给变量 $path_info</div><div class="line">                    set $path_info $2;</div><div class="line">            &#125;</div><div class="line">            #配置fastcgi的一些参数</div><div class="line">            fastcgi_param SCRIPT_FILENAME $document_root$real_script_name;</div><div class="line">            fastcgi_param SCRIPT_NAME $real_script_name;</div><div class="line">            fastcgi_param PATH_INFO $path_info;</div><div class="line">            ###pathinfo支持end</div><div class="line">        fastcgi_intercept_errors on;</div><div class="line">        fastcgi_pass   127.0.0.1:9000;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    location ^~ /data/runtime &#123;</div><div class="line">    return 404;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    location ^~ /application &#123;</div><div class="line">    return 404;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    location ^~ /simplewind &#123;</div><div class="line">    return 404;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>复制代码<br>2.重启nginx</p>
+<p><code># service nginx reload</code><br>3.</p>
+<p><code># vim /var/www/html/php7.aaa.com/index.php</code><br>把下面的代码复制到这个文件 里<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">phpinfo();</div></pre></td></tr></table></figure></p>
+<p>4.查看访问<a href="http://php7.aaa.com" target="_blank" rel="external">http://php7.aaa.com</a></p>
+<p>ok!收工！</p>
 
       
     </div>
@@ -427,6 +540,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/lnmp/" rel="tag"># lnmp</a>
+          
+        </div>
+      
 
       
       
@@ -436,8 +555,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/11/docker/" rel="next" title="Docker坑系列">
-                <i class="fa fa-chevron-left"></i> Docker坑系列
+              <a href="/2017/09/12/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -445,10 +564,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/14/lnmp/" rel="prev" title="搭建lnmp环境 (centos7+nginx+MySQL5.7.9+PHP7)">
-                搭建lnmp环境 (centos7+nginx+MySQL5.7.9+PHP7) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -500,17 +615,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://tva4.sinaimg.cn/crop.0.0.640.640.180/7392110djw8eld8qhm29zj20hs0hs753.jpg"
@@ -605,22 +711,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
