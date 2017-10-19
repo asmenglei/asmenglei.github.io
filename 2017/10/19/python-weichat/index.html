@@ -96,23 +96,23 @@
 
 
 
-<meta name="description" content="itchat最近研究了一些微信的玩法，我们可以通过网页版的微信微信网页版，扫码登录后去抓包爬取信息，还可以post去发送信息。 然后发现了itchat这个开源项目，作者是@LittleCoder，已经把微信的接口完成了，大大的方便了我们对微信的挖掘，以下的功能也通过itchat来实现。 安装itchat这个库 pip install itchat先来段简单的试用，实现微信的登录，运行下面代码会生成">
+<meta name="description" content="itchat最近研究了一些微信的玩法，我们可以通过网页版的微信微信网页版，扫码登录后去抓包爬取信息，还可以post去发送信息。 然后发现了itchat这个开源项目，作者是@LittleCoder，已经把微信的接口完成了，大大的方便了我们对微信的挖掘，以下的功能也通过itchat来实现。 安装itchat这个库 pip install itchat">
 <meta name="keywords" content="Python,Wechat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python VS Wechat 可以这么玩">
 <meta property="og:url" content="http://yoursite.com/2017/10/19/python-weichat/index.html">
 <meta property="og:site_name" content="Elliot&#39;Blog">
-<meta property="og:description" content="itchat最近研究了一些微信的玩法，我们可以通过网页版的微信微信网页版，扫码登录后去抓包爬取信息，还可以post去发送信息。 然后发现了itchat这个开源项目，作者是@LittleCoder，已经把微信的接口完成了，大大的方便了我们对微信的挖掘，以下的功能也通过itchat来实现。 安装itchat这个库 pip install itchat先来段简单的试用，实现微信的登录，运行下面代码会生成">
+<meta property="og:description" content="itchat最近研究了一些微信的玩法，我们可以通过网页版的微信微信网页版，扫码登录后去抓包爬取信息，还可以post去发送信息。 然后发现了itchat这个开源项目，作者是@LittleCoder，已经把微信的接口完成了，大大的方便了我们对微信的挖掘，以下的功能也通过itchat来实现。 安装itchat这个库 pip install itchat">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/python_wechat1.png">
 <meta property="og:image" content="http://yoursite.com/images/python_wechat2.png">
 <meta property="og:image" content="http://yoursite.com/images/python_wechat3.png">
 <meta property="og:image" content="http://yoursite.com/images/python_wechat4.png">
 <meta property="og:image" content="http://yoursite.com/images/python_wechat5.png">
-<meta property="og:updated_time" content="2017-10-19T06:54:02.404Z">
+<meta property="og:updated_time" content="2017-10-19T07:01:37.895Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python VS Wechat 可以这么玩">
-<meta name="twitter:description" content="itchat最近研究了一些微信的玩法，我们可以通过网页版的微信微信网页版，扫码登录后去抓包爬取信息，还可以post去发送信息。 然后发现了itchat这个开源项目，作者是@LittleCoder，已经把微信的接口完成了，大大的方便了我们对微信的挖掘，以下的功能也通过itchat来实现。 安装itchat这个库 pip install itchat先来段简单的试用，实现微信的登录，运行下面代码会生成">
+<meta name="twitter:description" content="itchat最近研究了一些微信的玩法，我们可以通过网页版的微信微信网页版，扫码登录后去抓包爬取信息，还可以post去发送信息。 然后发现了itchat这个开源项目，作者是@LittleCoder，已经把微信的接口完成了，大大的方便了我们对微信的挖掘，以下的功能也通过itchat来实现。 安装itchat这个库 pip install itchat">
 <meta name="twitter:image" content="http://yoursite.com/images/python_wechat1.png">
 
 
@@ -422,7 +422,9 @@
         <h2 id="itchat"><a href="#itchat" class="headerlink" title="itchat"></a>itchat</h2><p>最近研究了一些微信的玩法，我们可以通过网页版的微信微信网页版，扫码登录后去抓包爬取信息，还可以post去发送信息。</p>
 <p>然后发现了itchat这个开源项目，作者是@LittleCoder，已经把微信的接口完成了，大大的方便了我们对微信的挖掘，以下的功能也通过itchat来实现。</p>
 <p>安装itchat这个库</p>
-<p>pip install itchat<br>先来段简单的试用，实现微信的登录，运行下面代码会生成一个二维码，扫码之后手机端确认登录，就会发送一条信息给‘filehelper’，这个filehelper就是微信上的文件传输助手。</p>
+<p>pip install itchat  </p>
+<a id="more"></a>
+<p>先来段简单的试用，实现微信的登录，运行下面代码会生成一个二维码，扫码之后手机端确认登录，就会发送一条信息给‘filehelper’，这个filehelper就是微信上的文件传输助手。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> itchat</div><div class="line"></div><div class="line"><span class="comment"># 登录</span></div><div class="line">itchat.login()</div><div class="line"><span class="comment"># 发送消息</span></div><div class="line">itchat.send(<span class="string">u'你好'</span>, <span class="string">'filehelper'</span>)</div></pre></td></tr></table></figure>
 <p>除了登录和发送消息我们还可以这么来玩，往下走～</p>
 <h2 id="1-微信好友男女比例"><a href="#1-微信好友男女比例" class="headerlink" title="1. 微信好友男女比例"></a>1. 微信好友男女比例</h2><p>想统计下自己微信里好友的性别比例，当然也是很简单，先获取好友列表，统计列表里性别计数</p>
@@ -459,6 +461,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@itchat.msg_register(['Map', 'Card', 'Note', 'Sharing', 'Picture'])</span></div></pre></td></tr></table></figure>
 <h2 id="4-最后"><a href="#4-最后" class="headerlink" title="4. 最后"></a>4. 最后</h2><p>除了上面这些，还可以做到管理微信群，自动添加好友，还可以加入机器人回复功能，有时间会补上。</p>
 <p>再次感谢itchat作者@LittleCoder</p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=449824579&auto=0&height=66"><br></iframe>
 
       
     </div>
