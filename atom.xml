@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-19T07:42:50.001Z</updated>
+  <updated>2017-10-19T07:43:22.788Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/10/19/python-weichat/"/>
     <id>http://yoursite.com/2017/10/19/python-weichat/</id>
     <published>2017-10-19T02:53:59.000Z</published>
-    <updated>2017-10-19T07:42:50.001Z</updated>
+    <updated>2017-10-19T07:43:22.788Z</updated>
     
     <content type="html"><![CDATA[<h2 id="itchat"><a href="#itchat" class="headerlink" title="itchat"></a>itchat</h2><p>最近研究了一些微信的玩法，我们可以通过网页版的微信微信网页版，扫码登录后去抓包爬取信息，还可以post去发送信息。</p>
 <p>然后发现了itchat这个开源项目，作者是@LittleCoder，已经把微信的接口完成了，大大的方便了我们对微信的挖掘，以下的功能也通过itchat来实现。</p>
@@ -64,7 +64,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@itchat.msg_register(['Map', 'Card', 'Note', 'Sharing', 'Picture'])</span></div></pre></td></tr></table></figure>
 <h2 id="4-最后"><a href="#4-最后" class="headerlink" title="4. 最后"></a>4. 最后</h2><p>除了上面这些，还可以做到管理微信群，自动添加好友，还可以加入机器人回复功能，有时间会补上。</p>
 <p>再次感谢itchat作者@LittleCoder</p>
-<p>#Ps<br>本人使用的Python版本 [Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 18:41:36) [MSC v.1900 64 bit (AMD64)] on win32]<br>在win10环境下坑B的地方使用echart报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">UnicodeDecodeError: &apos;gbk&apos; codec can&apos;t decode byte 0xa4 in position 250: illegal multibyte sequence</div></pre></td></tr></table></figure></p>
+<h2 id="Ps"><a href="#Ps" class="headerlink" title="Ps"></a>Ps</h2><p>本人使用的Python版本 [Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 18:41:36) [MSC v.1900 64 bit (AMD64)] on win32]<br>在win10环境下坑B的地方使用echart报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">UnicodeDecodeError: &apos;gbk&apos; codec can&apos;t decode byte 0xa4 in position 250: illegal multibyte sequence</div></pre></td></tr></table></figure></p>
 <p>参照 <a href="https://github.com/yufeiminds/echarts-python/issues/14" target="_blank" rel="external">https://github.com/yufeiminds/echarts-python/issues/14</a></p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=449824579&auto=0&height=66"><br></iframe>
 ]]></content>
