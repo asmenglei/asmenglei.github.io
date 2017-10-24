@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Elliot&#39;Blog">
 <meta property="og:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-10-24T02:15:02.334Z">
+<meta property="og:updated_time" content="2017-10-24T02:26:43.510Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lanxiao-doc">
 <meta name="twitter:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json">
@@ -1214,137 +1214,169 @@
 <tr>
 <th>字段名</th>
 <th style="text-align:center">说明</th>
-<th>举例</th>
+<th style="text-align:right">举例</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>total</td>
 <td style="text-align:center">总条数</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>id</td>
 <td style="text-align:center">自增ID</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>name</td>
 <td style="text-align:center">约定名字</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>type</td>
 <td style="text-align:center">约定类型 ： 1约定-大家平摊，2宴请 邀约者出分</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>deduct_type</td>
 <td style="text-align:center">迟到扣分方式1,2,3</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>min_person</td>
 <td style="text-align:center">最少人数</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>max_person</td>
 <td style="text-align:center">最多人数</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>invitepeo_num</td>
 <td style="text-align:center">邀请人数（后期可作为发出微信约定人数）</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>accept_num</td>
 <td style="text-align:center">接受约定人数</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>reject_num</td>
 <td style="text-align:center">拒绝人数 （无效）</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>place_remark</td>
 <td style="text-align:center">地点备注</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>gps_remark</td>
 <td style="text-align:center">GPS地图地点描述</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>invitation_time</td>
 <td style="text-align:center">约定时间</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>sign_start_time</td>
 <td style="text-align:center">签到开始时间</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>point</td>
 <td style="text-align:center">开约分数</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>createtime</td>
 <td style="text-align:center">创建时间</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>uid</td>
 <td style="text-align:center">约定发起人UID</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>username</td>
 <td style="text-align:center">约定发起人名字</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>status</td>
 <td style="text-align:center">状态： status=0 离达成 ,status=-2 已结束, status=1 已达成 多种情况 要判断userstatus状态</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>opentype</td>
 <td style="text-align:center">可见类型(公私):0私有 1公有</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>remark</td>
 <td style="text-align:center">约定描述</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>deleted</td>
 <td style="text-align:center">是否删除</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>lon</td>
 <td style="text-align:center">经度</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>lat</td>
 <td style="text-align:center">纬度</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>signed_num</td>
 <td style="text-align:center">签到人数</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>last_confirm_time</td>
 <td style="text-align:center">最后参与时间</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>sncode</td>
 <td style="text-align:center">约定码</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>is_checked</td>
 <td style="text-align:center">是否查看过1是，0否</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>distance</td>
 <td style="text-align:center">距离此约定地址距离*公里</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>countdown</td>
 <td style="text-align:center">倒计时秒</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>userstatus</td>
 <td style="text-align:center">userstatus=2 离结束 userstatus=3 离准时签到 userstatus=1 离签到 userstatus=4 离报名</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>canCancel</td>
 <td style="text-align:center">可否取消（5min内）   1可以取消 0不可以</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>userinfo</td>
@@ -1405,121 +1437,149 @@
 <tr>
 <th>字段名</th>
 <th style="text-align:center">说明</th>
-<th>举例</th>
+<th style="text-align:right">举例</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>id</td>
 <td style="text-align:center">自增ID</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>name</td>
 <td style="text-align:center">约定名字</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>type</td>
 <td style="text-align:center">约定类型 ： 1约定-大家平摊，2宴请 邀约者出分</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>deduct_type</td>
 <td style="text-align:center">迟到扣分方式1,2,3</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>min_person</td>
 <td style="text-align:center">最少人数</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>max_person</td>
 <td style="text-align:center">最多人数</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>invitepeo_num</td>
 <td style="text-align:center">邀请人数（后期可作为发出微信约定人数）</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>accept_num</td>
 <td style="text-align:center">接受约定人数</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>reject_num</td>
 <td style="text-align:center">拒绝人数 （无效）</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>place_remark</td>
 <td style="text-align:center">地点备注</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>gps_remark</td>
 <td style="text-align:center">GPS地图地点描述</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>invitation_time</td>
 <td style="text-align:center">约定时间</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>sign_start_time</td>
 <td style="text-align:center">签到开始时间</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>point</td>
 <td style="text-align:center">开约分数</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>createtime</td>
 <td style="text-align:center">创建时间</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>uid</td>
 <td style="text-align:center">约定发起人UID</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>username</td>
 <td style="text-align:center">约定发起人名字</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>status</td>
 <td style="text-align:center">状态： status=0 离达成 ,status=-2 已结束, status=1 已达成 多种情况 要判断userstatus状态</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>opentype</td>
 <td style="text-align:center">可见类型(公私):0私有 1公有</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>remark</td>
 <td style="text-align:center">约定描述</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>deleted</td>
 <td style="text-align:center">是否删除</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>lon</td>
 <td style="text-align:center">经度</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>lat</td>
 <td style="text-align:center">纬度</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>userstatus</td>
 <td style="text-align:center">userstatus=2 离结束 userstatus=3 离准时签到 userstatus=1 离签到 userstatus=4 离报名</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>signed_num</td>
 <td style="text-align:center">签到人数</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>last_confirm_time</td>
 <td style="text-align:center">最后参与时间</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>sncode</td>
 <td style="text-align:center">约定码</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>inventUserList</td>
 <td style="text-align:center">约定参与者列表</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>userinfo</td>
@@ -1589,46 +1649,57 @@
 <tr>
 <td>total</td>
 <td style="text-align:center">记录条数</td>
+<td></td>
 </tr>
 <tr>
 <td>totalScore</td>
 <td style="text-align:center">总分数</td>
+<td></td>
 </tr>
 <tr>
 <td>id</td>
 <td style="text-align:center">自增ID</td>
+<td></td>
 </tr>
 <tr>
 <td>userid</td>
 <td style="text-align:center">用户ID</td>
+<td></td>
 </tr>
 <tr>
 <td>createtime</td>
 <td style="text-align:center">创建时间</td>
+<td></td>
 </tr>
 <tr>
 <td>score</td>
 <td style="text-align:center">分数变动</td>
+<td></td>
 </tr>
 <tr>
 <td>status</td>
 <td style="text-align:center">状态： 0待处理  1领取</td>
+<td></td>
 </tr>
 <tr>
 <td>type</td>
 <td style="text-align:center">日志类别  10约定</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_id</td>
 <td style="text-align:center">对应实体ID</td>
+<td></td>
 </tr>
 <tr>
 <td>addsub</td>
 <td style="text-align:center">1加分  2减分</td>
+<td></td>
 </tr>
 <tr>
 <td>updatetime</td>
 <td style="text-align:center">更新时间</td>
+<td></td>
 </tr>
 <tr>
 <td>remark</td>
@@ -1674,30 +1745,37 @@
 <tr>
 <td>id</td>
 <td style="text-align:center">自增ID</td>
+<td></td>
 </tr>
 <tr>
 <td>name</td>
 <td style="text-align:center">充值卡名字</td>
+<td></td>
 </tr>
 <tr>
 <td>status</td>
 <td style="text-align:center">状态 1 正常 -1删除</td>
+<td></td>
 </tr>
 <tr>
 <td>createtime</td>
 <td style="text-align:center">创建时间</td>
+<td></td>
 </tr>
 <tr>
 <td>score</td>
 <td style="text-align:center">等价积分</td>
+<td></td>
 </tr>
 <tr>
 <td>type</td>
 <td style="text-align:center">可购买次数 0 单次 1多次</td>
+<td></td>
 </tr>
 <tr>
 <td>price</td>
 <td style="text-align:center">约定描述</td>
+<td></td>
 </tr>
 <tr>
 <td>userstatus</td>
@@ -1749,158 +1827,197 @@
 <tr>
 <td>id</td>
 <td style="text-align:center">自增ID</td>
+<td></td>
 </tr>
 <tr>
 <td>username</td>
 <td style="text-align:center">用户名字</td>
+<td></td>
 </tr>
 <tr>
 <td>passwd</td>
 <td style="text-align:center">密码MD5</td>
+<td></td>
 </tr>
 <tr>
 <td>status</td>
 <td style="text-align:center">状态 1 正常 -1删除 -2禁止登陆</td>
+<td></td>
 </tr>
 <tr>
 <td>descr</td>
 <td style="text-align:center">描述</td>
+<td></td>
 </tr>
 <tr>
 <td>tel</td>
 <td style="text-align:center">手机号码</td>
+<td></td>
 </tr>
 <tr>
 <td>email</td>
 <td style="text-align:center">邮箱号码</td>
+<td></td>
 </tr>
 <tr>
 <td>sex</td>
 <td style="text-align:center">姓别 1 男  2女 0未知</td>
+<td></td>
 </tr>
 <tr>
 <td>createtime</td>
 <td style="text-align:center">注册时间</td>
+<td></td>
 </tr>
 <tr>
 <td>disablesendmsg</td>
 <td style="text-align:center">是否禁言 0正常 1禁言</td>
+<td></td>
 </tr>
 <tr>
 <td>usertype</td>
 <td style="text-align:center">用户类型 0 注册用户  1默认用户</td>
+<td></td>
 </tr>
 <tr>
 <td>provice_sid</td>
 <td style="text-align:center">省编号</td>
+<td></td>
 </tr>
 <tr>
 <td>city_sid</td>
 <td style="text-align:center">市编号</td>
+<td></td>
 </tr>
 <tr>
 <td>provice_name</td>
 <td style="text-align:center">省份名字</td>
+<td></td>
 </tr>
 <tr>
 <td>city_name</td>
 <td style="text-align:center">市名字</td>
+<td></td>
 </tr>
 <tr>
 <td>score</td>
 <td style="text-align:center">积分</td>
+<td></td>
 </tr>
 <tr>
 <td>usernamelock</td>
 <td style="text-align:center">名字锁定 1锁定(可修改名字)  0未锁定</td>
+<td></td>
 </tr>
 <tr>
 <td>invitationcode</td>
 <td style="text-align:center">邀请码</td>
+<td></td>
 </tr>
 <tr>
 <td>picurl</td>
 <td style="text-align:center">头像</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_userid</td>
 <td style="text-align:center">邀请上线UID</td>
+<td></td>
 </tr>
 <tr>
 <td>level</td>
 <td style="text-align:center">等级</td>
+<td></td>
 </tr>
 <tr>
 <td>avatar</td>
 <td style="text-align:center">头像</td>
+<td></td>
 </tr>
 <tr>
 <td>sysavatarid</td>
 <td style="text-align:center">系统随机头像ID</td>
+<td></td>
 </tr>
 <tr>
 <td>lastoptime</td>
 <td style="text-align:center">上次操作时间</td>
+<td></td>
 </tr>
 <tr>
 <td>platform</td>
 <td style="text-align:center">设备平台 1 android 2ios 3window 0未知</td>
+<td></td>
 </tr>
 <tr>
 <td>updatetime</td>
 <td style="text-align:center">更新时间</td>
+<td></td>
 </tr>
 <tr>
 <td>device_tokens</td>
 <td style="text-align:center">设备TOKEN</td>
+<td></td>
 </tr>
 <tr>
 <td>subscription_push</td>
 <td style="text-align:center">订阅开关</td>
+<td></td>
 </tr>
 <tr>
 <td>receivepoints_push</td>
 <td style="text-align:center">领取积分</td>
+<td></td>
 </tr>
 <tr>
 <td>sys_push</td>
 <td style="text-align:center">系统通知</td>
+<td></td>
 </tr>
 <tr>
 <td>invter_push</td>
 <td style="text-align:center">推荐人接受通知</td>
+<td></td>
 </tr>
 <tr>
 <td>comment_push</td>
 <td style="text-align:center">帖子被评论通知</td>
+<td></td>
 </tr>
 <tr>
 <td>type</td>
 <td style="text-align:center">是否内部测试户 0否  1是</td>
+<td></td>
 </tr>
 <tr>
 <td>lon</td>
 <td style="text-align:center">经度</td>
+<td></td>
 </tr>
 <tr>
 <td>lat</td>
 <td style="text-align:center">纬度</td>
+<td></td>
 </tr>
 <tr>
 <td>isautobefriend</td>
 <td style="text-align:center">是否自动成为好友</td>
+<td></td>
 </tr>
 <tr>
 <td>openid</td>
 <td style="text-align:center">微信userid</td>
+<td></td>
 </tr>
 <tr>
 <td>headimgurl</td>
 <td style="text-align:center">微信头像URL</td>
+<td></td>
 </tr>
 <tr>
 <td>access_token</td>
 <td style="text-align:center">微信登录验证码</td>
+<td></td>
 </tr>
 <tr>
 <td>loan</td>
@@ -1952,158 +2069,197 @@
 <tr>
 <td>id</td>
 <td style="text-align:center">自增ID</td>
+<td></td>
 </tr>
 <tr>
 <td>username</td>
 <td style="text-align:center">用户名字</td>
+<td></td>
 </tr>
 <tr>
 <td>passwd</td>
 <td style="text-align:center">密码MD5</td>
+<td></td>
 </tr>
 <tr>
 <td>status</td>
 <td style="text-align:center">状态 1 正常 -1删除 -2禁止登陆</td>
+<td></td>
 </tr>
 <tr>
 <td>descr</td>
 <td style="text-align:center">描述</td>
+<td></td>
 </tr>
 <tr>
 <td>tel</td>
 <td style="text-align:center">手机号码</td>
+<td></td>
 </tr>
 <tr>
 <td>email</td>
 <td style="text-align:center">邮箱号码</td>
+<td></td>
 </tr>
 <tr>
 <td>sex</td>
 <td style="text-align:center">姓别 1 男  2女 0未知</td>
+<td></td>
 </tr>
 <tr>
 <td>createtime</td>
 <td style="text-align:center">注册时间</td>
+<td></td>
 </tr>
 <tr>
 <td>disablesendmsg</td>
 <td style="text-align:center">是否禁言 0正常 1禁言</td>
+<td></td>
 </tr>
 <tr>
 <td>usertype</td>
 <td style="text-align:center">用户类型 0 注册用户  1默认用户</td>
+<td></td>
 </tr>
 <tr>
 <td>provice_sid</td>
 <td style="text-align:center">省编号</td>
+<td></td>
 </tr>
 <tr>
 <td>city_sid</td>
 <td style="text-align:center">市编号</td>
+<td></td>
 </tr>
 <tr>
 <td>provice_name</td>
 <td style="text-align:center">省份名字</td>
+<td></td>
 </tr>
 <tr>
 <td>city_name</td>
 <td style="text-align:center">市名字</td>
+<td></td>
 </tr>
 <tr>
 <td>score</td>
 <td style="text-align:center">积分</td>
+<td></td>
 </tr>
 <tr>
 <td>usernamelock</td>
 <td style="text-align:center">名字锁定 1锁定(可修改名字)  0未锁定</td>
+<td></td>
 </tr>
 <tr>
 <td>invitationcode</td>
 <td style="text-align:center">邀请码</td>
+<td></td>
 </tr>
 <tr>
 <td>picurl</td>
 <td style="text-align:center">头像</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_userid</td>
 <td style="text-align:center">邀请上线UID</td>
+<td></td>
 </tr>
 <tr>
 <td>level</td>
 <td style="text-align:center">等级</td>
+<td></td>
 </tr>
 <tr>
 <td>avatar</td>
 <td style="text-align:center">头像</td>
+<td></td>
 </tr>
 <tr>
 <td>sysavatarid</td>
 <td style="text-align:center">系统随机头像ID</td>
+<td></td>
 </tr>
 <tr>
 <td>lastoptime</td>
 <td style="text-align:center">上次操作时间</td>
+<td></td>
 </tr>
 <tr>
 <td>platform</td>
 <td style="text-align:center">设备平台 1 android 2ios 3window 0未知</td>
+<td></td>
 </tr>
 <tr>
 <td>updatetime</td>
 <td style="text-align:center">更新时间</td>
+<td></td>
 </tr>
 <tr>
 <td>device_tokens</td>
 <td style="text-align:center">设备TOKEN</td>
+<td></td>
 </tr>
 <tr>
 <td>subscription_push</td>
 <td style="text-align:center">订阅开关</td>
+<td></td>
 </tr>
 <tr>
 <td>receivepoints_push</td>
 <td style="text-align:center">领取积分</td>
+<td></td>
 </tr>
 <tr>
 <td>sys_push</td>
 <td style="text-align:center">系统通知</td>
+<td></td>
 </tr>
 <tr>
 <td>invter_push</td>
 <td style="text-align:center">推荐人接受通知</td>
+<td></td>
 </tr>
 <tr>
 <td>comment_push</td>
 <td style="text-align:center">帖子被评论通知</td>
+<td></td>
 </tr>
 <tr>
 <td>type</td>
 <td style="text-align:center">是否内部测试户 0否  1是</td>
+<td></td>
 </tr>
 <tr>
 <td>lon</td>
 <td style="text-align:center">经度</td>
+<td></td>
 </tr>
 <tr>
 <td>lat</td>
 <td style="text-align:center">纬度</td>
+<td></td>
 </tr>
 <tr>
 <td>isautobefriend</td>
 <td style="text-align:center">是否自动成为好友</td>
+<td></td>
 </tr>
 <tr>
 <td>openid</td>
 <td style="text-align:center">微信userid</td>
+<td></td>
 </tr>
 <tr>
 <td>headimgurl</td>
 <td style="text-align:center">微信头像URL</td>
+<td></td>
 </tr>
 <tr>
 <td>access_token</td>
 <td style="text-align:center">微信登录验证码</td>
+<td></td>
 </tr>
 <tr>
 <td>loan</td>
@@ -2166,42 +2322,52 @@
 <tr>
 <td>ref_id</td>
 <td style="text-align:center">自增ID</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_invitationid</td>
 <td style="text-align:center">关联的约定ID</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_uid</td>
 <td style="text-align:center">约定参与者ID</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_username</td>
 <td style="text-align:center">约定参与者名字</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_status</td>
 <td style="text-align:center">是否成约  0待确认 1接受 <del>-1拒绝</del>  <del>-2超时未确认</del></td>
+<td></td>
 </tr>
 <tr>
 <td>ref_createtime</td>
 <td style="text-align:center">关系创建时间</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_updatetime</td>
 <td style="text-align:center">关系人签约时间</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_sign</td>
 <td style="text-align:center">1已经签到  0 未签到</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_signtime</td>
 <td style="text-align:center">签到时间</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_auto</td>
 <td style="text-align:center"><del>是否是主动报名1是 0否 发起约定是拉进来的人是0 陌生人主动参与是1</del></td>
+<td></td>
 </tr>
 <tr>
 <td>ref_checktime</td>
@@ -2259,206 +2425,257 @@
 <tr>
 <td>ref_id</td>
 <td style="text-align:center">自增ID</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_invitationid</td>
 <td style="text-align:center">关联的约定ID</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_uid</td>
 <td style="text-align:center">约定参与者ID</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_username</td>
 <td style="text-align:center">约定参与者名字</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_status</td>
 <td style="text-align:center">是否成约  0待确认 1接受 <del>-1拒绝</del>  <del>-2超时未确认</del></td>
+<td></td>
 </tr>
 <tr>
 <td>ref_createtime</td>
 <td style="text-align:center">关系创建时间即参与时间</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_updatetime</td>
 <td style="text-align:center"><del>记录更新时间</del></td>
+<td></td>
 </tr>
 <tr>
 <td>ref_sign</td>
 <td style="text-align:center">1已经签到  0 未签到</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_signtime</td>
 <td style="text-align:center">签到时间</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_auto</td>
 <td style="text-align:center"><del>是否是主动报名1是 0否 发起约定是拉进来的人是0 陌生人主动参与是1</del></td>
+<td></td>
 </tr>
 <tr>
 <td>ref_checktime</td>
 <td style="text-align:center">参与者查看此约定时间</td>
+<td></td>
 </tr>
 <tr>
 <td>id</td>
 <td style="text-align:center">自增ID</td>
+<td></td>
 </tr>
 <tr>
 <td>username</td>
 <td style="text-align:center">用户名字</td>
+<td></td>
 </tr>
 <tr>
 <td>passwd</td>
 <td style="text-align:center">密码MD5</td>
+<td></td>
 </tr>
 <tr>
 <td>status</td>
 <td style="text-align:center">状态 1 正常 -1删除 -2禁止登陆</td>
+<td></td>
 </tr>
 <tr>
 <td>descr</td>
 <td style="text-align:center">描述</td>
+<td></td>
 </tr>
 <tr>
 <td>tel</td>
 <td style="text-align:center">手机号码</td>
+<td></td>
 </tr>
 <tr>
 <td>email</td>
 <td style="text-align:center">邮箱号码</td>
+<td></td>
 </tr>
 <tr>
 <td>sex</td>
 <td style="text-align:center">姓别 1 男  2女 0未知</td>
+<td></td>
 </tr>
 <tr>
 <td>createtime</td>
 <td style="text-align:center">注册时间</td>
+<td></td>
 </tr>
 <tr>
 <td>disablesendmsg</td>
 <td style="text-align:center">是否禁言 0正常 1禁言</td>
+<td></td>
 </tr>
 <tr>
 <td>usertype</td>
 <td style="text-align:center">用户类型 0 注册用户  1默认用户</td>
+<td></td>
 </tr>
 <tr>
 <td>provice_sid</td>
 <td style="text-align:center">省编号</td>
+<td></td>
 </tr>
 <tr>
 <td>city_sid</td>
 <td style="text-align:center">市编号</td>
+<td></td>
 </tr>
 <tr>
 <td>provice_name</td>
 <td style="text-align:center">省份名字</td>
+<td></td>
 </tr>
 <tr>
 <td>city_name</td>
 <td style="text-align:center">市名字</td>
+<td></td>
 </tr>
 <tr>
 <td>score</td>
 <td style="text-align:center">积分</td>
+<td></td>
 </tr>
 <tr>
 <td>usernamelock</td>
 <td style="text-align:center">名字锁定 1锁定(可修改名字)  0未锁定</td>
+<td></td>
 </tr>
 <tr>
 <td>invitationcode</td>
 <td style="text-align:center">邀请码</td>
+<td></td>
 </tr>
 <tr>
 <td>picurl</td>
 <td style="text-align:center">头像</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_userid</td>
 <td style="text-align:center">邀请上线UID</td>
+<td></td>
 </tr>
 <tr>
 <td>level</td>
 <td style="text-align:center">等级</td>
+<td></td>
 </tr>
 <tr>
 <td>avatar</td>
 <td style="text-align:center">头像</td>
+<td></td>
 </tr>
 <tr>
 <td>sysavatarid</td>
 <td style="text-align:center">系统随机头像ID</td>
+<td></td>
 </tr>
 <tr>
 <td>lastoptime</td>
 <td style="text-align:center">上次操作时间</td>
+<td></td>
 </tr>
 <tr>
 <td>platform</td>
 <td style="text-align:center">设备平台 1 android 2ios 3window 0未知</td>
+<td></td>
 </tr>
 <tr>
 <td>updatetime</td>
 <td style="text-align:center">更新时间</td>
+<td></td>
 </tr>
 <tr>
 <td>device_tokens</td>
 <td style="text-align:center">设备TOKEN</td>
+<td></td>
 </tr>
 <tr>
 <td>subscription_push</td>
 <td style="text-align:center">订阅开关</td>
+<td></td>
 </tr>
 <tr>
 <td>receivepoints_push</td>
 <td style="text-align:center">领取积分</td>
+<td></td>
 </tr>
 <tr>
 <td>sys_push</td>
 <td style="text-align:center">系统通知</td>
+<td></td>
 </tr>
 <tr>
 <td>invter_push</td>
 <td style="text-align:center">推荐人接受通知</td>
+<td></td>
 </tr>
 <tr>
 <td>comment_push</td>
 <td style="text-align:center">帖子被评论通知</td>
+<td></td>
 </tr>
 <tr>
 <td>type</td>
 <td style="text-align:center">是否内部测试户 0否  1是</td>
+<td></td>
 </tr>
 <tr>
 <td>lon</td>
 <td style="text-align:center">经度</td>
+<td></td>
 </tr>
 <tr>
 <td>lat</td>
 <td style="text-align:center">纬度</td>
+<td></td>
 </tr>
 <tr>
 <td>isautobefriend</td>
 <td style="text-align:center">是否自动成为好友</td>
+<td></td>
 </tr>
 <tr>
 <td>openid</td>
 <td style="text-align:center">微信userid</td>
+<td></td>
 </tr>
 <tr>
 <td>headimgurl</td>
 <td style="text-align:center">微信头像URL</td>
+<td></td>
 </tr>
 <tr>
 <td>access_token</td>
 <td style="text-align:center">微信登录验证码</td>
+<td></td>
 </tr>
 <tr>
 <td>loan</td>
 <td style="text-align:center">贷款负债金额</td>
+<td></td>
 </tr>
 <tr>
 <td>scoreLog</td>
@@ -2524,30 +2741,37 @@
 <tr>
 <td>id</td>
 <td style="text-align:center">自增ID</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_id</td>
 <td style="text-align:center">关联的约定ID</td>
+<td></td>
 </tr>
 <tr>
 <td>content</td>
 <td style="text-align:center">约定参与者ID</td>
+<td></td>
 </tr>
 <tr>
 <td>status</td>
 <td style="text-align:center">状态 1正常 -1删除 -2被屏蔽</td>
+<td></td>
 </tr>
 <tr>
 <td>createtime</td>
 <td style="text-align:center">创建时间</td>
+<td></td>
 </tr>
 <tr>
 <td>uid</td>
 <td style="text-align:center">评论者ID</td>
+<td></td>
 </tr>
 <tr>
 <td>username</td>
 <td style="text-align:center">评论者名字</td>
+<td></td>
 </tr>
 <tr>
 <td>usersysavatarid</td>
@@ -2605,38 +2829,47 @@
 <tr>
 <td>id</td>
 <td style="text-align:center">自增ID</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_id</td>
 <td style="text-align:center">关联的约定ID</td>
+<td></td>
 </tr>
 <tr>
 <td>content</td>
 <td style="text-align:center">约定参与者ID</td>
+<td></td>
 </tr>
 <tr>
 <td>status</td>
 <td style="text-align:center">状态 1正常 -1删除 -2被屏蔽</td>
+<td></td>
 </tr>
 <tr>
 <td>createtime</td>
 <td style="text-align:center">创建时间</td>
+<td></td>
 </tr>
 <tr>
 <td>uid</td>
 <td style="text-align:center">评论者ID</td>
+<td></td>
 </tr>
 <tr>
 <td>username</td>
 <td style="text-align:center">评论者名字</td>
+<td></td>
 </tr>
 <tr>
 <td>usersysavatarid</td>
 <td style="text-align:center"><del>评论者头像ID</del></td>
+<td></td>
 </tr>
 <tr>
 <td>userinfo</td>
 <td style="text-align:center">评论者信息</td>
+<td></td>
 </tr>
 <tr>
 <td>floornum</td>
@@ -2682,6 +2915,7 @@
 <tr>
 <td>version</td>
 <td style="text-align:center">版本</td>
+<td></td>
 </tr>
 <tr>
 <td>url</td>
@@ -2733,158 +2967,197 @@
 <tr>
 <td>id</td>
 <td style="text-align:center">自增ID</td>
+<td></td>
 </tr>
 <tr>
 <td>username</td>
 <td style="text-align:center">用户名字</td>
+<td></td>
 </tr>
 <tr>
 <td>passwd</td>
 <td style="text-align:center">密码MD5</td>
+<td></td>
 </tr>
 <tr>
 <td>status</td>
 <td style="text-align:center">状态 1 正常 -1删除 -2禁止登陆</td>
+<td></td>
 </tr>
 <tr>
 <td>descr</td>
 <td style="text-align:center">描述</td>
+<td></td>
 </tr>
 <tr>
 <td>tel</td>
 <td style="text-align:center">手机号码</td>
+<td></td>
 </tr>
 <tr>
 <td>email</td>
 <td style="text-align:center">邮箱号码</td>
+<td></td>
 </tr>
 <tr>
 <td>sex</td>
 <td style="text-align:center">姓别 1 男  2女 0未知</td>
+<td></td>
 </tr>
 <tr>
 <td>createtime</td>
 <td style="text-align:center">注册时间</td>
+<td></td>
 </tr>
 <tr>
 <td>disablesendmsg</td>
 <td style="text-align:center">是否禁言 0正常 1禁言</td>
+<td></td>
 </tr>
 <tr>
 <td>usertype</td>
 <td style="text-align:center">用户类型 0 注册用户  1默认用户</td>
+<td></td>
 </tr>
 <tr>
 <td>provice_sid</td>
 <td style="text-align:center">省编号</td>
+<td></td>
 </tr>
 <tr>
 <td>city_sid</td>
 <td style="text-align:center">市编号</td>
+<td></td>
 </tr>
 <tr>
 <td>provice_name</td>
 <td style="text-align:center">省份名字</td>
+<td></td>
 </tr>
 <tr>
 <td>city_name</td>
 <td style="text-align:center">市名字</td>
+<td></td>
 </tr>
 <tr>
 <td>score</td>
 <td style="text-align:center">积分</td>
+<td></td>
 </tr>
 <tr>
 <td>usernamelock</td>
 <td style="text-align:center">名字锁定 1锁定(可修改名字)  0未锁定</td>
+<td></td>
 </tr>
 <tr>
 <td>invitationcode</td>
 <td style="text-align:center">邀请码</td>
+<td></td>
 </tr>
 <tr>
 <td>picurl</td>
 <td style="text-align:center">头像</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_userid</td>
 <td style="text-align:center">邀请上线UID</td>
+<td></td>
 </tr>
 <tr>
 <td>level</td>
 <td style="text-align:center">等级</td>
+<td></td>
 </tr>
 <tr>
 <td>avatar</td>
 <td style="text-align:center">头像</td>
+<td></td>
 </tr>
 <tr>
 <td>sysavatarid</td>
 <td style="text-align:center">系统随机头像ID</td>
+<td></td>
 </tr>
 <tr>
 <td>lastoptime</td>
 <td style="text-align:center">上次操作时间</td>
+<td></td>
 </tr>
 <tr>
 <td>platform</td>
 <td style="text-align:center">设备平台 1 android 2ios 3window 0未知</td>
+<td></td>
 </tr>
 <tr>
 <td>updatetime</td>
 <td style="text-align:center">更新时间</td>
+<td></td>
 </tr>
 <tr>
 <td>device_tokens</td>
 <td style="text-align:center">设备TOKEN</td>
+<td></td>
 </tr>
 <tr>
 <td>subscription_push</td>
 <td style="text-align:center">订阅开关</td>
+<td></td>
 </tr>
 <tr>
 <td>receivepoints_push</td>
 <td style="text-align:center">领取积分</td>
+<td></td>
 </tr>
 <tr>
 <td>sys_push</td>
 <td style="text-align:center">系统通知</td>
+<td></td>
 </tr>
 <tr>
 <td>invter_push</td>
 <td style="text-align:center">推荐人接受通知</td>
+<td></td>
 </tr>
 <tr>
 <td>comment_push</td>
 <td style="text-align:center">帖子被评论通知</td>
+<td></td>
 </tr>
 <tr>
 <td>type</td>
 <td style="text-align:center">是否内部测试户 0否  1是</td>
+<td></td>
 </tr>
 <tr>
 <td>lon</td>
 <td style="text-align:center">经度</td>
+<td></td>
 </tr>
 <tr>
 <td>lat</td>
 <td style="text-align:center">纬度</td>
+<td></td>
 </tr>
 <tr>
 <td>isautobefriend</td>
 <td style="text-align:center">是否自动成为好友</td>
+<td></td>
 </tr>
 <tr>
 <td>openid</td>
 <td style="text-align:center">微信userid</td>
+<td></td>
 </tr>
 <tr>
 <td>headimgurl</td>
 <td style="text-align:center">微信头像URL</td>
+<td></td>
 </tr>
 <tr>
 <td>access_token</td>
 <td style="text-align:center">微信登录验证码</td>
+<td></td>
 </tr>
 <tr>
 <td>loan</td>
@@ -2966,158 +3239,197 @@
 <tr>
 <td>id</td>
 <td style="text-align:center">自增ID</td>
+<td></td>
 </tr>
 <tr>
 <td>username</td>
 <td style="text-align:center">用户名字</td>
+<td></td>
 </tr>
 <tr>
 <td>passwd</td>
 <td style="text-align:center">密码MD5</td>
+<td></td>
 </tr>
 <tr>
 <td>status</td>
 <td style="text-align:center">状态 1 正常 -1删除 -2禁止登陆</td>
+<td></td>
 </tr>
 <tr>
 <td>descr</td>
 <td style="text-align:center">描述</td>
+<td></td>
 </tr>
 <tr>
 <td>tel</td>
 <td style="text-align:center">手机号码</td>
+<td></td>
 </tr>
 <tr>
 <td>email</td>
 <td style="text-align:center">邮箱号码</td>
+<td></td>
 </tr>
 <tr>
 <td>sex</td>
 <td style="text-align:center">姓别 1 男  2女 0未知</td>
+<td></td>
 </tr>
 <tr>
 <td>createtime</td>
 <td style="text-align:center">注册时间</td>
+<td></td>
 </tr>
 <tr>
 <td>disablesendmsg</td>
 <td style="text-align:center">是否禁言 0正常 1禁言</td>
+<td></td>
 </tr>
 <tr>
 <td>usertype</td>
 <td style="text-align:center">用户类型 0 注册用户  1默认用户</td>
+<td></td>
 </tr>
 <tr>
 <td>provice_sid</td>
 <td style="text-align:center">省编号</td>
+<td></td>
 </tr>
 <tr>
 <td>city_sid</td>
 <td style="text-align:center">市编号</td>
+<td></td>
 </tr>
 <tr>
 <td>provice_name</td>
 <td style="text-align:center">省份名字</td>
+<td></td>
 </tr>
 <tr>
 <td>city_name</td>
 <td style="text-align:center">市名字</td>
+<td></td>
 </tr>
 <tr>
 <td>score</td>
 <td style="text-align:center">积分</td>
+<td></td>
 </tr>
 <tr>
 <td>usernamelock</td>
 <td style="text-align:center">名字锁定 1锁定(可修改名字)  0未锁定</td>
+<td></td>
 </tr>
 <tr>
 <td>invitationcode</td>
 <td style="text-align:center">邀请码</td>
+<td></td>
 </tr>
 <tr>
 <td>picurl</td>
 <td style="text-align:center">头像</td>
+<td></td>
 </tr>
 <tr>
 <td>ref_userid</td>
 <td style="text-align:center">邀请上线UID</td>
+<td></td>
 </tr>
 <tr>
 <td>level</td>
 <td style="text-align:center">等级</td>
+<td></td>
 </tr>
 <tr>
 <td>avatar</td>
 <td style="text-align:center">头像</td>
+<td></td>
 </tr>
 <tr>
 <td>sysavatarid</td>
 <td style="text-align:center">系统随机头像ID</td>
+<td></td>
 </tr>
 <tr>
 <td>lastoptime</td>
 <td style="text-align:center">上次操作时间</td>
+<td></td>
 </tr>
 <tr>
 <td>platform</td>
 <td style="text-align:center">设备平台 1 android 2ios 3window 0未知</td>
+<td></td>
 </tr>
 <tr>
 <td>updatetime</td>
 <td style="text-align:center">更新时间</td>
+<td></td>
 </tr>
 <tr>
 <td>device_tokens</td>
 <td style="text-align:center">设备TOKEN</td>
+<td></td>
 </tr>
 <tr>
 <td>subscription_push</td>
 <td style="text-align:center">订阅开关</td>
+<td></td>
 </tr>
 <tr>
 <td>receivepoints_push</td>
 <td style="text-align:center">领取积分</td>
+<td></td>
 </tr>
 <tr>
 <td>sys_push</td>
 <td style="text-align:center">系统通知</td>
+<td></td>
 </tr>
 <tr>
 <td>invter_push</td>
 <td style="text-align:center">推荐人接受通知</td>
+<td></td>
 </tr>
 <tr>
 <td>comment_push</td>
 <td style="text-align:center">帖子被评论通知</td>
+<td></td>
 </tr>
 <tr>
 <td>type</td>
 <td style="text-align:center">是否内部测试户 0否  1是</td>
+<td></td>
 </tr>
 <tr>
 <td>lon</td>
 <td style="text-align:center">经度</td>
+<td></td>
 </tr>
 <tr>
 <td>lat</td>
 <td style="text-align:center">纬度</td>
+<td></td>
 </tr>
 <tr>
 <td>isautobefriend</td>
 <td style="text-align:center">是否自动成为好友</td>
+<td></td>
 </tr>
 <tr>
 <td>openid</td>
 <td style="text-align:center">微信userid</td>
+<td></td>
 </tr>
 <tr>
 <td>headimgurl</td>
 <td style="text-align:center">微信头像URL</td>
+<td></td>
 </tr>
 <tr>
 <td>access_token</td>
 <td style="text-align:center">微信登录验证码</td>
+<td></td>
 </tr>
 <tr>
 <td>loan</td>
@@ -3228,6 +3540,7 @@
 <td>username</td>
 <td style="text-align:center">Y</td>
 <td>用户名字</td>
+<td></td>
 </tr>
 <tr>
 <td>createtime</td>
@@ -3325,20 +3638,17 @@
 <tbody>
 <tr>
 <td>errorCode</td>
-<td style="text-align:center">Y</td>
-<td>识别码</td>
+<td style="text-align:center">识别码</td>
 <td>183</td>
 </tr>
 <tr>
 <td>errorMsg</td>
-<td style="text-align:center">Y</td>
-<td>错误信息</td>
+<td style="text-align:center">错误信息</td>
 <td>1</td>
 </tr>
 <tr>
 <td>responseData</td>
-<td style="text-align:center">Y</td>
-<td>返回信息主体</td>
+<td style="text-align:center">返回信息主体</td>
 </tr>
 </tbody>
 </table>
