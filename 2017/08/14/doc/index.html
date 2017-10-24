@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Elliot&#39;Blog">
 <meta property="og:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-11T04:26:13.573Z">
+<meta property="og:updated_time" content="2017-10-24T02:15:02.334Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lanxiao-doc">
 <meta name="twitter:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json">
@@ -1292,7 +1292,7 @@
 </tr>
 <tr>
 <td>status</td>
-<td style="text-align:center">状态： 0待确认 1成功 -1失败/用户删除 -2结束</td>
+<td style="text-align:center">状态： status=0 离达成 ,status=-2 已结束, status=1 已达成 多种情况 要判断userstatus状态</td>
 </tr>
 <tr>
 <td>opentype</td>
@@ -1340,7 +1340,7 @@
 </tr>
 <tr>
 <td>userstatus</td>
-<td style="text-align:center">1离签到 2离结束 3准时签到 4报名</td>
+<td style="text-align:center">userstatus=2 离结束 userstatus=3 离准时签到 userstatus=1 离签到 userstatus=4 离报名</td>
 </tr>
 <tr>
 <td>canCancel</td>
@@ -1479,7 +1479,7 @@
 </tr>
 <tr>
 <td>status</td>
-<td style="text-align:center">状态： 0待确认 1成功 -1失败/用户删除 -2结束</td>
+<td style="text-align:center">状态： status=0 离达成 ,status=-2 已结束, status=1 已达成 多种情况 要判断userstatus状态</td>
 </tr>
 <tr>
 <td>opentype</td>
@@ -1503,7 +1503,7 @@
 </tr>
 <tr>
 <td>userstatus</td>
-<td style="text-align:center">1离签到 2离结束 3准时签到 4报名</td>
+<td style="text-align:center">userstatus=2 离结束 userstatus=3 离准时签到 userstatus=1 离签到 userstatus=4 离报名</td>
 </tr>
 <tr>
 <td>signed_num</td>

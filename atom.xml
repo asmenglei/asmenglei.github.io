@@ -380,7 +380,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2017-09-11T04:26:13.573Z</updated>
+    <updated>2017-10-24T02:15:02.334Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -1261,7 +1261,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tr>
 <tr>
 <td>status</td>
-<td style="text-align:center">状态： 0待确认 1成功 -1失败/用户删除 -2结束</td>
+<td style="text-align:center">状态： status=0 离达成 ,status=-2 已结束, status=1 已达成 多种情况 要判断userstatus状态</td>
 </tr>
 <tr>
 <td>opentype</td>
@@ -1309,7 +1309,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tr>
 <tr>
 <td>userstatus</td>
-<td style="text-align:center">1离签到 2离结束 3准时签到 4报名</td>
+<td style="text-align:center">userstatus=2 离结束 userstatus=3 离准时签到 userstatus=1 离签到 userstatus=4 离报名</td>
 </tr>
 <tr>
 <td>canCancel</td>
@@ -1448,7 +1448,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tr>
 <tr>
 <td>status</td>
-<td style="text-align:center">状态： 0待确认 1成功 -1失败/用户删除 -2结束</td>
+<td style="text-align:center">状态： status=0 离达成 ,status=-2 已结束, status=1 已达成 多种情况 要判断userstatus状态</td>
 </tr>
 <tr>
 <td>opentype</td>
@@ -1472,7 +1472,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tr>
 <tr>
 <td>userstatus</td>
-<td style="text-align:center">1离签到 2离结束 3准时签到 4报名</td>
+<td style="text-align:center">userstatus=2 离结束 userstatus=3 离准时签到 userstatus=1 离签到 userstatus=4 离报名</td>
 </tr>
 <tr>
 <td>signed_num</td>
