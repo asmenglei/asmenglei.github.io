@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Elliot&#39;Blog">
 <meta property="og:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-12-06T06:49:48.122Z">
+<meta property="og:updated_time" content="2017-12-11T06:13:00.176Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lanxiao-doc">
 <meta name="twitter:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json">
@@ -3781,6 +3781,53 @@
 </tbody>
 </table>
 <p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"errorCode"</span>: <span class="number">0</span>,</div><div class="line">        <span class="attr">"errorMsg"</span>: <span class="string">"success"</span>,</div><div class="line">        <span class="attr">"responseData"</span>: &#123;</div><div class="line">            <span class="attr">"notify_url"</span>: <span class="string">"http://www.lanxiao.com/index.php/api/restful/wxOrderNotify"</span>,</div><div class="line">            <span class="attr">"app_response"</span>: &#123;</div><div class="line">                <span class="attr">"appid"</span>: <span class="string">"wx426b3015555a46be"</span>,</div><div class="line">                <span class="attr">"noncestr"</span>: <span class="string">"mFR2iNSEvFzZGCp94voInFXNOV5Y7Eel"</span>,</div><div class="line">                <span class="attr">"package"</span>: <span class="string">"Sign=WXPay"</span>,</div><div class="line">                <span class="attr">"partnerid"</span>: <span class="string">"1900009851"</span>,</div><div class="line">                <span class="attr">"prepayid"</span>: <span class="string">"wx2017071114145319a1f965550432316187"</span>,</div><div class="line">                <span class="attr">"timestamp"</span>: <span class="number">1499753649</span>,</div><div class="line">                <span class="attr">"sign"</span>: <span class="string">"847A9DE4F32000402C3686EA73E97CC4"</span>,</div><div class="line">                <span class="attr">"packagestr"</span>: <span class="string">"Sign=WXPay"</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="计算手续费"><a href="#计算手续费" class="headerlink" title="计算手续费"></a>计算手续费</h3><ul>
+<li>wxCalcPoundage</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">用户UID</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>point</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">兑换的积分数</td>
+<td style="text-align:right">2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>poundage</td>
+<td style="text-align:center">手续费</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"poundage"</span>: <span class="string">"5"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="发起提现申请"><a href="#发起提现申请" class="headerlink" title="发起提现申请"></a>发起提现申请</h3><ul>
 <li>wxApplyExchange</li>
 <li>请求参数</li>
@@ -3805,6 +3852,12 @@
 <td>point</td>
 <td style="text-align:center">Y</td>
 <td style="text-align:right">兑换的积分数</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>poundage</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">手续费分数</td>
 <td style="text-align:right">2</td>
 </tr>
 </tbody>
@@ -3847,8 +3900,8 @@
 <td>-1 删除  0待审核 1审核通过 2兑换成功</td>
 </tr>
 <tr>
-<td>cardno</td>
-<td style="text-align:center">提现卡号</td>
+<td>poundage</td>
+<td style="text-align:center">手续费</td>
 <td></td>
 </tr>
 <tr>
@@ -3873,7 +3926,7 @@
 </tr>
 </tbody>
 </table>
-<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="string">"3"</span>,</div><div class="line">        <span class="attr">"userid"</span>: <span class="string">"5"</span>,</div><div class="line">        <span class="attr">"username"</span>: <span class="string">"中文"</span>,</div><div class="line">        <span class="attr">"createtime"</span>: <span class="string">"2017-12-06 14:30:36"</span>,</div><div class="line">        <span class="attr">"status"</span>: <span class="string">"0"</span>,</div><div class="line">        <span class="attr">"point"</span>: <span class="string">"2"</span>,</div><div class="line">        <span class="attr">"cardno"</span>: <span class="string">""</span>,</div><div class="line">        <span class="attr">"updatetime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">        <span class="attr">"cardtype"</span>: <span class="string">"1"</span>,</div><div class="line">        <span class="attr">"payment_time"</span>: <span class="literal">null</span>,</div><div class="line">        <span class="attr">"payment_no"</span>: <span class="literal">null</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"id"</span>: <span class="string">"3"</span>,</div><div class="line">        <span class="attr">"userid"</span>: <span class="string">"5"</span>,</div><div class="line">        <span class="attr">"username"</span>: <span class="string">"中文"</span>,</div><div class="line">        <span class="attr">"createtime"</span>: <span class="string">"2017-12-06 14:30:36"</span>,</div><div class="line">        <span class="attr">"status"</span>: <span class="string">"0"</span>,</div><div class="line">        <span class="attr">"point"</span>: <span class="string">"10000"</span>,</div><div class="line">        <span class="attr">"poundage"</span>: <span class="string">"5"</span>,</div><div class="line">        <span class="attr">"updatetime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">        <span class="attr">"cardtype"</span>: <span class="string">"1"</span>,</div><div class="line">        <span class="attr">"payment_time"</span>: <span class="literal">null</span>,</div><div class="line">        <span class="attr">"payment_no"</span>: <span class="literal">null</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <hr>
 <p>Author [@elliot]<br>2017 年 05月 10日</p>
 
@@ -4107,7 +4160,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#约定微信对接API文档-version-1-0"><span class="nav-number">1.</span> <span class="nav-text">约定微信对接API文档 version 1.0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#接口签名算法"><span class="nav-number">1.1.</span> <span class="nav-text">接口签名算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微信用户开约"><span class="nav-number">1.2.</span> <span class="nav-text">微信用户开约</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微信用户删除约定-5-mins之内"><span class="nav-number">1.3.</span> <span class="nav-text">微信用户删除约定(5 mins之内)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微信用户参与约定"><span class="nav-number">1.4.</span> <span class="nav-text">微信用户参与约定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取用户详细信息"><span class="nav-number">1.5.</span> <span class="nav-text">获取用户详细信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取约定列表"><span class="nav-number">1.6.</span> <span class="nav-text">获取约定列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取约定详细信息"><span class="nav-number">1.7.</span> <span class="nav-text">获取约定详细信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取用户积分历史"><span class="nav-number">1.8.</span> <span class="nav-text">获取用户积分历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#充值卡列表"><span class="nav-number">1.9.</span> <span class="nav-text">充值卡列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户借贷"><span class="nav-number">1.10.</span> <span class="nav-text">用户借贷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户还贷"><span class="nav-number">1.11.</span> <span class="nav-text">客户还贷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#约定签到"><span class="nav-number">1.12.</span> <span class="nav-text">约定签到</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取约定成员列表及相关此约定的积分变动"><span class="nav-number">1.13.</span> <span class="nav-text">获取约定成员列表及相关此约定的积分变动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发起约定评论"><span class="nav-number">1.14.</span> <span class="nav-text">发起约定评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取约定评论列表"><span class="nav-number">1.15.</span> <span class="nav-text">获取约定评论列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取APP版本"><span class="nav-number">1.16.</span> <span class="nav-text">获取APP版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新设备TOKEN"><span class="nav-number">1.17.</span> <span class="nav-text">更新设备TOKEN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新设备TOKEN-1"><span class="nav-number">1.18.</span> <span class="nav-text">更新设备TOKEN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#APP用户维持登录状态"><span class="nav-number">1.19.</span> <span class="nav-text">APP用户维持登录状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建本地订单"><span class="nav-number">1.20.</span> <span class="nav-text">创建本地订单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微信通过订单ordersn生成预付单"><span class="nav-number">1.21.</span> <span class="nav-text">微信通过订单ordersn生成预付单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发起提现申请"><span class="nav-number">1.22.</span> <span class="nav-text">发起提现申请</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#约定微信对接API文档-version-1-0"><span class="nav-number">1.</span> <span class="nav-text">约定微信对接API文档 version 1.0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#接口签名算法"><span class="nav-number">1.1.</span> <span class="nav-text">接口签名算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微信用户开约"><span class="nav-number">1.2.</span> <span class="nav-text">微信用户开约</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微信用户删除约定-5-mins之内"><span class="nav-number">1.3.</span> <span class="nav-text">微信用户删除约定(5 mins之内)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微信用户参与约定"><span class="nav-number">1.4.</span> <span class="nav-text">微信用户参与约定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取用户详细信息"><span class="nav-number">1.5.</span> <span class="nav-text">获取用户详细信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取约定列表"><span class="nav-number">1.6.</span> <span class="nav-text">获取约定列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取约定详细信息"><span class="nav-number">1.7.</span> <span class="nav-text">获取约定详细信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取用户积分历史"><span class="nav-number">1.8.</span> <span class="nav-text">获取用户积分历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#充值卡列表"><span class="nav-number">1.9.</span> <span class="nav-text">充值卡列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户借贷"><span class="nav-number">1.10.</span> <span class="nav-text">用户借贷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户还贷"><span class="nav-number">1.11.</span> <span class="nav-text">客户还贷</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#约定签到"><span class="nav-number">1.12.</span> <span class="nav-text">约定签到</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取约定成员列表及相关此约定的积分变动"><span class="nav-number">1.13.</span> <span class="nav-text">获取约定成员列表及相关此约定的积分变动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发起约定评论"><span class="nav-number">1.14.</span> <span class="nav-text">发起约定评论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取约定评论列表"><span class="nav-number">1.15.</span> <span class="nav-text">获取约定评论列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取APP版本"><span class="nav-number">1.16.</span> <span class="nav-text">获取APP版本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新设备TOKEN"><span class="nav-number">1.17.</span> <span class="nav-text">更新设备TOKEN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新设备TOKEN-1"><span class="nav-number">1.18.</span> <span class="nav-text">更新设备TOKEN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#APP用户维持登录状态"><span class="nav-number">1.19.</span> <span class="nav-text">APP用户维持登录状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建本地订单"><span class="nav-number">1.20.</span> <span class="nav-text">创建本地订单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#微信通过订单ordersn生成预付单"><span class="nav-number">1.21.</span> <span class="nav-text">微信通过订单ordersn生成预付单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算手续费"><span class="nav-number">1.22.</span> <span class="nav-text">计算手续费</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发起提现申请"><span class="nav-number">1.23.</span> <span class="nav-text">发起提现申请</span></a></li></ol></li></ol></div>
             
 
           </div>
