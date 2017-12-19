@@ -380,7 +380,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2017-12-13T15:53:16.937Z</updated>
+    <updated>2017-12-19T03:24:20.735Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -419,7 +419,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td style="text-align:right">约定测试</td>
 </tr>
 <tr>
-<td>type</td>
+<td><del>type</del></td>
 <td style="text-align:center">Y</td>
 <td style="text-align:right">约定类型 ： 1约定-大家平摊，2宴请 邀约者出分</td>
 <td style="text-align:right">1</td>
@@ -1096,6 +1096,11 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <tr>
 <td>score</td>
 <td style="text-align:center">积分</td>
+<td></td>
+</tr>
+<tr>
+<td>scoredebt</td>
+<td style="text-align:center">欠款</td>
 <td></td>
 </tr>
 <tr>
@@ -4059,6 +4064,116 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tbody>
 </table>
 <p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">            <span class="attr">"total"</span>: <span class="string">"9"</span>,</div><div class="line">            <span class="attr">"rows"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="string">"16"</span>,</div><div class="line">                    <span class="attr">"content"</span>: <span class="string">"我来试一下"</span>,</div><div class="line">                    <span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"createtime"</span>: <span class="string">"2016-01-11 00:06:02"</span>,</div><div class="line">                    <span class="attr">"fromdate"</span>: <span class="string">"2016-01-11 00:00:00"</span>,</div><div class="line">                    <span class="attr">"enddate"</span>: <span class="string">"2016-01-12 00:00:00"</span></div><div class="line">                &#125;,</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="string">"15"</span>,</div><div class="line">                    <span class="attr">"content"</span>: <span class="string">"测试"</span>,</div><div class="line">                    <span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"createtime"</span>: <span class="string">"2016-01-04 19:04:53"</span>,</div><div class="line">                    <span class="attr">"fromdate"</span>: <span class="string">"2016-01-04 00:00:00"</span>,</div><div class="line">                    <span class="attr">"enddate"</span>: <span class="string">"2016-02-01 00:00:00"</span></div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="提现申请列表"><a href="#提现申请列表" class="headerlink" title="提现申请列表"></a>提现申请列表</h3><ul>
+<li>wxApplyExchangeList</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">用户UID</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>page</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">页码</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>limit</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">每页条数</td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:center">N</td>
+<td style="text-align:right">状态 ‘-1 删除  0待审核 1审核通过 2兑换成功’</td>
+<td style="text-align:right">2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td style="text-align:center">自增ID</td>
+<td>3</td>
+</tr>
+<tr>
+<td>userid</td>
+<td style="text-align:center">用户ID</td>
+<td>5</td>
+</tr>
+<tr>
+<td>username</td>
+<td style="text-align:center">用户名字</td>
+<td>中文</td>
+</tr>
+<tr>
+<td>createtime</td>
+<td style="text-align:center">申请创建时间</td>
+<td>2017-12-06 14:30:36</td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:center">状态</td>
+<td>-1 删除  0待审核 1审核通过 2兑换成功</td>
+</tr>
+<tr>
+<td>point</td>
+<td style="text-align:center">欲兑换的积分数</td>
+<td></td>
+</tr>
+<tr>
+<td>poundage</td>
+<td style="text-align:center">手续费</td>
+<td></td>
+</tr>
+<tr>
+<td>updatetime</td>
+<td style="text-align:center">更新时间</td>
+<td></td>
+</tr>
+<tr>
+<td>cardtype</td>
+<td style="text-align:center">提现到卡类型</td>
+<td>1 微信零钱</td>
+</tr>
+<tr>
+<td>payment_time</td>
+<td style="text-align:center">兑换成功时间</td>
+<td>提现成功后写入</td>
+</tr>
+<tr>
+<td>payment_no</td>
+<td style="text-align:center">外部付款订单号  微信订单号</td>
+<td>提现成功后写入</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">            <span class="attr">"total"</span>: <span class="string">"3"</span>,</div><div class="line">            <span class="attr">"rows"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="string">"3"</span>,</div><div class="line">                    <span class="attr">"userid"</span>: <span class="string">"5"</span>,</div><div class="line">                    <span class="attr">"username"</span>: <span class="string">"中文"</span>,</div><div class="line">                    <span class="attr">"createtime"</span>: <span class="string">"2017-12-06 14:30:36"</span>,</div><div class="line">                    <span class="attr">"status"</span>: <span class="string">"0"</span>,</div><div class="line">                    <span class="attr">"point"</span>: <span class="string">"2"</span>,</div><div class="line">                    <span class="attr">"updatetime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">                    <span class="attr">"cardtype"</span>: <span class="string">"0"</span>,</div><div class="line">                    <span class="attr">"payment_time"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">                    <span class="attr">"payment_no"</span>: <span class="string">""</span>,</div><div class="line">                    <span class="attr">"poundage"</span>: <span class="string">"0"</span></div><div class="line">                &#125;,</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="string">"2"</span>,</div><div class="line">                    <span class="attr">"userid"</span>: <span class="string">"5"</span>,</div><div class="line">                    <span class="attr">"username"</span>: <span class="string">"中文"</span>,</div><div class="line">                    <span class="attr">"createtime"</span>: <span class="string">"2017-12-06 14:26:42"</span>,</div><div class="line">                    <span class="attr">"status"</span>: <span class="string">"0"</span>,</div><div class="line">                    <span class="attr">"point"</span>: <span class="string">"2"</span>,</div><div class="line">                    <span class="attr">"updatetime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">                    <span class="attr">"cardtype"</span>: <span class="string">"0"</span>,</div><div class="line">                    <span class="attr">"payment_time"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">                    <span class="attr">"payment_no"</span>: <span class="string">""</span>,</div><div class="line">                    <span class="attr">"poundage"</span>: <span class="string">"0"</span></div><div class="line">                &#125;,</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"userid"</span>: <span class="string">"5"</span>,</div><div class="line">                    <span class="attr">"username"</span>: <span class="string">"elliot"</span>,</div><div class="line">                    <span class="attr">"createtime"</span>: <span class="string">"2015-07-16 21:39:08"</span>,</div><div class="line">                    <span class="attr">"status"</span>: <span class="string">"2"</span>,</div><div class="line">                    <span class="attr">"point"</span>: <span class="string">"100"</span>,</div><div class="line">                    <span class="attr">"updatetime"</span>: <span class="string">"2017-10-26 22:39:46"</span>,</div><div class="line">                    <span class="attr">"cardtype"</span>: <span class="string">"0"</span>,</div><div class="line">                    <span class="attr">"payment_time"</span>: <span class="string">"2017-10-26 22:39:55"</span>,</div><div class="line">                    <span class="attr">"payment_no"</span>: <span class="string">"1000018301201710260868339757"</span>,</div><div class="line">                    <span class="attr">"poundage"</span>: <span class="string">"0"</span></div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <hr>
 <p>Author [@elliot]<br>2017 年 05月 10日</p>
 ]]></content>
