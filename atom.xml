@@ -380,7 +380,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-01-05T05:08:04.112Z</updated>
+    <updated>2018-01-05T05:13:37.912Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -1209,13 +1209,8 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td></td>
 </tr>
 <tr>
-<td>scoreDebt</td>
-<td style="text-align:center">欠款总额</td>
-<td></td>
-</tr>
-<tr>
-<td>scoreDebtList</td>
-<td style="text-align:center">欠款列表</td>
+<td>fathergrandfather_id</td>
+<td style="text-align:center">祖爷爷ID</td>
 <td></td>
 </tr>
 <tr>
@@ -4464,6 +4459,11 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td></td>
 </tr>
 <tr>
+<td>fathergrandfather_id</td>
+<td style="text-align:center">祖爷爷ID</td>
+<td></td>
+</tr>
+<tr>
 <td>scoreIncome</td>
 <td style="text-align:center">此节点用户贡献给此用户的金额</td>
 <td></td>
@@ -4765,18 +4765,8 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td></td>
 </tr>
 <tr>
-<td>scoreDebt</td>
-<td style="text-align:center">欠款总额</td>
-<td></td>
-</tr>
-<tr>
-<td>scoreDebtList</td>
-<td style="text-align:center">欠款列表</td>
-<td></td>
-</tr>
-<tr>
-<td>extensionUsersScore</td>
-<td style="text-align:center">累计推广奖励</td>
+<td>fathergrandfather_id</td>
+<td style="text-align:center">祖爷爷ID</td>
 </tr>
 </tbody>
 </table>
@@ -4890,6 +4880,216 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <tbody>
 <tr>
 <td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td style="text-align:center">自增ID</td>
+<td></td>
+</tr>
+<tr>
+<td>username</td>
+<td style="text-align:center">用户名字</td>
+<td></td>
+</tr>
+<tr>
+<td>passwd</td>
+<td style="text-align:center">密码MD5</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:center">状态 1 正常 -1删除 -2禁止登陆</td>
+<td></td>
+</tr>
+<tr>
+<td>descr</td>
+<td style="text-align:center">描述</td>
+<td></td>
+</tr>
+<tr>
+<td>tel</td>
+<td style="text-align:center">手机号码</td>
+<td></td>
+</tr>
+<tr>
+<td>email</td>
+<td style="text-align:center">邮箱号码</td>
+<td></td>
+</tr>
+<tr>
+<td>sex</td>
+<td style="text-align:center">姓别 1 男  2女 0未知</td>
+<td></td>
+</tr>
+<tr>
+<td>createtime</td>
+<td style="text-align:center">注册时间</td>
+<td></td>
+</tr>
+<tr>
+<td>disablesendmsg</td>
+<td style="text-align:center">是否禁言 0正常 1禁言</td>
+<td></td>
+</tr>
+<tr>
+<td>usertype</td>
+<td style="text-align:center">用户类型 0 注册用户  1默认用户</td>
+<td></td>
+</tr>
+<tr>
+<td>provice_sid</td>
+<td style="text-align:center">省编号</td>
+<td></td>
+</tr>
+<tr>
+<td>city_sid</td>
+<td style="text-align:center">市编号</td>
+<td></td>
+</tr>
+<tr>
+<td>provice_name</td>
+<td style="text-align:center">省份名字</td>
+<td></td>
+</tr>
+<tr>
+<td>city_name</td>
+<td style="text-align:center">市名字</td>
+<td></td>
+</tr>
+<tr>
+<td>score</td>
+<td style="text-align:center">积分</td>
+<td></td>
+</tr>
+<tr>
+<td>scoredebt</td>
+<td style="text-align:center">欠款</td>
+<td></td>
+</tr>
+<tr>
+<td>usernamelock</td>
+<td style="text-align:center">名字锁定 1锁定(可修改名字)  0未锁定</td>
+<td></td>
+</tr>
+<tr>
+<td>invitationcode</td>
+<td style="text-align:center">邀请码</td>
+<td></td>
+</tr>
+<tr>
+<td>picurl</td>
+<td style="text-align:center">头像</td>
+<td></td>
+</tr>
+<tr>
+<td>ref_userid</td>
+<td style="text-align:center">邀请上线UID</td>
+<td></td>
+</tr>
+<tr>
+<td>level</td>
+<td style="text-align:center">等级</td>
+<td></td>
+</tr>
+<tr>
+<td>avatar</td>
+<td style="text-align:center">头像</td>
+<td></td>
+</tr>
+<tr>
+<td>sysavatarid</td>
+<td style="text-align:center">系统随机头像ID</td>
+<td></td>
+</tr>
+<tr>
+<td>lastoptime</td>
+<td style="text-align:center">上次操作时间</td>
+<td></td>
+</tr>
+<tr>
+<td>platform</td>
+<td style="text-align:center">设备平台 1 android 2ios 3window 0未知</td>
+<td></td>
+</tr>
+<tr>
+<td>updatetime</td>
+<td style="text-align:center">更新时间</td>
+<td></td>
+</tr>
+<tr>
+<td>device_tokens</td>
+<td style="text-align:center">设备TOKEN</td>
+<td></td>
+</tr>
+<tr>
+<td>sys_push</td>
+<td style="text-align:center">系统通知</td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td style="text-align:center">是否内部测试户 0否  1是</td>
+<td></td>
+</tr>
+<tr>
+<td>lon</td>
+<td style="text-align:center">经度</td>
+<td></td>
+</tr>
+<tr>
+<td>lat</td>
+<td style="text-align:center">纬度</td>
+<td></td>
+</tr>
+<tr>
+<td>isautobefriend</td>
+<td style="text-align:center">是否自动成为好友</td>
+<td></td>
+</tr>
+<tr>
+<td>openid</td>
+<td style="text-align:center">微信userid</td>
+<td></td>
+</tr>
+<tr>
+<td>headimgurl</td>
+<td style="text-align:center">微信头像URL</td>
+<td></td>
+</tr>
+<tr>
+<td>access_token</td>
+<td style="text-align:center">微信登录验证码</td>
+<td></td>
+</tr>
+<tr>
+<td>loan</td>
+<td style="text-align:center">贷款负债金额</td>
+<td></td>
+</tr>
+<tr>
+<td>father_id</td>
+<td style="text-align:center">父级ID</td>
+<td></td>
+</tr>
+<tr>
+<td>grandfather_id</td>
+<td style="text-align:center">爷爷ID</td>
+<td></td>
+</tr>
+<tr>
+<td>fathergrandfather_id</td>
+<td style="text-align:center">祖爷爷ID</td>
 </tr>
 </tbody>
 </table>
