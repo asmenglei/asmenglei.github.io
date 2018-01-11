@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Elliot&#39;Blog">
 <meta property="og:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-01-08T07:54:33.519Z">
+<meta property="og:updated_time" content="2018-01-11T02:48:58.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="lanxiao-doc">
 <meta name="twitter:description" content="约定微信对接API文档 version 1.0 url地址 :http://dev.**.cn/index.php/api/restful/### method  :POST 返回格式: json">
@@ -3851,10 +3851,15 @@
 <tr>
 <td>poundage</td>
 <td style="text-align:center">手续费</td>
+<td></td>
+</tr>
+<tr>
+<td>principal</td>
+<td style="text-align:center">能提取出的金额(到账金额)</td>
 </tr>
 </tbody>
 </table>
-<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"poundage"</span>: <span class="string">"5"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	<span class="attr">"data"</span>: &#123;</div><div class="line">		<span class="attr">"poundage"</span>: <span class="string">"100"</span>,</div><div class="line">		<span class="attr">"principal"</span>: <span class="string">"99"</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="发起提现申请"><a href="#发起提现申请" class="headerlink" title="发起提现申请"></a>发起提现申请</h3><ul>
 <li>wxApplyExchange</li>
 <li>请求参数</li>
@@ -3876,9 +3881,9 @@
 <td style="text-align:right">5</td>
 </tr>
 <tr>
-<td>point</td>
+<td>principal</td>
 <td style="text-align:center">Y</td>
-<td style="text-align:right">兑换的积分数</td>
+<td style="text-align:right">提取本金（实际可以到账）</td>
 <td style="text-align:right">2</td>
 </tr>
 <tr>
