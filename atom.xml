@@ -380,7 +380,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-01-11T15:45:40.536Z</updated>
+    <updated>2018-01-15T02:16:58.033Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -1382,6 +1382,17 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <tr>
 <td>status</td>
 <td style="text-align:center">状态： 约定状态  -1已失效 0待达成 1已达成 2待签到 3进行中 4已结束</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>usestatus</td>
+<td style="text-align:center">使用状态： 约定状态  1离准时签到 2离最迟签到 3离结束 4报名</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>countdown</td>
+<td style="text-align:center">倒计时</td>
+<td style="text-align:right"></td>
 </tr>
 <tr>
 <td>remark</td>
@@ -1577,6 +1588,16 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td style="text-align:center">状态： 约定状态  -1已失效 0待达成 1已达成 2待签到 3进行中 4已结束</td>
 </tr>
 <tr>
+<td>usestatus</td>
+<td style="text-align:center">使用状态： 约定状态  1离准时签到 2离最迟签到 3离结束 4报名</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>countdown</td>
+<td style="text-align:center">倒计时</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
 <td>remark</td>
 <td style="text-align:center">约定描述</td>
 <td style="text-align:right"></td>
@@ -1595,10 +1616,6 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td>lat</td>
 <td style="text-align:center">纬度</td>
 <td style="text-align:right"></td>
-</tr>
-<tr>
-<td>status</td>
-<td style="text-align:center">状态： 约定状态  -1已失效 0待达成 1已达成 2待签到 3进行中 4已结束</td>
 </tr>
 <tr>
 <td>signed_num</td>
@@ -1782,6 +1799,16 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td style="text-align:center">状态： 约定状态  -1已失效 0待达成 1已达成 2待签到 3进行中 4已结束</td>
 </tr>
 <tr>
+<td>usestatus</td>
+<td style="text-align:center">使用状态： 约定状态  1离准时签到 2离最迟签到 3离结束 4报名</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td>countdown</td>
+<td style="text-align:center">倒计时</td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
 <td>opentype</td>
 <td style="text-align:center">可见类型(公私):0私有 1公有</td>
 <td style="text-align:right"></td>
@@ -1805,10 +1832,6 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td>lat</td>
 <td style="text-align:center">纬度</td>
 <td style="text-align:right"></td>
-</tr>
-<tr>
-<td>status</td>
-<td style="text-align:center">状态： 约定状态  -1已失效 0待达成 1已达成 2待签到 3进行中 4已结束</td>
 </tr>
 <tr>
 <td>signed_num</td>
@@ -3838,7 +3861,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tr>
 </tbody>
 </table>
-<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	<span class="attr">"data"</span>: &#123;</div><div class="line">		<span class="attr">"poundage"</span>: <span class="string">"100"</span>,</div><div class="line">		<span class="attr">"principal"</span>: <span class="string">"99"</span>,</div><div class="line">		<span class="attr">"maxprincipal"</span>: <span class="string">"99"</span>,</div><div class="line">		<span class="attr">"score"</span>: <span class="string">"99"</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"> <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"principal"</span>: <span class="string">"100"</span>,</div><div class="line">        <span class="attr">"poundage"</span>: <span class="number">1</span>,</div><div class="line">        <span class="attr">"maxprincipal"</span>: <span class="number">100</span>,</div><div class="line">        <span class="attr">"score"</span>: <span class="string">"101.000"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="发起提现申请"><a href="#发起提现申请" class="headerlink" title="发起提现申请"></a>发起提现申请</h3><ul>
 <li>wxApplyExchange</li>
 <li>请求参数</li>
