@@ -380,7 +380,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-01-15T16:10:34.980Z</updated>
+    <updated>2018-01-16T04:52:35.278Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -1386,7 +1386,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tr>
 <tr>
 <td>usestatus</td>
-<td style="text-align:center">使用状态： 约定状态  -1报名参与 1离准时签到 2离最迟签到 3离结束 4离签到开始 0未知</td>
+<td style="text-align:center">使用状态： 约定状态  -1报名参与 1离准时签到 2离最迟签到 3离结束 4离签到开始 -2已结束 0未知</td>
 <td style="text-align:right"></td>
 </tr>
 <tr>
@@ -1589,7 +1589,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tr>
 <tr>
 <td>usestatus</td>
-<td style="text-align:center">使用状态： 约定状态  -1报名参与 1离准时签到 2离最迟签到 3离结束 4离签到开始 0未知</td>
+<td style="text-align:center">使用状态： 约定状态  -1报名参与 1离准时签到 2离最迟签到 3离结束 4离签到开始 -2已结束 0未知</td>
 <td style="text-align:right"></td>
 </tr>
 <tr>
@@ -1800,7 +1800,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tr>
 <tr>
 <td>usestatus</td>
-<td style="text-align:center">使用状态： 约定状态  -1报名参与 1离准时签到 2离最迟签到 3离结束 4离签到开始 0未知</td>
+<td style="text-align:center">使用状态： 约定状态  -1报名参与 1离准时签到 2离最迟签到 3离结束 4离签到开始 -2已结束 0未知</td>
 <td style="text-align:right"></td>
 </tr>
 <tr>
