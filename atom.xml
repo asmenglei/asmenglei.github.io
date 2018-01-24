@@ -380,7 +380,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-01-23T08:21:20.990Z</updated>
+    <updated>2018-01-24T01:40:10.196Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -421,7 +421,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <tr>
 <td>deduct_type</td>
 <td style="text-align:center">Y</td>
-<td style="text-align:right">迟到扣分方式1,2,3</td>
+<td style="text-align:right">迟到扣分方式1,2,3  单签4/双签5</td>
 <td style="text-align:right">1</td>
 </tr>
 <tr>
@@ -485,10 +485,21 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td style="text-align:right">四川省成都市成华区猛追湾街道景泰景泰(猛追湾街)</td>
 </tr>
 <tr>
-<td>opentype</td>
+<td>type</td>
 <td style="text-align:center">Y</td>
-<td style="text-align:right">可见类型(公私):0私有 1公有</td>
-<td style="text-align:right">0</td>
+<td style="text-align:right">约定类型(约定1/邀请2)</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>paytype</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">付款类型1先付款 2后付款</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>invitation_time_second</td>
+<td style="text-align:center">N</td>
+<td style="text-align:right">二签时间点 2018-01-24 11:11:11</td>
 </tr>
 </tbody>
 </table>
