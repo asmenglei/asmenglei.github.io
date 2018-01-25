@@ -380,7 +380,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-01-25T01:58:16.453Z</updated>
+    <updated>2018-01-25T10:05:35.632Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -1990,7 +1990,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tr>
 <tr>
 <td>type</td>
-<td style="text-align:center">积分变动原因 1参与约定扣分4迟到签到退回剩余6准时签到退回7准时签到得分8约定未达成退回9约定参与集体缺席退回10购买积分券11下级用户奖励12还款13抽奖 14 邀请得分 15 邀请剩余退还 16后付款用户当欠款用户都还款后清算增减分数</td>
+<td style="text-align:center">积分变动原因 1参与约定扣分2提现4迟到签到退回剩余6准时签到退回7准时签到得分8约定未达成退回9约定参与集体缺席退回10购买积分券11下级用户奖励12还款13抽奖 14 邀请得分 15 邀请剩余退还 16后付款用户当欠款用户都还款后清算增减分数</td>
 </tr>
 </tbody>
 </table>
