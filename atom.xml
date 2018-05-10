@@ -380,7 +380,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-05-03T09:59:01.480Z</updated>
+    <updated>2018-05-10T09:04:38.313Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -5251,6 +5251,58 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tbody>
 </table>
 <p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="attr">"data"</span>: &#123;</div><div class="line">           <span class="attr">"lottery"</span>: &#123;</div><div class="line">               <span class="attr">"yes"</span>: &#123;</div><div class="line">                   <span class="attr">"8"</span>: <span class="string">"谢谢参与"</span></div><div class="line">               &#125;,</div><div class="line">               <span class="attr">"no"</span>: &#123;</div><div class="line">                   <span class="attr">"1"</span>: <span class="string">"1"</span>,</div><div class="line">                   <span class="attr">"2"</span>: <span class="string">"2"</span>,</div><div class="line">                   <span class="attr">"3"</span>: <span class="string">"3"</span>,</div><div class="line">                   <span class="attr">"4"</span>: <span class="string">"5"</span>,</div><div class="line">                   <span class="attr">"5"</span>: <span class="string">"5元"</span>,</div><div class="line">                   <span class="attr">"6"</span>: <span class="string">"10元"</span>,</div><div class="line">                   <span class="attr">"7"</span>: <span class="string">"20元"</span></div><div class="line">               &#125;</div><div class="line">           &#125;,</div><div class="line">           <span class="attr">"lottery_times"</span>: <span class="string">"2"</span></div><div class="line">       &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="约定抽奖确认"><a href="#约定抽奖确认" class="headerlink" title="约定抽奖确认"></a>约定抽奖确认</h3><p>*wxInvitationLotteryDone</p>
+<ul>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lottery_id</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">中奖纪录ID</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">中奖用户ID</td>
+<td style="text-align:right">12</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>price</td>
+<td style="text-align:center">抽中的奖项</td>
+<td></td>
+</tr>
+<tr>
+<td>lottery_id</td>
+<td style="text-align:center">中奖记录ID</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="attr">"data"</span>: &#123;</div><div class="line">           <span class="attr">"price"</span>: <span class="string">"2"</span>,</div><div class="line">           <span class="attr">"lottery_id"</span>: <span class="string">"2"</span></div><div class="line">       &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="获取推广奖励明细"><a href="#获取推广奖励明细" class="headerlink" title="获取推广奖励明细"></a>获取推广奖励明细</h3><ul>
 <li>wxExtenduserAwardsList</li>
 <li>请求参数</li>
