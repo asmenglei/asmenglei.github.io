@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-20T10:08:54.656Z</updated>
+  <updated>2018-05-24T03:00:04.130Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,143 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>zq_sso</title>
+    <link href="http://yoursite.com/2018/05/24/zq-sso/"/>
+    <id>http://yoursite.com/2018/05/24/zq-sso/</id>
+    <published>2018-05-24T01:53:02.000Z</published>
+    <updated>2018-05-24T03:00:04.130Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="中企对接文档-version-1-0"><a href="#中企对接文档-version-1-0" class="headerlink" title="中企对接文档 version 1.0"></a><strong>中企对接文档 version 1.0</strong></h2><ul>
+<li>url地址 :[<a href="http://passport.newdhb.com/login/{method}" target="_blank" rel="external">http://passport.newdhb.com/login/{method}</a>]</li>
+<li>method :POST</li>
+<li>返回格式 : json</li>
+<li>传输头:Content-Type:application/json</li>
+<li>password加密算法:RSA</li>
+</ul>
+<h3 id="三方登陆接口"><a href="#三方登陆接口" class="headerlink" title="三方登陆接口"></a>三方登陆接口</h3><ul>
+<li>thirdLogin</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">username</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">用户名</td>
+<td style="text-align:center">elliot</td>
+</tr>
+<tr>
+<td style="text-align:center">password</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">密码</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">partner_id</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">合作方ID</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">appkey</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">appkey</td>
+<td style="text-align:center">123</td>
+</tr>
+<tr>
+<td style="text-align:center">timestamp</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">时间戳</td>
+<td style="text-align:center">1526871491</td>
+</tr>
+<tr>
+<td style="text-align:center">sign</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">签名</td>
+<td style="text-align:center">2c3f152edb0b035cac69b24774c8d39f</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">refresh_token</td>
+<td style="text-align:center">refresh_token</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"refresh_token"</span>: <span class="string">"663bbe3a2c52bc598cab170a92ff2f44"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="通过RefreshToken设置登陆状态"><a href="#通过RefreshToken设置登陆状态" class="headerlink" title="通过RefreshToken设置登陆状态"></a>通过RefreshToken设置登陆状态</h3><ul>
+<li>getAccessToken</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">refresh_token</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">refresh_token</td>
+<td style="text-align:center">663bbe3a2c52bc598cab170a92ff2f44</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">refresh_token</td>
+<td style="text-align:center">refresh_token</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: [],</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;中企对接文档-version-1-0&quot;&gt;&lt;a href=&quot;#中企对接文档-version-1-0&quot; class=&quot;headerlink&quot; title=&quot;中企对接文档 version 1.0&quot;&gt;&lt;/a&gt;&lt;strong&gt;中企对接文档 version 1.0&lt;/stro
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Python VS Wechat 可以这么玩</title>
@@ -380,7 +517,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-05-23T09:43:01.133Z</updated>
+    <updated>2018-05-28T03:01:27.739Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -9564,9 +9701,223 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td>weekend_consult_score</td>
 <td style="text-align:center">家族本周收入</td>
 </tr>
+<tr>
+<td>family_integral</td>
+<td style="text-align:center">家族各项指标值</td>
+</tr>
 </tbody>
 </table>
-<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">    		<span class="attr">"id"</span>: <span class="string">"8"</span>,</div><div class="line">    		<span class="attr">"name"</span>: <span class="string">"家族名字2"</span>,</div><div class="line">    		<span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">    		<span class="attr">"createtime"</span>: <span class="string">"2018-05-21 23:32:40"</span>,</div><div class="line">    		<span class="attr">"updatetime"</span>: <span class="string">"2018-05-22 00:33:06"</span>,</div><div class="line">    		<span class="attr">"userid"</span>: <span class="string">"1"</span>,</div><div class="line">    		<span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">    		<span class="attr">"color"</span>: <span class="string">"1"</span>,</div><div class="line">    		<span class="attr">"remark"</span>: <span class="string">"备注"</span>,</div><div class="line">    		<span class="attr">"people_num"</span>: <span class="string">"0"</span>,</div><div class="line">    		<span class="attr">"score"</span>: <span class="string">"3.00"</span>,</div><div class="line">    		<span class="attr">"need_pay"</span>: <span class="literal">false</span>,</div><div class="line">    		<span class="attr">"member_list"</span>: [&#123;</div><div class="line">    			<span class="attr">"id"</span>: <span class="string">"9"</span>,</div><div class="line">    			<span class="attr">"ref_family_id"</span>: <span class="string">"8"</span>,</div><div class="line">    			<span class="attr">"userid"</span>: <span class="string">"2"</span>,</div><div class="line">    			<span class="attr">"username"</span>: <span class="string">"贫妖"</span>,</div><div class="line">    			<span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">    			<span class="attr">"createtime"</span>: <span class="string">"2018-05-21 23:32:40"</span>,</div><div class="line">    			<span class="attr">"updatetime"</span>: <span class="string">"2018-05-22 00:32:14"</span>,</div><div class="line">    			<span class="attr">"is_leader"</span>: <span class="string">"0"</span>,</div><div class="line">    			<span class="attr">"user_info"</span>: &#123;</div><div class="line">    				<span class="attr">"id"</span>: <span class="string">"2"</span>,</div><div class="line">    				<span class="attr">"username"</span>: <span class="string">"贫妖"</span>,</div><div class="line">    				<span class="attr">"passwd"</span>: <span class="string">"9ded86502138f2e4521728b3f2cd0881"</span>,</div><div class="line">    				<span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">    				<span class="attr">"tel"</span>: <span class="string">"13982199933"</span>,</div><div class="line">    				<span class="attr">"createtime"</span>: <span class="string">"2018-03-01 22:58:08"</span>,</div><div class="line">    				<span class="attr">"usertype"</span>: <span class="string">"0"</span>,</div><div class="line">    				<span class="attr">"provice_sid"</span>: <span class="string">"001023"</span>,</div><div class="line">    				<span class="attr">"city_sid"</span>: <span class="string">"001001001"</span>,</div><div class="line">    				<span class="attr">"provice_name"</span>: <span class="string">"四川"</span>,</div><div class="line">    				<span class="attr">"city_name"</span>: <span class="string">""</span>,</div><div class="line">    				<span class="attr">"score"</span>: <span class="string">"192.52"</span>,</div><div class="line">    				<span class="attr">"scoredebt"</span>: <span class="string">"0.00"</span>,</div><div class="line">    				<span class="attr">"invitecode"</span>: <span class="string">"151991628872"</span>,</div><div class="line">    				<span class="attr">"level"</span>: <span class="string">"1"</span>,</div><div class="line">    				<span class="attr">"lastoptime"</span>: <span class="string">"2018-04-24 16:50:58"</span>,</div><div class="line">    				<span class="attr">"platform"</span>: <span class="string">"1"</span>,</div><div class="line">    				<span class="attr">"updatetime"</span>: <span class="string">"2018-04-25 16:00:59"</span>,</div><div class="line">    				<span class="attr">"device_tokens"</span>: <span class="string">"AjDEU6pAXjeCXXea1y-RVir4kmecD9mYrSfgsR_WpRbm"</span>,</div><div class="line">    				<span class="attr">"sys_push"</span>: <span class="string">"1"</span>,</div><div class="line">    				<span class="attr">"type"</span>: <span class="string">"0"</span>,</div><div class="line">    				<span class="attr">"unionid"</span>: <span class="string">"olOxs0QL7MUudiryiHBoiQ8b9SE4"</span>,</div><div class="line">    				<span class="attr">"openid"</span>: <span class="string">"oa5re032ywJWp7FzwgoLFMTp0t-s"</span>,</div><div class="line">    				<span class="attr">"headimgurl"</span>: <span class="string">"http:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/wzC6wd7ABl9t0JarUNF8kfGnHYTKNf9esibibhLY38voIJRIiaSe65Y0zV5P3STreHPywr6xfwjhxbYqiaibjox2Wrg\/132"</span>,</div><div class="line">    				<span class="attr">"access_token"</span>: <span class="string">""</span>,</div><div class="line">    				<span class="attr">"father_id"</span>: <span class="string">"1"</span>,</div><div class="line">    				<span class="attr">"grandfather_id"</span>: <span class="string">"2"</span>,</div><div class="line">    				<span class="attr">"fathergrandfather_id"</span>: <span class="string">"3"</span>,</div><div class="line">    				<span class="attr">"lottery_times"</span>: <span class="string">"0"</span>,</div><div class="line">    				<span class="attr">"ip_address"</span>: <span class="string">"117.136.63.132"</span>,</div><div class="line">    				<span class="attr">"ontime_ratio"</span>: <span class="string">"0.37"</span>,</div><div class="line">    				<span class="attr">"spirit_num"</span>: <span class="string">"0"</span></div><div class="line">    			&#125;</div><div class="line">    		&#125;, &#123;</div><div class="line">    			<span class="attr">"id"</span>: <span class="string">"8"</span>,</div><div class="line">    			<span class="attr">"ref_family_id"</span>: <span class="string">"8"</span>,</div><div class="line">    			<span class="attr">"userid"</span>: <span class="string">"1"</span>,</div><div class="line">    			<span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">    			<span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">    			<span class="attr">"createtime"</span>: <span class="string">"2018-05-21 23:32:21"</span>,</div><div class="line">    			<span class="attr">"updatetime"</span>: <span class="string">"2018-05-22 00:33:06"</span>,</div><div class="line">    			<span class="attr">"is_leader"</span>: <span class="string">"1"</span>,</div><div class="line">    			<span class="attr">"user_info"</span>: &#123;</div><div class="line">    				<span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">    				<span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">    				<span class="attr">"passwd"</span>: <span class="string">"fd77c6ca78da7e09d89f36dab2d7a496"</span>,</div><div class="line">    				<span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">    				<span class="attr">"tel"</span>: <span class="string">"17188307666"</span>,</div><div class="line">    				<span class="attr">"createtime"</span>: <span class="string">"2018-03-01 22:56:38"</span>,</div><div class="line">    				<span class="attr">"usertype"</span>: <span class="string">"0"</span>,</div><div class="line">    				<span class="attr">"provice_sid"</span>: <span class="string">"001023"</span>,</div><div class="line">    				<span class="attr">"city_sid"</span>: <span class="string">"001023002"</span>,</div><div class="line">    				<span class="attr">"provice_name"</span>: <span class="string">"四川"</span>,</div><div class="line">    				<span class="attr">"city_name"</span>: <span class="string">"自贡"</span>,</div><div class="line">    				<span class="attr">"score"</span>: <span class="string">"14.97"</span>,</div><div class="line">    				<span class="attr">"scoredebt"</span>: <span class="string">"0.00"</span>,</div><div class="line">    				<span class="attr">"invitecode"</span>: <span class="string">"151991619816"</span>,</div><div class="line">    				<span class="attr">"level"</span>: <span class="string">"1"</span>,</div><div class="line">    				<span class="attr">"lastoptime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">    				<span class="attr">"platform"</span>: <span class="string">"2"</span>,</div><div class="line">    				<span class="attr">"updatetime"</span>: <span class="string">"2018-04-24 00:36:08"</span>,</div><div class="line">    				<span class="attr">"device_tokens"</span>: <span class="string">"b65789f6b06468deda4ebd7352c70408169b42ada6a24b1fd82a325d45e8fa42"</span>,</div><div class="line">    				<span class="attr">"sys_push"</span>: <span class="string">"1"</span>,</div><div class="line">    				<span class="attr">"type"</span>: <span class="string">"0"</span>,</div><div class="line">    				<span class="attr">"unionid"</span>: <span class="string">"olOxs0ePxsKzx-gQyl1Yx89uUrW0"</span>,</div><div class="line">    				<span class="attr">"openid"</span>: <span class="string">"oa5re0xXA-90UHaoJL-gCfDvFmBU"</span>,</div><div class="line">    				<span class="attr">"headimgurl"</span>: <span class="string">"http:\/\/thirdwx.qlogo.cn\/mmopen\/vi_32\/XNicWkyLW6Uqol3sHeibrV4N0JibAt8V6e2dJRRSQegnDTABQz9oPTaQkic9f65FAFxJwQiazibYpvffc62IRKt4k2oA\/132"</span>,</div><div class="line">    				<span class="attr">"access_token"</span>: <span class="string">""</span>,</div><div class="line">    				<span class="attr">"father_id"</span>: <span class="string">"1"</span>,</div><div class="line">    				<span class="attr">"grandfather_id"</span>: <span class="string">"2"</span>,</div><div class="line">    				<span class="attr">"fathergrandfather_id"</span>: <span class="string">"3"</span>,</div><div class="line">    				<span class="attr">"lottery_times"</span>: <span class="string">"0"</span>,</div><div class="line">    				<span class="attr">"ip_address"</span>: <span class="string">"171.94.129.171"</span>,</div><div class="line">    				<span class="attr">"ontime_ratio"</span>: <span class="string">"0.00"</span>,</div><div class="line">    				<span class="attr">"spirit_num"</span>: <span class="string">"0"</span></div><div class="line">    			&#125;</div><div class="line">    		&#125;],</div><div class="line">    		<span class="attr">"weekend_consult_score"</span>: <span class="number">0</span></div><div class="line">    	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">            <span class="attr">"id"</span>: <span class="string">"8"</span>,</div><div class="line">            <span class="attr">"name"</span>: <span class="string">"家族名字2"</span>,</div><div class="line">            <span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"createtime"</span>: <span class="string">"2018-05-21 23:32:40"</span>,</div><div class="line">            <span class="attr">"updatetime"</span>: <span class="string">"2018-05-22 00:33:06"</span>,</div><div class="line">            <span class="attr">"userid"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">            <span class="attr">"color"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"remark"</span>: <span class="string">"备注"</span>,</div><div class="line">            <span class="attr">"people_num"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"score"</span>: <span class="string">"3.00"</span>,</div><div class="line">            <span class="attr">"need_pay"</span>: <span class="literal">false</span>,</div><div class="line">            <span class="attr">"member_list"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="string">"9"</span>,</div><div class="line">                    <span class="attr">"ref_family_id"</span>: <span class="string">"8"</span>,</div><div class="line">                    <span class="attr">"userid"</span>: <span class="string">"2"</span>,</div><div class="line">                    <span class="attr">"username"</span>: <span class="string">"贫妖"</span>,</div><div class="line">                    <span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"createtime"</span>: <span class="string">"2018-05-21 23:32:40"</span>,</div><div class="line">                    <span class="attr">"updatetime"</span>: <span class="string">"2018-05-22 00:32:14"</span>,</div><div class="line">                    <span class="attr">"is_leader"</span>: <span class="string">"0"</span>,</div><div class="line">                    <span class="attr">"user_info"</span>: &#123;</div><div class="line">                        <span class="attr">"id"</span>: <span class="string">"2"</span>,</div><div class="line">                        <span class="attr">"username"</span>: <span class="string">"贫妖"</span>,</div><div class="line">                        <span class="attr">"passwd"</span>: <span class="string">"9ded86502138f2e4521728b3f2cd0881"</span>,</div><div class="line">                        <span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"tel"</span>: <span class="string">"13982199933"</span>,</div><div class="line">                        <span class="attr">"createtime"</span>: <span class="string">"2018-03-01 22:58:08"</span>,</div><div class="line">                        <span class="attr">"usertype"</span>: <span class="string">"0"</span>,</div><div class="line">                        <span class="attr">"provice_sid"</span>: <span class="string">"001023"</span>,</div><div class="line">                        <span class="attr">"city_sid"</span>: <span class="string">"001001001"</span>,</div><div class="line">                        <span class="attr">"provice_name"</span>: <span class="string">"四川"</span>,</div><div class="line">                        <span class="attr">"city_name"</span>: <span class="string">""</span>,</div><div class="line">                        <span class="attr">"score"</span>: <span class="string">"192.52"</span>,</div><div class="line">                        <span class="attr">"scoredebt"</span>: <span class="string">"0.00"</span>,</div><div class="line">                        <span class="attr">"invitecode"</span>: <span class="string">"151991628872"</span>,</div><div class="line">                        <span class="attr">"level"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"lastoptime"</span>: <span class="string">"2018-04-24 16:50:58"</span>,</div><div class="line">                        <span class="attr">"platform"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"updatetime"</span>: <span class="string">"2018-04-25 16:00:59"</span>,</div><div class="line">                        <span class="attr">"device_tokens"</span>: <span class="string">"AjDEU6pAXjeCXXea1y-RVir4kmecD9mYrSfgsR_WpRbm"</span>,</div><div class="line">                        <span class="attr">"sys_push"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"type"</span>: <span class="string">"0"</span>,</div><div class="line">                        <span class="attr">"unionid"</span>: <span class="string">"olOxs0QL7MUudiryiHBoiQ8b9SE4"</span>,</div><div class="line">                        <span class="attr">"openid"</span>: <span class="string">"oa5re032ywJWp7FzwgoLFMTp0t-s"</span>,</div><div class="line">                        <span class="attr">"headimgurl"</span>: <span class="string">"http://thirdwx.qlogo.cn/mmopen/vi_32/wzC6wd7ABl9t0JarUNF8kfGnHYTKNf9esibibhLY38voIJRIiaSe65Y0zV5P3STreHPywr6xfwjhxbYqiaibjox2Wrg/132"</span>,</div><div class="line">                        <span class="attr">"access_token"</span>: <span class="string">""</span>,</div><div class="line">                        <span class="attr">"father_id"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"grandfather_id"</span>: <span class="string">"2"</span>,</div><div class="line">                        <span class="attr">"fathergrandfather_id"</span>: <span class="string">"3"</span>,</div><div class="line">                        <span class="attr">"lottery_times"</span>: <span class="string">"0"</span>,</div><div class="line">                        <span class="attr">"ip_address"</span>: <span class="string">"117.136.63.132"</span>,</div><div class="line">                        <span class="attr">"ontime_ratio"</span>: <span class="string">"0.37"</span>,</div><div class="line">                        <span class="attr">"spirit_num"</span>: <span class="string">"0"</span></div><div class="line">                    &#125;</div><div class="line">                &#125;,</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="string">"8"</span>,</div><div class="line">                    <span class="attr">"ref_family_id"</span>: <span class="string">"8"</span>,</div><div class="line">                    <span class="attr">"userid"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">                    <span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"createtime"</span>: <span class="string">"2018-05-21 23:32:21"</span>,</div><div class="line">                    <span class="attr">"updatetime"</span>: <span class="string">"2018-05-22 00:33:06"</span>,</div><div class="line">                    <span class="attr">"is_leader"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"user_info"</span>: &#123;</div><div class="line">                        <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">                        <span class="attr">"passwd"</span>: <span class="string">"fd77c6ca78da7e09d89f36dab2d7a496"</span>,</div><div class="line">                        <span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"tel"</span>: <span class="string">"17188307666"</span>,</div><div class="line">                        <span class="attr">"createtime"</span>: <span class="string">"2018-03-01 22:56:38"</span>,</div><div class="line">                        <span class="attr">"usertype"</span>: <span class="string">"0"</span>,</div><div class="line">                        <span class="attr">"provice_sid"</span>: <span class="string">"001023"</span>,</div><div class="line">                        <span class="attr">"city_sid"</span>: <span class="string">"001023002"</span>,</div><div class="line">                        <span class="attr">"provice_name"</span>: <span class="string">"四川"</span>,</div><div class="line">                        <span class="attr">"city_name"</span>: <span class="string">"自贡"</span>,</div><div class="line">                        <span class="attr">"score"</span>: <span class="string">"14.97"</span>,</div><div class="line">                        <span class="attr">"scoredebt"</span>: <span class="string">"0.00"</span>,</div><div class="line">                        <span class="attr">"invitecode"</span>: <span class="string">"151991619816"</span>,</div><div class="line">                        <span class="attr">"level"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"lastoptime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">                        <span class="attr">"platform"</span>: <span class="string">"2"</span>,</div><div class="line">                        <span class="attr">"updatetime"</span>: <span class="string">"2018-04-24 00:36:08"</span>,</div><div class="line">                        <span class="attr">"device_tokens"</span>: <span class="string">"b65789f6b06468deda4ebd7352c70408169b42ada6a24b1fd82a325d45e8fa42"</span>,</div><div class="line">                        <span class="attr">"sys_push"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"type"</span>: <span class="string">"0"</span>,</div><div class="line">                        <span class="attr">"unionid"</span>: <span class="string">"olOxs0ePxsKzx-gQyl1Yx89uUrW0"</span>,</div><div class="line">                        <span class="attr">"openid"</span>: <span class="string">"oa5re0xXA-90UHaoJL-gCfDvFmBU"</span>,</div><div class="line">                        <span class="attr">"headimgurl"</span>: <span class="string">"http://thirdwx.qlogo.cn/mmopen/vi_32/XNicWkyLW6Uqol3sHeibrV4N0JibAt8V6e2dJRRSQegnDTABQz9oPTaQkic9f65FAFxJwQiazibYpvffc62IRKt4k2oA/132"</span>,</div><div class="line">                        <span class="attr">"access_token"</span>: <span class="string">""</span>,</div><div class="line">                        <span class="attr">"father_id"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"grandfather_id"</span>: <span class="string">"2"</span>,</div><div class="line">                        <span class="attr">"fathergrandfather_id"</span>: <span class="string">"3"</span>,</div><div class="line">                        <span class="attr">"lottery_times"</span>: <span class="string">"0"</span>,</div><div class="line">                        <span class="attr">"ip_address"</span>: <span class="string">"171.94.129.171"</span>,</div><div class="line">                        <span class="attr">"ontime_ratio"</span>: <span class="string">"0.00"</span>,</div><div class="line">                        <span class="attr">"spirit_num"</span>: <span class="string">"0"</span></div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            ],</div><div class="line">            <span class="attr">"weekend_consult_score"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"family_integral"</span>: &#123;</div><div class="line">                <span class="attr">"week_ontime_ratio_integral"</span>: <span class="number">0</span>,</div><div class="line">                <span class="attr">"accept_invitation_num_integral"</span>: <span class="number">0</span>,</div><div class="line">                <span class="attr">"new_friends_num_integral"</span>: <span class="number">0</span>,</div><div class="line">                <span class="attr">"continue_days_integral"</span>: <span class="number">0</span>,</div><div class="line">                <span class="attr">"invitation_pay_amount_integral"</span>: <span class="number">0</span>,</div><div class="line">                <span class="attr">"invitation_income_integral"</span>: <span class="number">0</span>,</div><div class="line">                <span class="attr">"total_integral"</span>: <span class="number">0</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="获取家族成员各项指标数值"><a href="#获取家族成员各项指标数值" class="headerlink" title="获取家族成员各项指标数值"></a>获取家族成员各项指标数值</h3><p>*wxGetUserFamilyUserDetail</p>
+<ul>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">用户UID</td>
+<td style="text-align:right">12</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>week_ontime_ratio</td>
+<td style="text-align:center">周守时率</td>
+<td></td>
+</tr>
+<tr>
+<td>accept_invitation_num</td>
+<td style="text-align:center">接受邀请数量</td>
+<td></td>
+</tr>
+<tr>
+<td>new_friends_num</td>
+<td style="text-align:center">新增好友</td>
+<td></td>
+</tr>
+<tr>
+<td>continue_days</td>
+<td style="text-align:center">连续守时</td>
+<td></td>
+</tr>
+<tr>
+<td>invitation_pay_amount</td>
+<td style="text-align:center">邀请支付</td>
+<td></td>
+</tr>
+<tr>
+<td>invitation_income</td>
+<td style="text-align:center">创建时间</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">            <span class="attr">"week_ontime_ratio"</span>: <span class="number">-1</span>,</div><div class="line">            <span class="attr">"accept_invitation_num"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"new_friends_num"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"continue_days"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"invitation_pay_amount"</span>: <span class="number">0</span>,</div><div class="line">            <span class="attr">"invitation_income"</span>: <span class="number">0</span></div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="分页获取家族历史排名列表"><a href="#分页获取家族历史排名列表" class="headerlink" title="分页获取家族历史排名列表"></a>分页获取家族历史排名列表</h3><ul>
+<li>wxGetUserFamilyRank</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">当前登录用户UID</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>stage</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">期数</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>page</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">页码</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>limit</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">每页条数</td>
+<td style="text-align:right">2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td style="text-align:center">ID</td>
+<td></td>
+</tr>
+<tr>
+<td>family_id</td>
+<td style="text-align:center">家族ID</td>
+<td></td>
+</tr>
+<tr>
+<td>family_name</td>
+<td style="text-align:center">家族名字</td>
+<td></td>
+</tr>
+<tr>
+<td>ontime_ratio_integral</td>
+<td style="text-align:center">周守时率分数</td>
+<td></td>
+</tr>
+<tr>
+<td>accept_invitation_num_integral</td>
+<td style="text-align:center">接受邀请分数</td>
+<td></td>
+</tr>
+<tr>
+<td>new_friends_num_integral</td>
+<td style="text-align:center">新增好友分数</td>
+<td></td>
+</tr>
+<tr>
+<td>continue_days_integral</td>
+<td style="text-align:center">连续守时分数</td>
+<td></td>
+</tr>
+<tr>
+<td>invitation_pay_amount_integral</td>
+<td style="text-align:center">邀请支付分数</td>
+<td></td>
+</tr>
+<tr>
+<td>invitation_income_integral</td>
+<td style="text-align:center">邀请获得分数</td>
+<td></td>
+</tr>
+<tr>
+<td>createtime</td>
+<td style="text-align:center">创建时间</td>
+<td></td>
+</tr>
+<tr>
+<td>createdate</td>
+<td style="text-align:center">创建日期</td>
+<td></td>
+</tr>
+<tr>
+<td>total_integral</td>
+<td style="text-align:center"></td>
+<td>总分</td>
+</tr>
+<tr>
+<td>consult_score</td>
+<td style="text-align:center">查阅费</td>
+<td></td>
+</tr>
+<tr>
+<td>stage</td>
+<td style="text-align:center">期数</td>
+<td></td>
+</tr>
+<tr>
+<td>rank</td>
+<td style="text-align:center">排名</td>
+<td></td>
+</tr>
+<tr>
+<td>people_num</td>
+<td style="text-align:center">人数</td>
+<td></td>
+</tr>
+<tr>
+<td>leader_id</td>
+<td style="text-align:center">族长ID</td>
+<td></td>
+</tr>
+<tr>
+<td>leader_name</td>
+<td style="text-align:center">族长名字</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="attr">"data"</span>: &#123;</div><div class="line">           <span class="attr">"total"</span>: <span class="string">"1"</span>,</div><div class="line">           <span class="attr">"rows"</span>: [</div><div class="line">               &#123;</div><div class="line">                   <span class="attr">"id"</span>: <span class="string">"3"</span>,</div><div class="line">                   <span class="attr">"family_id"</span>: <span class="string">"8"</span>,</div><div class="line">                   <span class="attr">"family_name"</span>: <span class="string">"家族名字"</span>,</div><div class="line">                   <span class="attr">"ontime_ratio_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"accept_invitation_num_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"new_friends_num_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"continue_days_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"invitation_pay_amount_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"invitation_income_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"createtime"</span>: <span class="string">"2018-05-28 10:08:42"</span>,</div><div class="line">                   <span class="attr">"createdate"</span>: <span class="string">"2018-05-28"</span>,</div><div class="line">                   <span class="attr">"total_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"time_range"</span>: <span class="string">"2018.05.21 - 2018-05-27"</span>,</div><div class="line">                   <span class="attr">"consult_score"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"stage"</span>: <span class="string">"1"</span>,</div><div class="line">                   <span class="attr">"rank"</span>: <span class="string">"1"</span>,</div><div class="line">                   <span class="attr">"people_num"</span>: <span class="string">"2"</span>,</div><div class="line">                   <span class="attr">"leader_id"</span>: <span class="string">"1"</span>,</div><div class="line">                   <span class="attr">"leader_name"</span>: <span class="string">"affertime"</span></div><div class="line">               &#125;</div><div class="line">           ]</div><div class="line">       &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <hr>
 <p>Author [@elliot]<br>2017 年 05月 10日</p>
 ]]></content>

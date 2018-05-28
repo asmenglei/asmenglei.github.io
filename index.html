@@ -310,6 +310,255 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/zq-sso/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Elliot">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://tva4.sinaimg.cn/crop.0.0.640.640.180/7392110djw8eld8qhm29zj20hs0hs753.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Elliot'Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/05/24/zq-sso/" itemprop="url">zq_sso</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-24T09:53:02+08:00">
+                2018-05-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2018/05/24/zq-sso/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2018/05/24/zq-sso/" class="cy_cmt_count" data-xid="2018/05/24/zq-sso/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="中企对接文档-version-1-0"><a href="#中企对接文档-version-1-0" class="headerlink" title="中企对接文档 version 1.0"></a><strong>中企对接文档 version 1.0</strong></h2><ul>
+<li>url地址 :[<a href="http://passport.newdhb.com/login/{method}" target="_blank" rel="external">http://passport.newdhb.com/login/{method}</a>]</li>
+<li>method :POST</li>
+<li>返回格式 : json</li>
+<li>传输头:Content-Type:application/json</li>
+<li>password加密算法:RSA</li>
+</ul>
+<h3 id="三方登陆接口"><a href="#三方登陆接口" class="headerlink" title="三方登陆接口"></a>三方登陆接口</h3><ul>
+<li>thirdLogin</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">username</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">用户名</td>
+<td style="text-align:center">elliot</td>
+</tr>
+<tr>
+<td style="text-align:center">password</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">密码</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">partner_id</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">合作方ID</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">appkey</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">appkey</td>
+<td style="text-align:center">123</td>
+</tr>
+<tr>
+<td style="text-align:center">timestamp</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">时间戳</td>
+<td style="text-align:center">1526871491</td>
+</tr>
+<tr>
+<td style="text-align:center">sign</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">签名</td>
+<td style="text-align:center">2c3f152edb0b035cac69b24774c8d39f</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">refresh_token</td>
+<td style="text-align:center">refresh_token</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"refresh_token"</span>: <span class="string">"663bbe3a2c52bc598cab170a92ff2f44"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="通过RefreshToken设置登陆状态"><a href="#通过RefreshToken设置登陆状态" class="headerlink" title="通过RefreshToken设置登陆状态"></a>通过RefreshToken设置登陆状态</h3><ul>
+<li>getAccessToken</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">refresh_token</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">refresh_token</td>
+<td style="text-align:center">663bbe3a2c52bc598cab170a92ff2f44</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">refresh_token</td>
+<td style="text-align:center">refresh_token</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: [],</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/19/python-weichat/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1439,7 +1688,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
