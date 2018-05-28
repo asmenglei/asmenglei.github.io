@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-24T03:00:04.130Z</updated>
+  <updated>2018-05-28T03:16:13.263Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://yoursite.com/2018/05/24/zq-sso/"/>
     <id>http://yoursite.com/2018/05/24/zq-sso/</id>
     <published>2018-05-24T01:53:02.000Z</published>
-    <updated>2018-05-24T03:00:04.130Z</updated>
+    <updated>2018-05-28T03:16:13.263Z</updated>
     
     <content type="html"><![CDATA[<h2 id="中企对接文档-version-1-0"><a href="#中企对接文档-version-1-0" class="headerlink" title="中企对接文档 version 1.0"></a><strong>中企对接文档 version 1.0</strong></h2><ul>
-<li>url地址 :[<a href="http://passport.newdhb.com/login/{method}" target="_blank" rel="external">http://passport.newdhb.com/login/{method}</a>]</li>
+<li>url地址 :[<a href="http://passport.****.com/login/{method}" target="_blank" rel="external">http://passport.****.com/login/{method}</a>]</li>
 <li>method :POST</li>
 <li>返回格式 : json</li>
 <li>传输头:Content-Type:application/json</li>
