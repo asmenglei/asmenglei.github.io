@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[zq_sso]]></title>
     <url>%2F2018%2F05%2F24%2Fzq-sso%2F</url>
-    <content type="text"><![CDATA[中企对接文档 version 1.0 url地址 :[http://passport.****.com/login/{method}] method :POST 返回格式 : json 传输头:Content-Type:application/json password加密算法:RSA 三方登陆接口 thirdLogin 请求参数 参数名 是否必传 说明 举例 username Y 用户名 elliot password Y 密码 partner_id Y 合作方ID 1 appkey Y appkey 123 timestamp Y 时间戳 1526871491 sign Y 签名 2c3f152edb0b035cac69b24774c8d39f 返回数据格式 字段名 说明 举例 refresh_token refresh_token 返回样本1234567&#123; "code": 200, "data": &#123; "refresh_token": "663bbe3a2c52bc598cab170a92ff2f44" &#125;, "message": ""&#125; 通过RefreshToken设置登陆状态 getAccessToken 请求参数 参数名 是否必传 说明 举例 refresh_token Y refresh_token 663bbe3a2c52bc598cab170a92ff2f44 返回数据格式 字段名 说明 举例 refresh_token refresh_token 返回样本12345&#123; "code": 200, "data": [], "message": ""&#125;]]></content>
+    <content type="text"><![CDATA[对接文档 version 1.0 url地址 :[http://passport.****.com/login/{method}] method :POST 返回格式 : json 传输头:Content-Type:application/json password加密算法:RSA 三方登陆接口 thirdLogin 请求参数 参数名 是否必传 说明 举例 username Y 用户名 elliot password Y 密码 partner_id Y 合作方ID 1 appkey Y appkey 123 timestamp Y 时间戳 1526871491 sign Y 签名 2c3f152edb0b035cac69b24774c8d39f 返回数据格式 字段名 说明 举例 refresh_token refresh_token 返回样本1234567&#123; "code": 200, "data": &#123; "refresh_token": "663bbe3a2c52bc598cab170a92ff2f44" &#125;, "message": ""&#125; 通过RefreshToken设置登陆状态 getAccessToken 请求参数 参数名 是否必传 说明 举例 refresh_token Y refresh_token 663bbe3a2c52bc598cab170a92ff2f44 返回数据格式 字段名 说明 举例 refresh_token refresh_token 返回样本12345&#123; "code": 200, "data": [], "message": ""&#125;]]></content>
   </entry>
   <entry>
     <title><![CDATA[Python VS Wechat 可以这么玩]]></title>
