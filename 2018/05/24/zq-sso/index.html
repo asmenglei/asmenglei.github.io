@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Elliot&#39;Blog">
 <meta property="og:description" content="对接文档 version 1.0 url地址 :[http://passport.****.com/login/{method}] method :POST 返回格式 : json 传输头:Content-Type:application/json password加密算法:RSA  三方登陆接口 thirdLogin 请求参数     参数名 是否必传 说明 举例     username Y">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-28T03:17:20.317Z">
+<meta property="og:updated_time" content="2018-05-29T02:25:39.593Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zq_sso">
 <meta name="twitter:description" content="对接文档 version 1.0 url地址 :[http://passport.****.com/login/{method}] method :POST 返回格式 : json 传输头:Content-Type:application/json password加密算法:RSA  三方登陆接口 thirdLogin 请求参数     参数名 是否必传 说明 举例     username Y">
@@ -450,7 +450,11 @@
 </tbody>
 </table>
 <ul>
-<li>返回数据格式</li>
+<li><p>请求示例：</p>
+<p>curl -X POST \<br><a href="http://passport.newdhb.com/login/thirdLogin" target="_blank" rel="external">http://passport.newdhb.com/login/thirdLogin</a> \<br>-H ‘Cache-Control: no-cache’ \<br>-H ‘Content-Type: application/json’ \<br>-H ‘Postman-Token: 2eef0284-7294-4ac9-9b72-ef62ca567ead’ \<br>-d ‘{<br>“username”: “elliot”,<br>“password”: “622b34524b326a71704b343175746a586d4a704735327249784764356c31426b544e4c74532b5377705552455852462f626168385246427751746e6f50585176734458564a2f6e6b424877454935566d51503953313379763844486b5731594f2f6d47576a4e2b4849756b66594f5953447131454b6c516b334d57495a4462686f50737a78646b564779586472764c31664d49736c364b656d33416e76305349585535543459744a7976303d”,<br>“partner_id”: 1,<br>“appkey”: 123,<br>“timestamp”:1526871491,<br>“sign”:”2c3f152edb0b035cac69b24774c8d39f”<br>}’</p>
+</li>
+<li><p>返回数据格式</p>
+</li>
 </ul>
 <table>
 <thead>
@@ -467,7 +471,10 @@
 </tr>
 </tbody>
 </table>
-<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"refresh_token"</span>: <span class="string">"663bbe3a2c52bc598cab170a92ff2f44"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"refresh_token"</span>: <span class="string">"663bbe3a2c52bc598cab170a92ff2f44"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
 <h3 id="通过RefreshToken设置登陆状态"><a href="#通过RefreshToken设置登陆状态" class="headerlink" title="通过RefreshToken设置登陆状态"></a>通过RefreshToken设置登陆状态</h3><ul>
 <li>getAccessToken</li>
 <li>请求参数</li>
@@ -508,7 +515,14 @@
 </tr>
 </tbody>
 </table>
-<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: [],</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p>请求示例</p>
+<p>curl -X GET \<br>‘<a href="http://passport.newdhb.com/login/getAccessToken/?refresh_token=663bbe3a2c52bc598cab170a92ff2f44" target="_blank" rel="external">http://passport.newdhb.com/login/getAccessToken/?refresh_token=663bbe3a2c52bc598cab170a92ff2f44</a>‘ \<br>-H ‘Cache-Control: no-cache’ \<br>-H ‘Content-Type: application/json’ \<br>-H ‘Postman-Token: 14c08026-3396-4fe9-9cb4-5920995fcf35’</p>
+</li>
+<li><p>返回样本</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: [],</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
