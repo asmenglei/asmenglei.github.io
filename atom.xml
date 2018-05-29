@@ -531,7 +531,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-05-29T03:05:55.263Z</updated>
+    <updated>2018-05-29T08:32:52.782Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -9947,6 +9947,141 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tbody>
 </table>
 <p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="attr">"data"</span>: &#123;</div><div class="line">           <span class="attr">"total"</span>: <span class="string">"1"</span>,</div><div class="line">           <span class="attr">"rows"</span>: [</div><div class="line">               &#123;</div><div class="line">                   <span class="attr">"id"</span>: <span class="string">"3"</span>,</div><div class="line">                   <span class="attr">"family_id"</span>: <span class="string">"8"</span>,</div><div class="line">                   <span class="attr">"family_name"</span>: <span class="string">"家族名字"</span>,</div><div class="line">                   <span class="attr">"ontime_ratio_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"accept_invitation_num_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"new_friends_num_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"continue_days_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"invitation_pay_amount_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"invitation_income_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"createtime"</span>: <span class="string">"2018-05-28 10:08:42"</span>,</div><div class="line">                   <span class="attr">"createdate"</span>: <span class="string">"2018-05-28"</span>,</div><div class="line">                   <span class="attr">"total_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"time_range"</span>: <span class="string">"2018.05.21 - 2018-05-27"</span>,</div><div class="line">                   <span class="attr">"consult_score"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"stage"</span>: <span class="string">"1"</span>,</div><div class="line">                   <span class="attr">"rank"</span>: <span class="string">"1"</span>,</div><div class="line">                   <span class="attr">"people_num"</span>: <span class="string">"2"</span>,</div><div class="line">                   <span class="attr">"leader_id"</span>: <span class="string">"1"</span>,</div><div class="line">                   <span class="attr">"leader_name"</span>: <span class="string">"affertime"</span>,</div><div class="line">                   <span class="attr">"salary"</span>: <span class="string">"100"</span></div><div class="line">               &#125;</div><div class="line">           ]</div><div class="line">       &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="家族荣誉历史"><a href="#家族荣誉历史" class="headerlink" title="家族荣誉历史"></a>家族荣誉历史</h3><ul>
+<li>wxGetUserFamilyUserList</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">当前登录用户UID</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>family_id</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">家族ID</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>stage</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">期数</td>
+<td style="text-align:right">5</td>
+</tr>
+<tr>
+<td>page</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">页码</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>limit</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">每页条数</td>
+<td style="text-align:right">2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td style="text-align:center">ID</td>
+<td></td>
+</tr>
+<tr>
+<td>family_id</td>
+<td style="text-align:center">家族ID</td>
+<td></td>
+</tr>
+<tr>
+<td>family_name</td>
+<td style="text-align:center">家族名字</td>
+<td></td>
+</tr>
+<tr>
+<td>ontime_ratio_integral</td>
+<td style="text-align:center">周守时率分数</td>
+<td></td>
+</tr>
+<tr>
+<td>accept_invitation_num_integral</td>
+<td style="text-align:center">接受邀请分数</td>
+<td></td>
+</tr>
+<tr>
+<td>new_friends_num_integral</td>
+<td style="text-align:center">新增好友分数</td>
+<td></td>
+</tr>
+<tr>
+<td>continue_days_integral</td>
+<td style="text-align:center">连续守时分数</td>
+<td></td>
+</tr>
+<tr>
+<td>invitation_pay_amount_integral</td>
+<td style="text-align:center">邀请支付分数</td>
+<td></td>
+</tr>
+<tr>
+<td>invitation_income_integral</td>
+<td style="text-align:center">邀请获得分数</td>
+<td></td>
+</tr>
+<tr>
+<td>createtime</td>
+<td style="text-align:center">创建时间</td>
+<td></td>
+</tr>
+<tr>
+<td>createdate</td>
+<td style="text-align:center">创建日期</td>
+<td></td>
+</tr>
+<tr>
+<td>total_integral</td>
+<td style="text-align:center"></td>
+<td>总分</td>
+</tr>
+<tr>
+<td>stage</td>
+<td style="text-align:center">期数</td>
+<td></td>
+</tr>
+<tr>
+<td>salary</td>
+<td style="text-align:center">周薪水</td>
+<td></td>
+</tr>
+<tr>
+<td>user_family_integral_detail</td>
+<td style="text-align:center">家族信息及指数</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="attr">"data"</span>: &#123;</div><div class="line">           <span class="attr">"total"</span>: <span class="string">"1"</span>,</div><div class="line">           <span class="attr">"rows"</span>: [</div><div class="line">               &#123;</div><div class="line">                   <span class="attr">"id"</span>: <span class="string">"3"</span>,</div><div class="line">                   <span class="attr">"family_id"</span>: <span class="string">"4"</span>,</div><div class="line">                   <span class="attr">"family_name"</span>: <span class="string">"7天娱！"</span>,</div><div class="line">                   <span class="attr">"userid"</span>: <span class="string">"2"</span>,</div><div class="line">                   <span class="attr">"ontime_ratio"</span>: <span class="string">"0.65"</span>,</div><div class="line">                   <span class="attr">"ontime_ratio_integral"</span>: <span class="string">"6.47"</span>,</div><div class="line">                   <span class="attr">"accept_invitation_num"</span>: <span class="string">"0"</span>,</div><div class="line">                   <span class="attr">"accept_invitation_num_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"new_friends_num"</span>: <span class="string">"0"</span>,</div><div class="line">                   <span class="attr">"new_friends_num_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"continue_days"</span>: <span class="string">"0"</span>,</div><div class="line">                   <span class="attr">"continue_days_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">                   <span class="attr">"invitation_pay_amount"</span>: <span class="string">"30.00"</span>,</div><div class="line">                   <span class="attr">"invitation_pay_amount_integral"</span>: <span class="string">"3.00"</span>,</div><div class="line">                   <span class="attr">"invitation_income"</span>: <span class="string">"25.00"</span>,</div><div class="line">                   <span class="attr">"invitation_income_integral"</span>: <span class="string">"3.00"</span>,</div><div class="line">                   <span class="attr">"createtime"</span>: <span class="string">"2018-05-29 16:22:35"</span>,</div><div class="line">                   <span class="attr">"createdate"</span>: <span class="string">"2018-05-29"</span>,</div><div class="line">                   <span class="attr">"total_integral"</span>: <span class="string">"12.47"</span>,</div><div class="line">                   <span class="attr">"time_range"</span>: <span class="string">"2018-05-21 - 2018-05-27"</span>,</div><div class="line">                   <span class="attr">"salary"</span>: <span class="string">"5000"</span>,</div><div class="line">                   <span class="attr">"stage"</span>: <span class="string">"1"</span></div><div class="line">               &#125;</div><div class="line">           ],</div><div class="line">           <span class="attr">"user_family_integral_detail"</span>: &#123;</div><div class="line">               <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">               <span class="attr">"family_id"</span>: <span class="string">"4"</span>,</div><div class="line">               <span class="attr">"family_name"</span>: <span class="string">"7天娱！"</span>,</div><div class="line">               <span class="attr">"ontime_ratio_integral"</span>: <span class="string">"6.47"</span>,</div><div class="line">               <span class="attr">"accept_invitation_num_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">               <span class="attr">"new_friends_num_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">               <span class="attr">"continue_days_integral"</span>: <span class="string">"0.00"</span>,</div><div class="line">               <span class="attr">"invitation_pay_amount_integral"</span>: <span class="string">"3.00"</span>,</div><div class="line">               <span class="attr">"invitation_income_integral"</span>: <span class="string">"3.00"</span>,</div><div class="line">               <span class="attr">"createtime"</span>: <span class="string">"2018-05-29 16:23:39"</span>,</div><div class="line">               <span class="attr">"createdate"</span>: <span class="string">"2018-05-29"</span>,</div><div class="line">               <span class="attr">"total_integral"</span>: <span class="string">"12.47"</span>,</div><div class="line">               <span class="attr">"time_range"</span>: <span class="string">"2018.05.21 - 2018-05-27"</span>,</div><div class="line">               <span class="attr">"consult_score"</span>: <span class="string">"0.00"</span>,</div><div class="line">               <span class="attr">"stage"</span>: <span class="string">"1"</span>,</div><div class="line">               <span class="attr">"rank"</span>: <span class="string">"1"</span>,</div><div class="line">               <span class="attr">"people_num"</span>: <span class="string">"1"</span>,</div><div class="line">               <span class="attr">"salary"</span>: <span class="string">"5000"</span></div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <hr>
 <p>Author [@elliot]<br>2017 年 05月 10日</p>
 ]]></content>
