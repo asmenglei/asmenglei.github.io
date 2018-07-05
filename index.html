@@ -310,6 +310,137 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/05/yhsj/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Elliot">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://tva4.sinaimg.cn/crop.0.0.640.640.180/7392110djw8eld8qhm29zj20hs0hs753.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Elliot'Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/05/yhsj/" itemprop="url">杨辉三角形</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-05T16:23:25+08:00">
+                2018-07-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2018/07/05/yhsj/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2018/07/05/yhsj/" class="cy_cmt_count" data-xid="2018/07/05/yhsj/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>杨辉三角形</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">//行数</div><div class="line">const LINES int = 10</div><div class="line"></div><div class="line">// 杨辉三角</div><div class="line">func ShowYangHuiTriangle() &#123;</div><div class="line">    nums := []int&#123;&#125;</div><div class="line">    for i := 0; i &lt; LINES; i++ &#123;</div><div class="line">        //补空白</div><div class="line">        for j := 0; j &lt; (LINES - i); j++ &#123;</div><div class="line">            fmt.Print(&quot; &quot;)</div><div class="line">        &#125;</div><div class="line">        for j := 0; j &lt; (i + 1); j++ &#123;</div><div class="line">            var length = len(nums)</div><div class="line">            var value int</div><div class="line">            if j == 0 || j == i &#123;</div><div class="line">                value = 1</div><div class="line">            &#125; else &#123;</div><div class="line">                value = nums[length-i] + nums[length-i-1]</div><div class="line">            &#125;</div><div class="line">            nums = append(nums, value)</div><div class="line">            fmt.Print(value, &quot; &quot;)</div><div class="line">        &#125;</div><div class="line">        fmt.Println(&quot;&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">    ShowYangHuiTriangle()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/zq-sso/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -523,6 +654,170 @@
 </li>
 <li><p>返回样本</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: [],</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="移动端登陆-移动设备-小程序-获取移动端rsa密钥配置接口"><a href="#移动端登陆-移动设备-小程序-获取移动端rsa密钥配置接口" class="headerlink" title="移动端登陆 -移动设备(小程序)获取移动端rsa密钥配置接口"></a>移动端登陆 -移动设备(小程序)获取移动端rsa密钥配置接口</h3><ul>
+<li>mConf</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">key</td>
+<td style="text-align:center">refresh_token</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line"><span class="attr">"data"</span>: &#123;</div><div class="line"><span class="attr">"key"</span>: <span class="string">"LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlHZk1BMEdDU3FHU0liM0RRRUJBUVVBQTRHTkFEQ0JpUUtCZ1FESTlNTjB3ZHpCYUk2SVArd1RoVXQrTFNzVwpkMEFrVnJRSUwwUzhnV0lmakFoOWdDQTNqNTMyTm1yVmUxUk43OVlVN0JxeFF6a0JBN3NMZTU2ejBSSm1iNzN0Clh2TGtYUXhsMkNwRm5GSWNKaFNvdENYR0c3MnpZNHErZVJWY0lyL3lJWXNTemNhd2xPVHQ5OVBvMFNIOVo1Sk4KZm1HMm5MUzhXSnU0Y1ZJRXFRSURBUUFCCi0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQ=="</span></div><div class="line">&#125;,</div><div class="line"><span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="移动端登陆-移动设备-小程序-移动端用户名密码登陆"><a href="#移动端登陆-移动设备-小程序-移动端用户名密码登陆" class="headerlink" title="移动端登陆 -移动设备(小程序)移动端用户名密码登陆"></a>移动端登陆 -移动设备(小程序)移动端用户名密码登陆</h3><ul>
+<li>mUserLogin</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">accounts_name</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">用户名</td>
+<td style="text-align:center">kaifa</td>
+</tr>
+<tr>
+<td style="text-align:center">accounts_pass</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">rsa密码</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">login_type</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">登陆类型</td>
+<td style="text-align:center">xcx,kqhb,xdgl</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">token</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"> <span class="attr">"token"</span>: <span class="string">"9DQ+x8YPPeIr55AdvsjN/+/Sr4XO06tPPrOzriD/hXtWUmYvHXTPO9K+OsVI0De2bcBlifU3KB99164fvcUQK/zd42N0WW5bOCl4Sg2FwvSGHKvWOhTzQVjV5sA1JBwLhAvbolx4U9HGEPoWF2wg7mHbBBRQl9ZPRfoAa1Ofgu2V41Q8J9V/6mtD8b5UWu7z"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="移动端登陆-移动设备"><a href="#移动端登陆-移动设备" class="headerlink" title="移动端登陆 -移动设备"></a>移动端登陆 -移动设备</h3><ul>
+<li>mobileUserLogin</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">accounts_name</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">用户名</td>
+<td style="text-align:center">kaifa</td>
+</tr>
+<tr>
+<td style="text-align:center">accounts_pass</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Rsa密码</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">login_type</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">登陆端类型</td>
+<td style="text-align:center">mobile</td>
+</tr>
+<tr>
+<td style="text-align:center">wid</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Wid</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">company_id</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">公司ID</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">token</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"> <span class="attr">"token"</span>: <span class="string">"9DQ+x8YPPeIr55AdvsjN/+/Sr4XO06tPPrOzriD/hXtWUmYvHXTPO9K+OsVI0De2bcBlifU3KB99164fvcUQK/zd42N0WW5bOCl4Sg2FwvSGHKvWOhTzQVjV5sA1JBwLhAvbolx4U9HGEPoWF2wg7mHbBBRQl9ZPRfoAa1Ofgu2V41Q8J9V/6mtD8b5UWu7z"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -1702,7 +1997,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

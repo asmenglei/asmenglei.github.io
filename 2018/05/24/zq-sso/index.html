@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="Elliot&#39;Blog">
 <meta property="og:description" content="对接文档 version 1.0 url地址 :[http://passport.****.com/login/{method}] method :POST 返回格式 : json 传输头:Content-Type:application/json password加密算法:RSA  三方登陆接口 thirdLogin 请求参数     参数名 是否必传 说明 举例     username Y">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-05-29T02:25:39.593Z">
+<meta property="og:updated_time" content="2018-06-22T06:59:10.766Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zq_sso">
 <meta name="twitter:description" content="对接文档 version 1.0 url地址 :[http://passport.****.com/login/{method}] method :POST 返回格式 : json 传输头:Content-Type:application/json password加密算法:RSA  三方登陆接口 thirdLogin 请求参数     参数名 是否必传 说明 举例     username Y">
@@ -523,6 +523,170 @@
 <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: [],</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<h3 id="移动端登陆-移动设备-小程序-获取移动端rsa密钥配置接口"><a href="#移动端登陆-移动设备-小程序-获取移动端rsa密钥配置接口" class="headerlink" title="移动端登陆 -移动设备(小程序)获取移动端rsa密钥配置接口"></a>移动端登陆 -移动设备(小程序)获取移动端rsa密钥配置接口</h3><ul>
+<li>mConf</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">key</td>
+<td style="text-align:center">refresh_token</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line"><span class="attr">"data"</span>: &#123;</div><div class="line"><span class="attr">"key"</span>: <span class="string">"LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlHZk1BMEdDU3FHU0liM0RRRUJBUVVBQTRHTkFEQ0JpUUtCZ1FESTlNTjB3ZHpCYUk2SVArd1RoVXQrTFNzVwpkMEFrVnJRSUwwUzhnV0lmakFoOWdDQTNqNTMyTm1yVmUxUk43OVlVN0JxeFF6a0JBN3NMZTU2ejBSSm1iNzN0Clh2TGtYUXhsMkNwRm5GSWNKaFNvdENYR0c3MnpZNHErZVJWY0lyL3lJWXNTemNhd2xPVHQ5OVBvMFNIOVo1Sk4KZm1HMm5MUzhXSnU0Y1ZJRXFRSURBUUFCCi0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQ=="</span></div><div class="line">&#125;,</div><div class="line"><span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="移动端登陆-移动设备-小程序-移动端用户名密码登陆"><a href="#移动端登陆-移动设备-小程序-移动端用户名密码登陆" class="headerlink" title="移动端登陆 -移动设备(小程序)移动端用户名密码登陆"></a>移动端登陆 -移动设备(小程序)移动端用户名密码登陆</h3><ul>
+<li>mUserLogin</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">accounts_name</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">用户名</td>
+<td style="text-align:center">kaifa</td>
+</tr>
+<tr>
+<td style="text-align:center">accounts_pass</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">rsa密码</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">login_type</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">登陆类型</td>
+<td style="text-align:center">xcx,kqhb,xdgl</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">token</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"> <span class="attr">"token"</span>: <span class="string">"9DQ+x8YPPeIr55AdvsjN/+/Sr4XO06tPPrOzriD/hXtWUmYvHXTPO9K+OsVI0De2bcBlifU3KB99164fvcUQK/zd42N0WW5bOCl4Sg2FwvSGHKvWOhTzQVjV5sA1JBwLhAvbolx4U9HGEPoWF2wg7mHbBBRQl9ZPRfoAa1Ofgu2V41Q8J9V/6mtD8b5UWu7z"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="移动端登陆-移动设备"><a href="#移动端登陆-移动设备" class="headerlink" title="移动端登陆 -移动设备"></a>移动端登陆 -移动设备</h3><ul>
+<li>mobileUserLogin</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">accounts_name</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">用户名</td>
+<td style="text-align:center">kaifa</td>
+</tr>
+<tr>
+<td style="text-align:center">accounts_pass</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">Rsa密码</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">login_type</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">登陆端类型</td>
+<td style="text-align:center">mobile</td>
+</tr>
+<tr>
+<td style="text-align:center">wid</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">Wid</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">company_id</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">公司ID</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">token</td>
+<td style="text-align:center">token</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"> <span class="attr">"token"</span>: <span class="string">"9DQ+x8YPPeIr55AdvsjN/+/Sr4XO06tPPrOzriD/hXtWUmYvHXTPO9K+OsVI0De2bcBlifU3KB99164fvcUQK/zd42N0WW5bOCl4Sg2FwvSGHKvWOhTzQVjV5sA1JBwLhAvbolx4U9HGEPoWF2wg7mHbBBRQl9ZPRfoAa1Ofgu2V41Q8J9V/6mtD8b5UWu7z"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
@@ -580,6 +744,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/05/yhsj/" rel="prev" title="杨辉三角形">
+                杨辉三角形 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -658,7 +826,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -748,7 +916,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#对接文档-version-1-0"><span class="nav-number">1.</span> <span class="nav-text">对接文档 version 1.0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三方登陆接口"><span class="nav-number">1.1.</span> <span class="nav-text">三方登陆接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过RefreshToken设置登陆状态"><span class="nav-number">1.2.</span> <span class="nav-text">通过RefreshToken设置登陆状态</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#对接文档-version-1-0"><span class="nav-number">1.</span> <span class="nav-text">对接文档 version 1.0</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三方登陆接口"><span class="nav-number">1.1.</span> <span class="nav-text">三方登陆接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过RefreshToken设置登陆状态"><span class="nav-number">1.2.</span> <span class="nav-text">通过RefreshToken设置登陆状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端登陆-移动设备-小程序-获取移动端rsa密钥配置接口"><span class="nav-number">1.3.</span> <span class="nav-text">移动端登陆 -移动设备(小程序)获取移动端rsa密钥配置接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端登陆-移动设备-小程序-移动端用户名密码登陆"><span class="nav-number">1.4.</span> <span class="nav-text">移动端登陆 -移动设备(小程序)移动端用户名密码登陆</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#移动端登陆-移动设备"><span class="nav-number">1.5.</span> <span class="nav-text">移动端登陆 -移动设备</span></a></li></ol></li></ol></div>
             
 
           </div>
