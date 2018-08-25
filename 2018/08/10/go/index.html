@@ -96,17 +96,17 @@
 
 
 
-<meta name="description" content="杨辉三角形 123456789101112131415161718192021222324252627282930313233package mainimport &amp;quot;fmt&amp;quot;//行数const LINES int = 10// 杨辉三角func ShowYangHuiTriangle() &amp;#123;    nums := []int&amp;#123;&amp;#125;    for i">
+<meta name="description" content="windows下 golang 跨平台编译 #linux 641234SET CGO_ENABLED=0SET GOOS=linuxSET GOARCH=amd64go build #windows1234SET CGO_ENABLED=1SET GOOS=windowsSET GOARCH=go build">
 <meta property="og:type" content="article">
-<meta property="og:title" content="杨辉三角形">
-<meta property="og:url" content="http://yoursite.com/2018/07/05/yhsj/index.html">
+<meta property="og:title" content="go">
+<meta property="og:url" content="http://yoursite.com/2018/08/10/go/index.html">
 <meta property="og:site_name" content="Elliot&#39;Blog">
-<meta property="og:description" content="杨辉三角形 123456789101112131415161718192021222324252627282930313233package mainimport &amp;quot;fmt&amp;quot;//行数const LINES int = 10// 杨辉三角func ShowYangHuiTriangle() &amp;#123;    nums := []int&amp;#123;&amp;#125;    for i">
+<meta property="og:description" content="windows下 golang 跨平台编译 #linux 641234SET CGO_ENABLED=0SET GOOS=linuxSET GOARCH=amd64go build #windows1234SET CGO_ENABLED=1SET GOOS=windowsSET GOARCH=go build">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-05T08:25:50.045Z">
+<meta property="og:updated_time" content="2018-08-10T02:05:27.752Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="杨辉三角形">
-<meta name="twitter:description" content="杨辉三角形 123456789101112131415161718192021222324252627282930313233package mainimport &amp;quot;fmt&amp;quot;//行数const LINES int = 10// 杨辉三角func ShowYangHuiTriangle() &amp;#123;    nums := []int&amp;#123;&amp;#125;    for i">
+<meta name="twitter:title" content="go">
+<meta name="twitter:description" content="windows下 golang 跨平台编译 #linux 641234SET CGO_ENABLED=0SET GOOS=linuxSET GOARCH=amd64go build #windows1234SET CGO_ENABLED=1SET GOOS=windowsSET GOARCH=go build">
 
 
 
@@ -135,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/05/yhsj/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/10/go/"/>
 
 
 
 
 
-  <title>杨辉三角形 | Elliot'Blog</title>
+  <title>go | Elliot'Blog</title>
   
 
 
@@ -312,7 +312,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/05/yhsj/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/10/go/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Elliot">
@@ -329,7 +329,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">杨辉三角形</h1>
+          <h1 class="post-title" itemprop="name headline">go</h1>
         
 
         <div class="post-meta">
@@ -341,8 +341,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-05T16:23:25+08:00">
-                2018-07-05
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-10T10:04:12+08:00">
+                2018-08-10
               </time>
             
 
@@ -361,8 +361,8 @@
                 <i class="fa fa-comment-o"></i>
               </span>
               
-                <a href="/2018/07/05/yhsj/#SOHUCS" itemprop="discussionUrl">
-                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/07/05/yhsj/" itemprop="commentsCount"></span>
+                <a href="/2018/08/10/go/#SOHUCS" itemprop="discussionUrl">
+                  <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2018/08/10/go/" itemprop="commentsCount"></span>
                 </a>
               
             
@@ -390,8 +390,10 @@
       
 
       
-        <p><strong>杨辉三角形</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">package main</div><div class="line"></div><div class="line">import &quot;fmt&quot;</div><div class="line"></div><div class="line">//行数</div><div class="line">const LINES int = 10</div><div class="line"></div><div class="line">// 杨辉三角</div><div class="line">func ShowYangHuiTriangle() &#123;</div><div class="line">    nums := []int&#123;&#125;</div><div class="line">    for i := 0; i &lt; LINES; i++ &#123;</div><div class="line">        //补空白</div><div class="line">        for j := 0; j &lt; (LINES - i); j++ &#123;</div><div class="line">            fmt.Print(&quot; &quot;)</div><div class="line">        &#125;</div><div class="line">        for j := 0; j &lt; (i + 1); j++ &#123;</div><div class="line">            var length = len(nums)</div><div class="line">            var value int</div><div class="line">            if j == 0 || j == i &#123;</div><div class="line">                value = 1</div><div class="line">            &#125; else &#123;</div><div class="line">                value = nums[length-i] + nums[length-i-1]</div><div class="line">            &#125;</div><div class="line">            nums = append(nums, value)</div><div class="line">            fmt.Print(value, &quot; &quot;)</div><div class="line">        &#125;</div><div class="line">        fmt.Println(&quot;&quot;)</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">    ShowYangHuiTriangle()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>windows下 golang 跨平台编译</p>
+<p>#linux 64<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SET CGO_ENABLED=0</div><div class="line">SET GOOS=linux</div><div class="line">SET GOARCH=amd64</div><div class="line">go build</div></pre></td></tr></table></figure></p>
+<p>#windows<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SET CGO_ENABLED=1</div><div class="line">SET GOOS=windows</div><div class="line">SET GOARCH=</div><div class="line">go build</div></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -439,8 +441,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/24/zq-sso/" rel="next" title="zq_sso">
-                <i class="fa fa-chevron-left"></i> zq_sso
+              <a href="/2018/07/05/yhsj/" rel="next" title="杨辉三角形">
+                <i class="fa fa-chevron-left"></i> 杨辉三角形
               </a>
             
           </div>
@@ -448,10 +450,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/10/go/" rel="prev" title="go">
-                go <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

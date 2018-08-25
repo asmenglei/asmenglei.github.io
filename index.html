@@ -310,6 +310,139 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/10/go/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Elliot">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://tva4.sinaimg.cn/crop.0.0.640.640.180/7392110djw8eld8qhm29zj20hs0hs753.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Elliot'Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/10/go/" itemprop="url">go</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-10T10:04:12+08:00">
+                2018-08-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-comment-o"></i>
+              </span>
+              
+                <a href="/2018/08/10/go/#SOHUCS" itemprop="discussionUrl">
+                  <span id="url::http://yoursite.com/2018/08/10/go/" class="cy_cmt_count" data-xid="2018/08/10/go/" itemprop="commentsCount" ></span>
+                </a>
+              
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>windows下 golang 跨平台编译</p>
+<p>#linux 64<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SET CGO_ENABLED=0</div><div class="line">SET GOOS=linux</div><div class="line">SET GOARCH=amd64</div><div class="line">go build</div></pre></td></tr></table></figure></p>
+<p>#windows<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SET CGO_ENABLED=1</div><div class="line">SET GOOS=windows</div><div class="line">SET GOARCH=</div><div class="line">go build</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/05/yhsj/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -529,6 +662,125 @@
 <li>返回格式 : json</li>
 <li>传输头:Content-Type:application/json</li>
 <li>password加密算法:RSA</li>
+</ul>
+<h3 id="PC端登陆获取rsa密钥配置接口"><a href="#PC端登陆获取rsa密钥配置接口" class="headerlink" title="PC端登陆获取rsa密钥配置接口"></a>PC端登陆获取rsa密钥配置接口</h3><ul>
+<li>conf</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>请求示例：</p>
+</li>
+<li><p>返回数据格式</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">key</td>
+<td style="text-align:center">refresh_token</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"key"</span>: <span class="string">"LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlHZk1BMEdDU3FHU0liM0RRRUJBUVVBQTRHTkFEQ0JpUUtCZ1FERWl6V0hBUE1ZMGJ1c0M3dnZNenhYby9CawoxSVNrUXQ1NEQ2L2VOL2lqb3p0K1pXRy81elBHN2hTczZ3K1RoZzJ5TlRWWEdZZE5oS0R1WVR1OElhVS9JYThwCkMzNmQ5dUxkZVR4VzVJaVJpcEFyODJGK1pNYWxncFJrYkZvcUplb0U5WEM4ckpQNEJNcWh2ejUrZXYyajNReGgKWnV1clhGZm1zZVBEU0ZsT2t3SURBUUFCCi0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQ=="</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="PC端登陆接口"><a href="#PC端登陆接口" class="headerlink" title="PC端登陆接口"></a>PC端登陆接口</h3><ul>
+<li>userLogin</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">accounts_name</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">用户名</td>
+<td style="text-align:center">elliot</td>
+</tr>
+<tr>
+<td style="text-align:center">accounts_pass</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">RSA加密密码</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">captcha_code</td>
+<td style="text-align:center">N</td>
+<td style="text-align:center">验证码</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>请求示例：</li>
+</ul>
+<p>curl -X POST \<br>  ‘<a href="http://passport.newdhb.com/login/userLogin?XDEBUG_SESSION_START=PHPSTORM" target="_blank" rel="external">http://passport.newdhb.com/login/userLogin?XDEBUG_SESSION_START=PHPSTORM</a>‘ \<br>  -H ‘Cache-Control: no-cache’ \<br>  -H ‘Content-Type: application/json’ \<br>  -H ‘Postman-Token: b7c5f529-eaeb-4ae4-925f-8e81549b5759’ \<br>  -d ‘{<br>“accounts_name”:”elliot”,<br>“accounts_pass”:”6c6f39375a5155594d3478556175586769476672356c584f30425841746b796e495141762b50634a5474454a457a48646336325a6a7043516270615775734d455753426e4e716c487634657253384835437965506244706747747339617a514a45767575447a5470784f36567648465932777335674d5541486e6c30417250574a36794676627a506e774b38456438743145656138314a566d6b39745270582f587454337771666f5851553d”<br>}’</p>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">accounts_id</td>
+<td style="text-align:center">账户ID</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">accounts_name</td>
+<td style="text-align:center">账户名字</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">accounts_type</td>
+<td style="text-align:center">账户类型</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">redirect_url</td>
+<td style="text-align:center">跳转地址</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"user_info"</span>: &#123;</div><div class="line">            <span class="attr">"accounts_id"</span>: <span class="number">2788</span>,</div><div class="line">            <span class="attr">"accounts_name"</span>: <span class="string">"elliot"</span>,</div><div class="line">            <span class="attr">"accounts_type"</span>: <span class="string">"manager"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"redirect_url"</span>: <span class="string">"http://admin.newdhb.com/Auth/Index/manager_index"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
 <h3 id="三方登陆接口"><a href="#三方登陆接口" class="headerlink" title="三方登陆接口"></a>三方登陆接口</h3><ul>
 <li>thirdLogin</li>
@@ -818,6 +1070,49 @@
 </table>
 <ul>
 <li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"> <span class="attr">"token"</span>: <span class="string">"9DQ+x8YPPeIr55AdvsjN/+/Sr4XO06tPPrOzriD/hXtWUmYvHXTPO9K+OsVI0De2bcBlifU3KB99164fvcUQK/zd42N0WW5bOCl4Sg2FwvSGHKvWOhTzQVjV5sA1JBwLhAvbolx4U9HGEPoWF2wg7mHbBBRQl9ZPRfoAa1Ofgu2V41Q8J9V/6mtD8b5UWu7z"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="根据域名前缀获取公司LOGO"><a href="#根据域名前缀获取公司LOGO" class="headerlink" title="根据域名前缀获取公司LOGO"></a>根据域名前缀获取公司LOGO</h3><ul>
+<li>checkUrlPrefixLogo</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">prefix</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">域名前缀</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字段名</th>
+<th style="text-align:center">说明</th>
+<th style="text-align:center">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">prefix</td>
+<td style="text-align:center">token</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"logo"</span>: <span class="string">"000000/000000001/15/i20160125_988_296.jpg"</span>,</div><div class="line">        <span class="attr">"company_id"</span>: <span class="number">7</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
 
@@ -1997,7 +2292,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
