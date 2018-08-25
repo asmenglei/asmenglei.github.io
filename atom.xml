@@ -899,7 +899,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-08-25T07:51:58.098Z</updated>
+    <updated>2018-08-25T15:34:07.198Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -10844,6 +10844,103 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tbody>
 </table>
 <p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">   <span class="attr">"data"</span>: &#123;</div><div class="line">           <span class="attr">"total"</span>: <span class="string">"1"</span>,</div><div class="line">           <span class="attr">"rows"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"uid"</span>: <span class="string">"5"</span>,</div><div class="line">                    <span class="attr">"username"</span>: <span class="string">"牛牛"</span>,</div><div class="line">                    <span class="attr">"gps"</span>: <span class="string">"110.11#38.45"</span></div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">       &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="族长修改家族公告"><a href="#族长修改家族公告" class="headerlink" title="族长修改家族公告"></a>族长修改家族公告</h3><ul>
+<li>wxUpdateUserFamilyRemark</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">家族ID</td>
+</tr>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">当前登陆人ID</td>
+<td style="text-align:right">183</td>
+</tr>
+<tr>
+<td>remark</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">公告内容</td>
+<td style="text-align:right">aaa</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td style="text-align:center">家族名字</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:center">状态 -1删除 1成立</td>
+<td></td>
+</tr>
+<tr>
+<td>createtime</td>
+<td style="text-align:center">创建时间</td>
+<td></td>
+</tr>
+<tr>
+<td>updatetime</td>
+<td style="text-align:center">更新时间</td>
+<td></td>
+</tr>
+<tr>
+<td>userid</td>
+<td style="text-align:center">创建者UID</td>
+<td></td>
+</tr>
+<tr>
+<td>username</td>
+<td style="text-align:center">创建者名字</td>
+<td></td>
+</tr>
+<tr>
+<td>color</td>
+<td style="text-align:center">家族颜色 1红2黄3蓝4粉5青6绿7酱8黑9紫10白11黄12棕</td>
+<td></td>
+</tr>
+<tr>
+<td>remark</td>
+<td style="text-align:center">家族备注</td>
+<td></td>
+</tr>
+<tr>
+<td>people_num</td>
+<td style="text-align:center">家族人数</td>
+<td></td>
+</tr>
+<tr>
+<td>relations_id</td>
+<td style="text-align:center">关联的关系表lx_user_family_relation的ID</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">            <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"name"</span>: <span class="string">"第一波"</span>,</div><div class="line">            <span class="attr">"status"</span>: <span class="string">"-1"</span>,</div><div class="line">            <span class="attr">"createtime"</span>: <span class="string">"2018-05-28 21:00:36"</span>,</div><div class="line">            <span class="attr">"updatetime"</span>: <span class="string">"2018-08-25 23:31:35"</span>,</div><div class="line">            <span class="attr">"userid"</span>: <span class="string">"139"</span>,</div><div class="line">            <span class="attr">"username"</span>: <span class="string">"T2"</span>,</div><div class="line">            <span class="attr">"color"</span>: <span class="string">"6"</span>,</div><div class="line">            <span class="attr">"remark"</span>: <span class="string">"10"</span>,</div><div class="line">            <span class="attr">"people_num"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"score"</span>: <span class="string">"3.00"</span></div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <hr>
 <p>Author [@elliot]<br>2017 年 05月 10日</p>
 ]]></content>
