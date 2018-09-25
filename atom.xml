@@ -58,483 +58,6 @@
   </entry>
   
   <entry>
-    <title>zq_sso</title>
-    <link href="http://yoursite.com/2018/05/24/zq-sso/"/>
-    <id>http://yoursite.com/2018/05/24/zq-sso/</id>
-    <published>2018-05-24T01:53:02.000Z</published>
-    <updated>2018-07-20T05:59:40.802Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="对接文档-version-1-0"><a href="#对接文档-version-1-0" class="headerlink" title="对接文档 version 1.0"></a><strong>对接文档 version 1.0</strong></h2><ul>
-<li>url地址 :[<a href="http://passport.****.com/login/{method}" target="_blank" rel="external">http://passport.****.com/login/{method}</a>]</li>
-<li>method :POST</li>
-<li>返回格式 : json</li>
-<li>传输头:Content-Type:application/json</li>
-<li>password加密算法:RSA</li>
-</ul>
-<h3 id="PC端登陆获取rsa密钥配置接口"><a href="#PC端登陆获取rsa密钥配置接口" class="headerlink" title="PC端登陆获取rsa密钥配置接口"></a>PC端登陆获取rsa密钥配置接口</h3><ul>
-<li>conf</li>
-<li>请求参数</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参数名</th>
-<th style="text-align:center">是否必传</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>请求示例：</p>
-</li>
-<li><p>返回数据格式</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字段名</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">key</td>
-<td style="text-align:center">refresh_token</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"key"</span>: <span class="string">"LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlHZk1BMEdDU3FHU0liM0RRRUJBUVVBQTRHTkFEQ0JpUUtCZ1FERWl6V0hBUE1ZMGJ1c0M3dnZNenhYby9CawoxSVNrUXQ1NEQ2L2VOL2lqb3p0K1pXRy81elBHN2hTczZ3K1RoZzJ5TlRWWEdZZE5oS0R1WVR1OElhVS9JYThwCkMzNmQ5dUxkZVR4VzVJaVJpcEFyODJGK1pNYWxncFJrYkZvcUplb0U5WEM4ckpQNEJNcWh2ejUrZXYyajNReGgKWnV1clhGZm1zZVBEU0ZsT2t3SURBUUFCCi0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQ=="</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="PC端登陆接口"><a href="#PC端登陆接口" class="headerlink" title="PC端登陆接口"></a>PC端登陆接口</h3><ul>
-<li>userLogin</li>
-<li>请求参数</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参数名</th>
-<th style="text-align:center">是否必传</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">accounts_name</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">用户名</td>
-<td style="text-align:center">elliot</td>
-</tr>
-<tr>
-<td style="text-align:center">accounts_pass</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">RSA加密密码</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">captcha_code</td>
-<td style="text-align:center">N</td>
-<td style="text-align:center">验证码</td>
-<td style="text-align:center">1</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>请求示例：</li>
-</ul>
-<p>curl -X POST \<br>  ‘<a href="http://passport.newdhb.com/login/userLogin?XDEBUG_SESSION_START=PHPSTORM" target="_blank" rel="external">http://passport.newdhb.com/login/userLogin?XDEBUG_SESSION_START=PHPSTORM</a>‘ \<br>  -H ‘Cache-Control: no-cache’ \<br>  -H ‘Content-Type: application/json’ \<br>  -H ‘Postman-Token: b7c5f529-eaeb-4ae4-925f-8e81549b5759’ \<br>  -d ‘{<br>“accounts_name”:”elliot”,<br>“accounts_pass”:”6c6f39375a5155594d3478556175586769476672356c584f30425841746b796e495141762b50634a5474454a457a48646336325a6a7043516270615775734d455753426e4e716c487634657253384835437965506244706747747339617a514a45767575447a5470784f36567648465932777335674d5541486e6c30417250574a36794676627a506e774b38456438743145656138314a566d6b39745270582f587454337771666f5851553d”<br>}’</p>
-<ul>
-<li>返回数据格式</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字段名</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">accounts_id</td>
-<td style="text-align:center">账户ID</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">accounts_name</td>
-<td style="text-align:center">账户名字</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">accounts_type</td>
-<td style="text-align:center">账户类型</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">redirect_url</td>
-<td style="text-align:center">跳转地址</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"user_info"</span>: &#123;</div><div class="line">            <span class="attr">"accounts_id"</span>: <span class="number">2788</span>,</div><div class="line">            <span class="attr">"accounts_name"</span>: <span class="string">"elliot"</span>,</div><div class="line">            <span class="attr">"accounts_type"</span>: <span class="string">"manager"</span></div><div class="line">        &#125;,</div><div class="line">        <span class="attr">"redirect_url"</span>: <span class="string">"http://admin.newdhb.com/Auth/Index/manager_index"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="三方登陆接口"><a href="#三方登陆接口" class="headerlink" title="三方登陆接口"></a>三方登陆接口</h3><ul>
-<li>thirdLogin</li>
-<li>请求参数</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参数名</th>
-<th style="text-align:center">是否必传</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">username</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">用户名</td>
-<td style="text-align:center">elliot</td>
-</tr>
-<tr>
-<td style="text-align:center">password</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">密码</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">partner_id</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">合作方ID</td>
-<td style="text-align:center">1</td>
-</tr>
-<tr>
-<td style="text-align:center">appkey</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">appkey</td>
-<td style="text-align:center">123</td>
-</tr>
-<tr>
-<td style="text-align:center">timestamp</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">时间戳</td>
-<td style="text-align:center">1526871491</td>
-</tr>
-<tr>
-<td style="text-align:center">sign</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">签名</td>
-<td style="text-align:center">2c3f152edb0b035cac69b24774c8d39f</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>请求示例：</p>
-<p>curl -X POST \<br><a href="http://passport.newdhb.com/login/thirdLogin" target="_blank" rel="external">http://passport.newdhb.com/login/thirdLogin</a> \<br>-H ‘Cache-Control: no-cache’ \<br>-H ‘Content-Type: application/json’ \<br>-H ‘Postman-Token: 2eef0284-7294-4ac9-9b72-ef62ca567ead’ \<br>-d ‘{<br>“username”: “elliot”,<br>“password”: “622b34524b326a71704b343175746a586d4a704735327249784764356c31426b544e4c74532b5377705552455852462f626168385246427751746e6f50585176734458564a2f6e6b424877454935566d51503953313379763844486b5731594f2f6d47576a4e2b4849756b66594f5953447131454b6c516b334d57495a4462686f50737a78646b564779586472764c31664d49736c364b656d33416e76305349585535543459744a7976303d”,<br>“partner_id”: 1,<br>“appkey”: 123,<br>“timestamp”:1526871491,<br>“sign”:”2c3f152edb0b035cac69b24774c8d39f”<br>}’</p>
-</li>
-<li><p>返回数据格式</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字段名</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">refresh_token</td>
-<td style="text-align:center">refresh_token</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"refresh_token"</span>: <span class="string">"663bbe3a2c52bc598cab170a92ff2f44"</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="通过RefreshToken设置登陆状态"><a href="#通过RefreshToken设置登陆状态" class="headerlink" title="通过RefreshToken设置登陆状态"></a>通过RefreshToken设置登陆状态</h3><ul>
-<li>getAccessToken</li>
-<li>请求参数</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参数名</th>
-<th style="text-align:center">是否必传</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">refresh_token</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">refresh_token</td>
-<td style="text-align:center">663bbe3a2c52bc598cab170a92ff2f44</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回数据格式</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字段名</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">refresh_token</td>
-<td style="text-align:center">refresh_token</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><p>请求示例</p>
-<p>curl -X GET \<br>‘<a href="http://passport.newdhb.com/login/getAccessToken/?refresh_token=663bbe3a2c52bc598cab170a92ff2f44" target="_blank" rel="external">http://passport.newdhb.com/login/getAccessToken/?refresh_token=663bbe3a2c52bc598cab170a92ff2f44</a>‘ \<br>-H ‘Cache-Control: no-cache’ \<br>-H ‘Content-Type: application/json’ \<br>-H ‘Postman-Token: 14c08026-3396-4fe9-9cb4-5920995fcf35’</p>
-</li>
-<li><p>返回样本</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: [],</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="移动端登陆-移动设备-小程序-获取移动端rsa密钥配置接口"><a href="#移动端登陆-移动设备-小程序-获取移动端rsa密钥配置接口" class="headerlink" title="移动端登陆 -移动设备(小程序)获取移动端rsa密钥配置接口"></a>移动端登陆 -移动设备(小程序)获取移动端rsa密钥配置接口</h3><ul>
-<li>mConf</li>
-<li>请求参数</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参数名</th>
-<th style="text-align:center">是否必传</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回数据格式</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字段名</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">key</td>
-<td style="text-align:center">refresh_token</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"><span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line"><span class="attr">"data"</span>: &#123;</div><div class="line"><span class="attr">"key"</span>: <span class="string">"LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS0KTUlHZk1BMEdDU3FHU0liM0RRRUJBUVVBQTRHTkFEQ0JpUUtCZ1FESTlNTjB3ZHpCYUk2SVArd1RoVXQrTFNzVwpkMEFrVnJRSUwwUzhnV0lmakFoOWdDQTNqNTMyTm1yVmUxUk43OVlVN0JxeFF6a0JBN3NMZTU2ejBSSm1iNzN0Clh2TGtYUXhsMkNwRm5GSWNKaFNvdENYR0c3MnpZNHErZVJWY0lyL3lJWXNTemNhd2xPVHQ5OVBvMFNIOVo1Sk4KZm1HMm5MUzhXSnU0Y1ZJRXFRSURBUUFCCi0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQ=="</span></div><div class="line">&#125;,</div><div class="line"><span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="移动端登陆-移动设备-小程序-移动端用户名密码登陆"><a href="#移动端登陆-移动设备-小程序-移动端用户名密码登陆" class="headerlink" title="移动端登陆 -移动设备(小程序)移动端用户名密码登陆"></a>移动端登陆 -移动设备(小程序)移动端用户名密码登陆</h3><ul>
-<li>mUserLogin</li>
-<li>请求参数</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参数名</th>
-<th style="text-align:center">是否必传</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">accounts_name</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">用户名</td>
-<td style="text-align:center">kaifa</td>
-</tr>
-<tr>
-<td style="text-align:center">accounts_pass</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">rsa密码</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">login_type</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">登陆类型</td>
-<td style="text-align:center">xcx,kqhb,xdgl</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回数据格式</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字段名</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">token</td>
-<td style="text-align:center">token</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"> <span class="attr">"token"</span>: <span class="string">"9DQ+x8YPPeIr55AdvsjN/+/Sr4XO06tPPrOzriD/hXtWUmYvHXTPO9K+OsVI0De2bcBlifU3KB99164fvcUQK/zd42N0WW5bOCl4Sg2FwvSGHKvWOhTzQVjV5sA1JBwLhAvbolx4U9HGEPoWF2wg7mHbBBRQl9ZPRfoAa1Ofgu2V41Q8J9V/6mtD8b5UWu7z"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="移动端登陆-移动设备"><a href="#移动端登陆-移动设备" class="headerlink" title="移动端登陆 -移动设备"></a>移动端登陆 -移动设备</h3><ul>
-<li>mobileUserLogin</li>
-<li>请求参数</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参数名</th>
-<th style="text-align:center">是否必传</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">accounts_name</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">用户名</td>
-<td style="text-align:center">kaifa</td>
-</tr>
-<tr>
-<td style="text-align:center">accounts_pass</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">Rsa密码</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">login_type</td>
-<td style="text-align:center">N</td>
-<td style="text-align:center">登陆端类型</td>
-<td style="text-align:center">mobile</td>
-</tr>
-<tr>
-<td style="text-align:center">wid</td>
-<td style="text-align:center">N</td>
-<td style="text-align:center">Wid</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">company_id</td>
-<td style="text-align:center">N</td>
-<td style="text-align:center">公司ID</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回数据格式</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字段名</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">token</td>
-<td style="text-align:center">token</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line"> <span class="attr">"token"</span>: <span class="string">"9DQ+x8YPPeIr55AdvsjN/+/Sr4XO06tPPrOzriD/hXtWUmYvHXTPO9K+OsVI0De2bcBlifU3KB99164fvcUQK/zd42N0WW5bOCl4Sg2FwvSGHKvWOhTzQVjV5sA1JBwLhAvbolx4U9HGEPoWF2wg7mHbBBRQl9ZPRfoAa1Ofgu2V41Q8J9V/6mtD8b5UWu7z"</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="根据域名前缀获取公司LOGO"><a href="#根据域名前缀获取公司LOGO" class="headerlink" title="根据域名前缀获取公司LOGO"></a>根据域名前缀获取公司LOGO</h3><ul>
-<li>checkUrlPrefixLogo</li>
-<li>请求参数</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">参数名</th>
-<th style="text-align:center">是否必传</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">prefix</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:center">域名前缀</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回数据格式</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">字段名</th>
-<th style="text-align:center">说明</th>
-<th style="text-align:center">举例</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">prefix</td>
-<td style="text-align:center">token</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>返回样本<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"code"</span>: <span class="number">200</span>,</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"logo"</span>: <span class="string">"000000/000000001/15/i20160125_988_296.jpg"</span>,</div><div class="line">        <span class="attr">"company_id"</span>: <span class="number">7</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">"message"</span>: <span class="string">""</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;对接文档-version-1-0&quot;&gt;&lt;a href=&quot;#对接文档-version-1-0&quot; class=&quot;headerlink&quot; title=&quot;对接文档 version 1.0&quot;&gt;&lt;/a&gt;&lt;strong&gt;对接文档 version 1.0&lt;/strong&gt;&lt;/h2&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Python VS Wechat 可以这么玩</title>
     <link href="http://yoursite.com/2017/10/19/python-weichat/"/>
     <id>http://yoursite.com/2017/10/19/python-weichat/</id>
@@ -899,7 +422,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-09-19T13:51:56.014Z</updated>
+    <updated>2018-09-25T08:55:00.047Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -11043,6 +10566,316 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tbody>
 </table>
 <p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"data"</span>: &#123;</div><div class="line">        <span class="attr">"ref_id"</span>: <span class="string">"2"</span>,</div><div class="line">        <span class="attr">"ref_invitationid"</span>: <span class="string">"2"</span>,</div><div class="line">        <span class="attr">"ref_uid"</span>: <span class="string">"5"</span>,</div><div class="line">        <span class="attr">"ref_username"</span>: <span class="string">"牛牛"</span>,</div><div class="line">        <span class="attr">"ref_status"</span>: <span class="string">"1"</span>,</div><div class="line">        <span class="attr">"ref_createtime"</span>: <span class="string">"2018-03-01 23:24:06"</span>,</div><div class="line">        <span class="attr">"ref_updatetime"</span>: <span class="string">"2018-09-07 22:53:23"</span>,</div><div class="line">        <span class="attr">"ref_sign"</span>: <span class="string">"0"</span>,</div><div class="line">        <span class="attr">"ref_signtime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">        <span class="attr">"ref_sign_second"</span>: <span class="string">"0"</span>,</div><div class="line">        <span class="attr">"ref_signtime_second"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">        <span class="attr">"ref_checktime"</span>: <span class="string">"2018-03-01 23:24:08"</span>,</div><div class="line">        <span class="attr">"preincome"</span>: <span class="string">"0.00"</span>,</div><div class="line">        <span class="attr">"income"</span>: <span class="string">"0.00"</span>,</div><div class="line">        <span class="attr">"paystatus"</span>: <span class="string">"1"</span>,</div><div class="line">        <span class="attr">"paytime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">        <span class="attr">"lottery_id"</span>: <span class="string">"0"</span>,</div><div class="line">        <span class="attr">"send_remind"</span>: <span class="string">"-1"</span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="检测用户是否参与当前时间点PK任务"><a href="#检测用户是否参与当前时间点PK任务" class="headerlink" title="检测用户是否参与当前时间点PK任务"></a>检测用户是否参与当前时间点PK任务</h3><ul>
+<li>wxCheckUserPkTaskStatus</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">当前登陆人ID</td>
+<td style="text-align:right">183</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td style="text-align:center">自增ID</td>
+<td></td>
+</tr>
+<tr>
+<td>pk_task_id</td>
+<td style="text-align:center">参与的PK任务ID</td>
+<td></td>
+</tr>
+<tr>
+<td>userid</td>
+<td style="text-align:center">UID</td>
+<td></td>
+</tr>
+<tr>
+<td>username</td>
+<td style="text-align:center">参与者名字</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td style="text-align:center">参与金额</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:center">状态</td>
+<td></td>
+</tr>
+<tr>
+<td>createtime</td>
+<td style="text-align:center">创建时间</td>
+<td></td>
+</tr>
+<tr>
+<td>updatetime</td>
+<td style="text-align:center">更新时间</td>
+<td></td>
+</tr>
+<tr>
+<td>dayx</td>
+<td style="text-align:center">星期x是否完成任务 1是 0否</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">     <span class="attr">"data"</span>: &#123;</div><div class="line">            <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"pk_task_id"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"userid"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">            <span class="attr">"amount"</span>: <span class="string">"0.00"</span>,</div><div class="line">            <span class="attr">"status"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"createtime"</span>: <span class="string">"2018-09-24 22:49:23"</span>,</div><div class="line">            <span class="attr">"updatetime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">            <span class="attr">"day1"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"day2"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"day3"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"day4"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"day5"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"day6"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"day7"</span>: <span class="string">"0"</span></div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="参与PK任务"><a href="#参与PK任务" class="headerlink" title="参与PK任务"></a>参与PK任务</h3><ul>
+<li>wxCreatePkTaskUserRelation</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">当前登陆人ID</td>
+<td style="text-align:right">183</td>
+</tr>
+<tr>
+<td>amount</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">支付金额</td>
+<td style="text-align:right">183</td>
+</tr>
+<tr>
+<td>ordersn</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">支付的订单编码</td>
+<td style="text-align:right">183</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td style="text-align:center">自增ID</td>
+<td></td>
+</tr>
+<tr>
+<td>pk_task_id</td>
+<td style="text-align:center">参与的PK任务ID</td>
+<td></td>
+</tr>
+<tr>
+<td>userid</td>
+<td style="text-align:center">UID</td>
+<td></td>
+</tr>
+<tr>
+<td>username</td>
+<td style="text-align:center">参与者名字</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td style="text-align:center">参与金额</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td style="text-align:center">状态</td>
+<td></td>
+</tr>
+<tr>
+<td>createtime</td>
+<td style="text-align:center">创建时间</td>
+<td></td>
+</tr>
+<tr>
+<td>updatetime</td>
+<td style="text-align:center">更新时间</td>
+<td></td>
+</tr>
+<tr>
+<td>dayx</td>
+<td style="text-align:center">星期x是否完成任务 1是 0否</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">     <span class="attr">"data"</span>: &#123;</div><div class="line">            <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"pk_task_id"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"userid"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">            <span class="attr">"amount"</span>: <span class="string">"0.00"</span>,</div><div class="line">            <span class="attr">"status"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"createtime"</span>: <span class="string">"2018-09-24 22:49:23"</span>,</div><div class="line">            <span class="attr">"updatetime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">            <span class="attr">"day1"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"day2"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"day3"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"day4"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"day5"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"day6"</span>: <span class="string">"0"</span>,</div><div class="line">            <span class="attr">"day7"</span>: <span class="string">"0"</span></div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="叠加PK任务金额"><a href="#叠加PK任务金额" class="headerlink" title="叠加PK任务金额"></a>叠加PK任务金额</h3><ul>
+<li>wxOverlyingPkTaskAmount</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">当前登陆人ID</td>
+<td style="text-align:right">183</td>
+</tr>
+<tr>
+<td>amount</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">支付金额</td>
+<td style="text-align:right">183</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td style="text-align:center">自增ID</td>
+<td></td>
+</tr>
+<tr>
+<td>createdate</td>
+<td style="text-align:center">参与的PK任务ID</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td style="text-align:center">参与金额</td>
+<td></td>
+</tr>
+<tr>
+<td>time_range</td>
+<td style="text-align:center">时间范围</td>
+<td></td>
+</tr>
+<tr>
+<td>createtime</td>
+<td style="text-align:center">创建时间</td>
+<td></td>
+</tr>
+<tr>
+<td>deleted</td>
+<td style="text-align:center">删除 1是 0否</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"data"</span>: &#123;</div><div class="line">          <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">          <span class="attr">"createdate"</span>: <span class="string">"2018-09-24"</span>,</div><div class="line">          <span class="attr">"createtime"</span>: <span class="string">"2018-09-24 08:42:49"</span>,</div><div class="line">          <span class="attr">"time_range"</span>: <span class="string">"2018-09-24 00:00:00-2018-09-30 23:59:59"</span>,</div><div class="line">          <span class="attr">"amount"</span>: <span class="string">"20.00"</span>,</div><div class="line">          <span class="attr">"deleted"</span>: <span class="string">"0"</span></div><div class="line">      &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="获取小任务连续PK参与人列表"><a href="#获取小任务连续PK参与人列表" class="headerlink" title="获取小任务连续PK参与人列表"></a>获取小任务连续PK参与人列表</h3><ul>
+<li>wxPkTaskUserRelationList</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">当前登陆人ID</td>
+<td style="text-align:right">183</td>
+</tr>
+<tr>
+<td>pk_task_id</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">任务id</td>
+<td style="text-align:right">183</td>
+</tr>
+<tr>
+<td>page</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">页码</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>limit</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">每页条数</td>
+<td style="text-align:right">10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>amount</td>
+<td style="text-align:center">总额</td>
+<td></td>
+</tr>
+<tr>
+<td>total</td>
+<td style="text-align:center">条数</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	<span class="attr">"data"</span>: &#123;</div><div class="line">		<span class="attr">"amount"</span>: <span class="string">"20.00"</span>,</div><div class="line">		<span class="attr">"total"</span>: <span class="string">"1"</span>,</div><div class="line">		<span class="attr">"rows"</span>: [&#123;</div><div class="line">			<span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">			<span class="attr">"pk_task_id"</span>: <span class="string">"1"</span>,</div><div class="line">			<span class="attr">"userid"</span>: <span class="string">"1"</span>,</div><div class="line">			<span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">			<span class="attr">"amount"</span>: <span class="string">"20.00"</span>,</div><div class="line">			<span class="attr">"status"</span>: <span class="string">"0"</span>,</div><div class="line">			<span class="attr">"createtime"</span>: <span class="string">"2018-09-25 16:44:05"</span>,</div><div class="line">			<span class="attr">"updatetime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">			<span class="attr">"day1"</span>: <span class="string">"0"</span>,</div><div class="line">			<span class="attr">"day2"</span>: <span class="string">"0"</span>,</div><div class="line">			<span class="attr">"day3"</span>: <span class="string">"0"</span>,</div><div class="line">			<span class="attr">"day4"</span>: <span class="string">"0"</span>,</div><div class="line">			<span class="attr">"day5"</span>: <span class="string">"0"</span>,</div><div class="line">			<span class="attr">"day6"</span>: <span class="string">"0"</span>,</div><div class="line">			<span class="attr">"day7"</span>: <span class="string">"0"</span>,</div><div class="line">			<span class="attr">"today_task_status"</span>: <span class="number">0</span>,</div><div class="line">			<span class="attr">"continue_days"</span>: <span class="number">0</span>,</div><div class="line">			<span class="attr">"userInfo"</span>: &#123;</div><div class="line">				<span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">				<span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">				<span class="attr">"passwd"</span>: <span class="string">"fd77c6ca78da7e09d89f36dab2d7a496"</span>,</div><div class="line">				<span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">				<span class="attr">"tel"</span>: <span class="string">"17188307666"</span>,</div><div class="line">				<span class="attr">"createtime"</span>: <span class="string">"2018-03-01 22:56:38"</span>,</div><div class="line">				<span class="attr">"usertype"</span>: <span class="string">"0"</span>,</div><div class="line">				<span class="attr">"provice_sid"</span>: <span class="string">"001023"</span>,</div><div class="line">				<span class="attr">"city_sid"</span>: <span class="string">"001023002"</span>,</div><div class="line">				<span class="attr">"provice_name"</span>: <span class="string">"四川"</span>,</div><div class="line">				<span class="attr">"city_name"</span>: <span class="string">"自贡"</span>,</div><div class="line">				<span class="attr">"score"</span>: <span class="string">"627.83"</span>,</div><div class="line">				<span class="attr">"scoredebt"</span>: <span class="string">"0.00"</span>,</div><div class="line">				<span class="attr">"invitecode"</span>: <span class="string">"151991619816"</span>,</div><div class="line">				<span class="attr">"level"</span>: <span class="string">"1"</span>,</div><div class="line">				<span class="attr">"lastoptime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">				<span class="attr">"platform"</span>: <span class="string">"2"</span>,</div><div class="line">				<span class="attr">"updatetime"</span>: <span class="string">"2018-09-01 20:39:48"</span>,</div><div class="line">				<span class="attr">"device_tokens"</span>: <span class="string">"2cd01a0b7f5591629de90ae5c43d0718903d5868d3fc0c26d0fae5f7140f0d1e"</span>,</div><div class="line">				<span class="attr">"sys_push"</span>: <span class="string">"1"</span>,</div><div class="line">				<span class="attr">"type"</span>: <span class="string">"0"</span>,</div><div class="line">				<span class="attr">"unionid"</span>: <span class="string">"olOxs0ePxsKzx-gQyl1Yx89uUrW0"</span>,</div><div class="line">				<span class="attr">"openid"</span>: <span class="string">"oa5re0xXA-90UHaoJL-gCfDvFmBU"</span>,</div><div class="line">				<span class="attr">"headimgurl"</span>: <span class="string">"http://thirdwx.qlogo.cn/mmopen/vi_32/XNicWkyLW6Uqol3sHeibrV4N0JibAt8V6e2dJRRSQegnDTABQz9oPTaQkic9f65FAFxJwQiazibYpvffc62IRKt4k2oA/132"</span>,</div><div class="line">				<span class="attr">"father_id"</span>: <span class="string">"1"</span>,</div><div class="line">				<span class="attr">"grandfather_id"</span>: <span class="string">"2"</span>,</div><div class="line">				<span class="attr">"fathergrandfather_id"</span>: <span class="string">"3"</span>,</div><div class="line">				<span class="attr">"lottery_times"</span>: <span class="string">"0"</span>,</div><div class="line">				<span class="attr">"ip_address"</span>: <span class="string">"171.94.170.79"</span>,</div><div class="line">				<span class="attr">"ontime_ratio"</span>: <span class="string">"0.93"</span>,</div><div class="line">				<span class="attr">"spirit_num"</span>: <span class="string">"12"</span>,</div><div class="line">				<span class="attr">"family_id"</span>: <span class="string">"7"</span>,</div><div class="line">				<span class="attr">"family_name"</span>: <span class="string">"rex"</span>,</div><div class="line">				<span class="attr">"family_color"</span>: <span class="string">"5"</span>,</div><div class="line">				<span class="attr">"sendsms_num"</span>: <span class="string">"0"</span>,</div><div class="line">				<span class="attr">"pktask_num"</span>: <span class="string">"9"</span></div><div class="line">			&#125;</div><div class="line">		&#125;]</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <hr>
 <p>Author [@elliot]<br>2017 年 05月 10日</p>
 ]]></content>
