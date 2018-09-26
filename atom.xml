@@ -422,7 +422,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-09-26T08:17:08.881Z</updated>
+    <updated>2018-09-26T08:44:07.231Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -2054,7 +2054,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tr>
 <tr>
 <td>type</td>
-<td style="text-align:center">积分变动原因 1 参与扣分2余额提现4迟到退回剩余5余额提现审核未通过退回6准时全额退回7准时收入8未达成退回9集体缺席退回10金额充值11推广奖励12欠款还款13转盘抽奖14邀请得分15邀请退还剩余16后付准时收入</td>
+<td style="text-align:center">积分变动原因 1 参与扣分2余额提现4迟到退回剩余6准时全额退回7准时收入8未达成退回9集体缺席退回10金额充值11推广奖励12欠款还款13约定转盘抽奖14邀请得分15邀请退还剩余16后付准时收入17为担保人付款18被担保人还款担保金退回19植物收入20活动抽奖21查阅费22家族周薪23短信费24PK任务分成</td>
 </tr>
 </tbody>
 </table>
