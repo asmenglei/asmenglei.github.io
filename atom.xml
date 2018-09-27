@@ -422,7 +422,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-09-26T08:44:07.231Z</updated>
+    <updated>2018-09-27T10:22:03.611Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -10831,6 +10831,105 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tbody>
 </table>
 <p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	<span class="attr">"data"</span>: &#123;</div><div class="line">            <span class="attr">"week"</span>: <span class="string">"3"</span>,</div><div class="line">            <span class="attr">"date"</span>: <span class="string">"2018-09-26"</span>,</div><div class="line">            <span class="attr">"amount"</span>: <span class="string">"20.00"</span>,</div><div class="line">            <span class="attr">"total"</span>: <span class="string">"1"</span>,</div><div class="line">            <span class="attr">"rows"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"userid"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"20.00"</span>,</div><div class="line">                    <span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"createtime"</span>: <span class="string">"2018-09-25 16:44:05"</span>,</div><div class="line">                    <span class="attr">"updatetime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">                    <span class="attr">"ordersn"</span>: <span class="string">""</span>,</div><div class="line">                    <span class="attr">"today_task_status"</span>: <span class="number">0</span>,</div><div class="line">                    <span class="attr">"continue_days"</span>: <span class="number">1</span>,</div><div class="line">                    <span class="attr">"userInfo"</span>: &#123;</div><div class="line">                        <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">                        <span class="attr">"passwd"</span>: <span class="string">"fd77c6ca78da7e09d89f36dab2d7a496"</span>,</div><div class="line">                        <span class="attr">"status"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"tel"</span>: <span class="string">"17188307666"</span>,</div><div class="line">                        <span class="attr">"createtime"</span>: <span class="string">"2018-03-01 22:56:38"</span>,</div><div class="line">                        <span class="attr">"usertype"</span>: <span class="string">"0"</span>,</div><div class="line">                        <span class="attr">"provice_sid"</span>: <span class="string">"001023"</span>,</div><div class="line">                        <span class="attr">"city_sid"</span>: <span class="string">"001023002"</span>,</div><div class="line">                        <span class="attr">"provice_name"</span>: <span class="string">"四川"</span>,</div><div class="line">                        <span class="attr">"city_name"</span>: <span class="string">"自贡"</span>,</div><div class="line">                        <span class="attr">"score"</span>: <span class="string">"627.83"</span>,</div><div class="line">                        <span class="attr">"scoredebt"</span>: <span class="string">"0.00"</span>,</div><div class="line">                        <span class="attr">"invitecode"</span>: <span class="string">"151991619816"</span>,</div><div class="line">                        <span class="attr">"level"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"lastoptime"</span>: <span class="string">"0000-00-00 00:00:00"</span>,</div><div class="line">                        <span class="attr">"platform"</span>: <span class="string">"2"</span>,</div><div class="line">                        <span class="attr">"updatetime"</span>: <span class="string">"2018-09-01 20:39:48"</span>,</div><div class="line">                        <span class="attr">"device_tokens"</span>: <span class="string">"2cd01a0b7f5591629de90ae5c43d0718903d5868d3fc0c26d0fae5f7140f0d1e"</span>,</div><div class="line">                        <span class="attr">"sys_push"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"type"</span>: <span class="string">"0"</span>,</div><div class="line">                        <span class="attr">"unionid"</span>: <span class="string">"olOxs0ePxsKzx-gQyl1Yx89uUrW0"</span>,</div><div class="line">                        <span class="attr">"openid"</span>: <span class="string">"oa5re0xXA-90UHaoJL-gCfDvFmBU"</span>,</div><div class="line">                        <span class="attr">"headimgurl"</span>: <span class="string">"http://thirdwx.qlogo.cn/mmopen/vi_32/XNicWkyLW6Uqol3sHeibrV4N0JibAt8V6e2dJRRSQegnDTABQz9oPTaQkic9f65FAFxJwQiazibYpvffc62IRKt4k2oA/132"</span>,</div><div class="line">                        <span class="attr">"father_id"</span>: <span class="string">"1"</span>,</div><div class="line">                        <span class="attr">"grandfather_id"</span>: <span class="string">"2"</span>,</div><div class="line">                        <span class="attr">"fathergrandfather_id"</span>: <span class="string">"3"</span>,</div><div class="line">                        <span class="attr">"lottery_times"</span>: <span class="string">"0"</span>,</div><div class="line">                        <span class="attr">"ip_address"</span>: <span class="string">"171.94.170.79"</span>,</div><div class="line">                        <span class="attr">"ontime_ratio"</span>: <span class="string">"0.93"</span>,</div><div class="line">                        <span class="attr">"spirit_num"</span>: <span class="string">"12"</span>,</div><div class="line">                        <span class="attr">"family_id"</span>: <span class="string">"7"</span>,</div><div class="line">                        <span class="attr">"family_name"</span>: <span class="string">"rex"</span>,</div><div class="line">                        <span class="attr">"family_color"</span>: <span class="string">"5"</span>,</div><div class="line">                        <span class="attr">"sendsms_num"</span>: <span class="string">"0"</span>,</div><div class="line">                        <span class="attr">"pktask_num"</span>: <span class="string">"9"</span></div><div class="line">                    &#125;</div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="获取小任务连续PK每日历史纪录列表"><a href="#获取小任务连续PK每日历史纪录列表" class="headerlink" title="获取小任务连续PK每日历史纪录列表"></a>获取小任务连续PK每日历史纪录列表</h3><ul>
+<li>wxPkTaskUserRelationDayList</li>
+<li>请求参数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>参数名</th>
+<th style="text-align:center">是否必传</th>
+<th style="text-align:right">说明</th>
+<th style="text-align:right">举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>uid</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">当前登陆人ID</td>
+<td style="text-align:right">183</td>
+</tr>
+<tr>
+<td>date</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">日期</td>
+<td style="text-align:right">2018-09-26</td>
+</tr>
+<tr>
+<td>page</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">页码</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td>limit</td>
+<td style="text-align:center">Y</td>
+<td style="text-align:right">每页条数</td>
+<td style="text-align:right">10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>返回数据格式</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>字段名</th>
+<th style="text-align:center">说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>participate_status</td>
+<td style="text-align:center">是否参与过1是0否</td>
+<td></td>
+</tr>
+<tr>
+<td>week</td>
+<td style="text-align:center">星期N</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td style="text-align:center">当前系统日期</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td style="text-align:center">总额</td>
+<td></td>
+</tr>
+<tr>
+<td>total</td>
+<td style="text-align:center">条数</td>
+<td></td>
+</tr>
+<tr>
+<td>task_status</td>
+<td style="text-align:center">任务完成状态 0未 1已</td>
+<td></td>
+</tr>
+<tr>
+<td>continue_days</td>
+<td style="text-align:center">连续天数</td>
+<td></td>
+</tr>
+<tr>
+<td>amount</td>
+<td style="text-align:center">参与金额</td>
+<td></td>
+</tr>
+<tr>
+<td>award</td>
+<td style="text-align:center">收入</td>
+</tr>
+</tbody>
+</table>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	 <span class="attr">"data"</span>: &#123;</div><div class="line">            <span class="attr">"participate_status"</span>: <span class="number">1</span>,</div><div class="line">            <span class="attr">"week"</span>: <span class="string">"3"</span>,</div><div class="line">            <span class="attr">"date"</span>: <span class="string">"2018-09-26"</span>,</div><div class="line">            <span class="attr">"amount"</span>: <span class="string">"180.00"</span>,</div><div class="line">            <span class="attr">"total"</span>: <span class="string">"3"</span>,</div><div class="line">            <span class="attr">"rows"</span>: [</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="string">"9"</span>,</div><div class="line">                    <span class="attr">"userid"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"username"</span>: <span class="string">"affertime"</span>,</div><div class="line">                    <span class="attr">"continue_days"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"140.00"</span>,</div><div class="line">                    <span class="attr">"award"</span>: <span class="string">"17.50"</span>,</div><div class="line">                    <span class="attr">"ref_id"</span>: <span class="string">"2"</span>,</div><div class="line">                    <span class="attr">"task_status"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"date"</span>: <span class="string">"2018-09-26"</span>,</div><div class="line">                    <span class="attr">"createtime"</span>: <span class="string">"2018-09-27 17:49:55"</span>,</div><div class="line">                    <span class="attr">"updatetime"</span>: <span class="string">"0000-00-00 00:00:00"</span></div><div class="line">                &#125;,</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="string">"8"</span>,</div><div class="line">                    <span class="attr">"userid"</span>: <span class="string">"2"</span>,</div><div class="line">                    <span class="attr">"username"</span>: <span class="string">"123"</span>,</div><div class="line">                    <span class="attr">"continue_days"</span>: <span class="string">"0"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"20.00"</span>,</div><div class="line">                    <span class="attr">"award"</span>: <span class="string">"0.00"</span>,</div><div class="line">                    <span class="attr">"ref_id"</span>: <span class="string">""</span>,</div><div class="line">                    <span class="attr">"task_status"</span>: <span class="string">"0"</span>,</div><div class="line">                    <span class="attr">"date"</span>: <span class="string">"2018-09-26"</span>,</div><div class="line">                    <span class="attr">"createtime"</span>: <span class="string">"2018-09-27 17:49:55"</span>,</div><div class="line">                    <span class="attr">"updatetime"</span>: <span class="string">"0000-00-00 00:00:00"</span></div><div class="line">                &#125;,</div><div class="line">                &#123;</div><div class="line">                    <span class="attr">"id"</span>: <span class="string">"7"</span>,</div><div class="line">                    <span class="attr">"userid"</span>: <span class="string">"22"</span>,</div><div class="line">                    <span class="attr">"username"</span>: <span class="string">"23232"</span>,</div><div class="line">                    <span class="attr">"continue_days"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"amount"</span>: <span class="string">"20.00"</span>,</div><div class="line">                    <span class="attr">"award"</span>: <span class="string">"2.50"</span>,</div><div class="line">                    <span class="attr">"ref_id"</span>: <span class="string">"2"</span>,</div><div class="line">                    <span class="attr">"task_status"</span>: <span class="string">"1"</span>,</div><div class="line">                    <span class="attr">"date"</span>: <span class="string">"2018-09-26"</span>,</div><div class="line">                    <span class="attr">"createtime"</span>: <span class="string">"2018-09-27 17:49:55"</span>,</div><div class="line">                    <span class="attr">"updatetime"</span>: <span class="string">"0000-00-00 00:00:00"</span></div><div class="line">                &#125;</div><div class="line">            ]</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <hr>
 <p>Author [@elliot]<br>2017 年 05月 10日</p>
 ]]></content>
