@@ -422,7 +422,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
     <link href="http://yoursite.com/2017/08/14/doc/"/>
     <id>http://yoursite.com/2017/08/14/doc/</id>
     <published>2017-08-14T09:38:22.000Z</published>
-    <updated>2018-09-28T15:32:37.728Z</updated>
+    <updated>2018-09-29T22:36:23.657Z</updated>
     
     <content type="html"><![CDATA[<h2 id="约定微信对接API文档-version-1-0"><a href="#约定微信对接API文档-version-1-0" class="headerlink" title="约定微信对接API文档 version 1.0"></a><strong>约定微信对接API文档 version 1.0</strong></h2><ul>
 <li>url地址 :<a href="http://dev.****.com" target="_blank" rel="external">http://dev.<em>**</em>.cn/index.php/api/restful/###</a></li>
@@ -10597,12 +10597,6 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td style="text-align:right">支付金额</td>
 <td style="text-align:right">183</td>
 </tr>
-<tr>
-<td>ordersn</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:right">支付的订单编码免费的订单就传空</td>
-<td style="text-align:right">183</td>
-</tr>
 </tbody>
 </table>
 <ul>
@@ -10685,12 +10679,6 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td style="text-align:right">支付金额</td>
 <td style="text-align:right">183</td>
 </tr>
-<tr>
-<td>ordersn</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:right">支付的订单编码免费的订单就传空</td>
-<td style="text-align:right">183</td>
-</tr>
 </tbody>
 </table>
 <ul>
@@ -10721,11 +10709,6 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td></td>
 </tr>
 <tr>
-<td>time_range</td>
-<td style="text-align:center">时间范围</td>
-<td></td>
-</tr>
-<tr>
 <td>createtime</td>
 <td style="text-align:center">创建时间</td>
 <td></td>
@@ -10736,7 +10719,7 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 </tr>
 </tbody>
 </table>
-<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"data"</span>: &#123;</div><div class="line">          <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">          <span class="attr">"createdate"</span>: <span class="string">"2018-09-24"</span>,</div><div class="line">          <span class="attr">"createtime"</span>: <span class="string">"2018-09-24 08:42:49"</span>,</div><div class="line">          <span class="attr">"time_range"</span>: <span class="string">"2018-09-24 00:00:00-2018-09-30 23:59:59"</span>,</div><div class="line">          <span class="attr">"amount"</span>: <span class="string">"20.00"</span>,</div><div class="line">          <span class="attr">"deleted"</span>: <span class="string">"0"</span></div><div class="line">      &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>返回样本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"data"</span>: &#123;</div><div class="line">          <span class="attr">"id"</span>: <span class="string">"1"</span>,</div><div class="line">          <span class="attr">"createdate"</span>: <span class="string">"2018-09-24"</span>,</div><div class="line">          <span class="attr">"createtime"</span>: <span class="string">"2018-09-24 08:42:49"</span>,</div><div class="line">          <span class="attr">"amount"</span>: <span class="string">"20.00"</span>,</div><div class="line">          <span class="attr">"deleted"</span>: <span class="string">"0"</span></div><div class="line">      &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="获取小任务连续PK参与人列表"><a href="#获取小任务连续PK参与人列表" class="headerlink" title="获取小任务连续PK参与人列表"></a>获取小任务连续PK参与人列表</h3><ul>
 <li>wxPkTaskUserRelationList</li>
 <li>请求参数</li>
@@ -10755,12 +10738,6 @@ alias topub=&apos;cd /usr/share/nginx/html&apos;
 <td>uid</td>
 <td style="text-align:center">Y</td>
 <td style="text-align:right">当前登陆人ID</td>
-<td style="text-align:right">183</td>
-</tr>
-<tr>
-<td>pk_task_id</td>
-<td style="text-align:center">Y</td>
-<td style="text-align:right">任务id</td>
 <td style="text-align:right">183</td>
 </tr>
 <tr>
